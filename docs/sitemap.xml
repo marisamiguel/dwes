@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://lmorillas.github.io/dwes/docs/presentaci%C3%B3n/</loc>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/</loc>
+    <lastmod>2021-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/primeratarea/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/inmersi%C3%B3n-en-python/</loc>
+    <lastmod>2021-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/segundatarea/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/</loc>
+    <lastmod>2021-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/</loc>
+    <lastmod>2021-09-15T00:00:00+00:00</lastmod>
+  </url>
+</urlset>

@@ -1,410 +1,451 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Desarrollo Web Entorno Servidor – Recursos</title>
-    <link>https://lmorillas.github.io/dwes/docs/</link>
-    <description>Recent content in Recursos on Desarrollo Web Entorno Servidor</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	  <atom:link href="https://lmorillas.github.io/dwes/docs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>Docs: Primera tarea</title>
-      <link>https://lmorillas.github.io/dwes/docs/staticsitegen/primeratarea/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://lmorillas.github.io/dwes/docs/staticsitegen/primeratarea/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Escritura de texto en markdown&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href=&#34;https://gohugo.io&#34;&gt;Links&lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.&lt;/p&gt;
-&lt;p&gt;90&amp;rsquo;s four loko seitan photo booth gochujang freegan tumeric listicle fam ugh humblebrag. Bespoke leggings gastropub, biodiesel brunch pug fashion axe meh swag art party neutra deep v chia. Enamel pin fanny pack knausgaard tofu, artisan cronut hammock meditation occupy master cleanse chartreuse lumbersexual. Kombucha kogi viral truffaut synth distillery single-origin coffee ugh slow-carb marfa selfies. Pitchfork schlitz semiotics fanny pack, ugh artisan vegan vaporware hexagon. Polaroid fixie post-ironic venmo wolf ramps &lt;strong&gt;kale chips&lt;/strong&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There should be no margin above this first sentence.&lt;/p&gt;
-&lt;p&gt;Blockquotes should be a lighter gray with a border along the left side in the secondary color.&lt;/p&gt;
-&lt;p&gt;There should be no margin below this final sentence.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;first-header-2&#34;&gt;First Header 2&lt;/h2&gt;
-&lt;p&gt;This is a normal paragraph following a header. Knausgaard kale chips snackwave microdosing cronut copper mug swag synth bitters letterpress glossier &lt;strong&gt;craft beer&lt;/strong&gt;. Mumblecore bushwick authentic gochujang vegan chambray meditation jean shorts irony. Viral farm-to-table kale chips, pork belly palo santo distillery activated charcoal aesthetic jianbing air plant woke lomo VHS organic. Tattooed locavore succulents heirloom, small batch sriracha echo park DIY af. Shaman you probably haven&amp;rsquo;t heard of them copper mug, crucifix green juice vape &lt;em&gt;single-origin coffee&lt;/em&gt; brunch actually. Mustache etsy vexillologist raclette authentic fam. Tousled beard humblebrag asymmetrical. I love turkey, I love my job, I love my friends, I love Chardonnay!&lt;/p&gt;
-&lt;p&gt;Deae legum paulatimque terra, non vos mutata tacet: dic. Vocant docuique me plumas fila quin afuerunt copia haec o neque.&lt;/p&gt;
-&lt;p&gt;On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.&lt;/p&gt;
-&lt;p&gt;Scenester tumeric pickled, authentic crucifix post-ironic fam freegan VHS pork belly 8-bit yuccie PBR&amp;amp;B. &lt;strong&gt;I love this life we live in&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;second-header-2&#34;&gt;Second Header 2&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;This is a code block following a header.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Next level leggings before they sold out, PBR&amp;amp;B church-key shaman echo park. Kale chips occupy godard whatever pop-up freegan pork belly selfies. Gastropub Belinda subway tile woke post-ironic seitan. Shabby chic man bun semiotics vape, chia messenger bag plaid cardigan.&lt;/p&gt;
-&lt;h4 id=&#34;header-4&#34;&gt;Header 4&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id=&#34;header-5&#34;&gt;Header 5&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h6 id=&#34;header-6&#34;&gt;Header 6&lt;/h6&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;What&lt;/th&gt;
-&lt;th&gt;Follows&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;A table&lt;/td&gt;
-&lt;td&gt;A header&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;There&amp;rsquo;s a horizontal rule above and below this.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Here is an unordered list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Liverpool F.C.&lt;/li&gt;
-&lt;li&gt;Chelsea F.C.&lt;/li&gt;
-&lt;li&gt;Manchester United F.C.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And an ordered list:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Michael Brecker&lt;/li&gt;
-&lt;li&gt;Seamus Blake&lt;/li&gt;
-&lt;li&gt;Branford Marsalis&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;And an unordered task list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create a Hugo theme&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add task lists to it&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Take a vacation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And a &amp;ldquo;mixed&amp;rdquo; task list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pack bags&lt;/li&gt;
-&lt;li&gt;?&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Travel!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And a nested list:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Jackson 5
-&lt;ul&gt;
-&lt;li&gt;Michael&lt;/li&gt;
-&lt;li&gt;Tito&lt;/li&gt;
-&lt;li&gt;Jackie&lt;/li&gt;
-&lt;li&gt;Marlon&lt;/li&gt;
-&lt;li&gt;Jermaine&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;TMNT
-&lt;ul&gt;
-&lt;li&gt;Leonardo&lt;/li&gt;
-&lt;li&gt;Michelangelo&lt;/li&gt;
-&lt;li&gt;Donatello&lt;/li&gt;
-&lt;li&gt;Raphael&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Definition lists can be used with Markdown syntax. Definition headers are bold.&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;Name&lt;/dt&gt;
-&lt;dd&gt;Godzilla&lt;/dd&gt;
-&lt;dt&gt;Born&lt;/dt&gt;
-&lt;dd&gt;1952&lt;/dd&gt;
-&lt;dt&gt;Birthplace&lt;/dt&gt;
-&lt;dd&gt;Japan&lt;/dd&gt;
-&lt;dt&gt;Color&lt;/dt&gt;
-&lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;hr&gt;
-&lt;p&gt;Tables should have bold headings and alternating shaded rows.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Artist&lt;/th&gt;
-&lt;th&gt;Album&lt;/th&gt;
-&lt;th&gt;Year&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Michael Jackson&lt;/td&gt;
-&lt;td&gt;Thriller&lt;/td&gt;
-&lt;td&gt;1982&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Prince&lt;/td&gt;
-&lt;td&gt;Purple Rain&lt;/td&gt;
-&lt;td&gt;1984&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beastie Boys&lt;/td&gt;
-&lt;td&gt;License to Ill&lt;/td&gt;
-&lt;td&gt;1986&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;If a table is too wide, it should scroll horizontally.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Artist&lt;/th&gt;
-&lt;th&gt;Album&lt;/th&gt;
-&lt;th&gt;Year&lt;/th&gt;
-&lt;th&gt;Label&lt;/th&gt;
-&lt;th&gt;Awards&lt;/th&gt;
-&lt;th&gt;Songs&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Michael Jackson&lt;/td&gt;
-&lt;td&gt;Thriller&lt;/td&gt;
-&lt;td&gt;1982&lt;/td&gt;
-&lt;td&gt;Epic Records&lt;/td&gt;
-&lt;td&gt;Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical&lt;/td&gt;
-&lt;td&gt;Wanna Be Startin&#39; Somethin&#39;, Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Prince&lt;/td&gt;
-&lt;td&gt;Purple Rain&lt;/td&gt;
-&lt;td&gt;1984&lt;/td&gt;
-&lt;td&gt;Warner Brothers Records&lt;/td&gt;
-&lt;td&gt;Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal&lt;/td&gt;
-&lt;td&gt;Let&amp;rsquo;s Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I&amp;rsquo;m a Star, Purple Rain&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Beastie Boys&lt;/td&gt;
-&lt;td&gt;License to Ill&lt;/td&gt;
-&lt;td&gt;1986&lt;/td&gt;
-&lt;td&gt;Mercury Records&lt;/td&gt;
-&lt;td&gt;noawardsbutthistablecelliswide&lt;/td&gt;
-&lt;td&gt;Rhymin &amp;amp; Stealin, The New Style, She&amp;rsquo;s Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Code snippets like &lt;code&gt;var foo = &amp;quot;bar&amp;quot;;&lt;/code&gt; can be shown inline.&lt;/p&gt;
-&lt;p&gt;Also, &lt;code&gt;this should vertically align&lt;/code&gt; &lt;del&gt;&lt;code&gt;with this&lt;/code&gt;&lt;/del&gt; &lt;del&gt;and this&lt;/del&gt;.&lt;/p&gt;
-&lt;p&gt;Code can also be shown in a block element.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;foo := &amp;quot;bar&amp;quot;;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Desarrollo Web Entorno Servidor – Recursos</title><link>https://lmorillas.github.io/dwes/docs/</link><description>Recent content in Recursos on Desarrollo Web Entorno Servidor</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://lmorillas.github.io/dwes/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Primera tarea</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/primeratarea/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/primeratarea/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Escritura de texto en markdown&lt;/p>
+&lt;/div>
+&lt;p>Text can be &lt;strong>bold&lt;/strong>, &lt;em>italic&lt;/em>, or &lt;del>strikethrough&lt;/del>. &lt;a href="https://gohugo.io">Links&lt;/a> should be blue with no underlines (unless hovered over).&lt;/p>
+&lt;p>There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.&lt;/p>
+&lt;p>90&amp;rsquo;s four loko seitan photo booth gochujang freegan tumeric listicle fam ugh humblebrag. Bespoke leggings gastropub, biodiesel brunch pug fashion axe meh swag art party neutra deep v chia. Enamel pin fanny pack knausgaard tofu, artisan cronut hammock meditation occupy master cleanse chartreuse lumbersexual. Kombucha kogi viral truffaut synth distillery single-origin coffee ugh slow-carb marfa selfies. Pitchfork schlitz semiotics fanny pack, ugh artisan vegan vaporware hexagon. Polaroid fixie post-ironic venmo wolf ramps &lt;strong>kale chips&lt;/strong>.&lt;/p>
+&lt;blockquote>
+&lt;p>There should be no margin above this first sentence.&lt;/p>
+&lt;p>Blockquotes should be a lighter gray with a border along the left side in the secondary color.&lt;/p>
+&lt;p>There should be no margin below this final sentence.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="first-header-2">First Header 2&lt;/h2>
+&lt;p>This is a normal paragraph following a header. Knausgaard kale chips snackwave microdosing cronut copper mug swag synth bitters letterpress glossier &lt;strong>craft beer&lt;/strong>. Mumblecore bushwick authentic gochujang vegan chambray meditation jean shorts irony. Viral farm-to-table kale chips, pork belly palo santo distillery activated charcoal aesthetic jianbing air plant woke lomo VHS organic. Tattooed locavore succulents heirloom, small batch sriracha echo park DIY af. Shaman you probably haven&amp;rsquo;t heard of them copper mug, crucifix green juice vape &lt;em>single-origin coffee&lt;/em> brunch actually. Mustache etsy vexillologist raclette authentic fam. Tousled beard humblebrag asymmetrical. I love turkey, I love my job, I love my friends, I love Chardonnay!&lt;/p>
+&lt;p>Deae legum paulatimque terra, non vos mutata tacet: dic. Vocant docuique me plumas fila quin afuerunt copia haec o neque.&lt;/p>
+&lt;p>On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.&lt;/p>
+&lt;p>Scenester tumeric pickled, authentic crucifix post-ironic fam freegan VHS pork belly 8-bit yuccie PBR&amp;amp;B. &lt;strong>I love this life we live in&lt;/strong>.&lt;/p>
+&lt;h2 id="second-header-2">Second Header 2&lt;/h2>
+&lt;blockquote>
+&lt;p>This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="header-3">Header 3&lt;/h3>
+&lt;pre>&lt;code>This is a code block following a header.
+&lt;/code>&lt;/pre>&lt;p>Next level leggings before they sold out, PBR&amp;amp;B church-key shaman echo park. Kale chips occupy godard whatever pop-up freegan pork belly selfies. Gastropub Belinda subway tile woke post-ironic seitan. Shabby chic man bun semiotics vape, chia messenger bag plaid cardigan.&lt;/p>
+&lt;h4 id="header-4">Header 4&lt;/h4>
+&lt;ul>
+&lt;li>This is an unordered list following a header.&lt;/li>
+&lt;li>This is an unordered list following a header.&lt;/li>
+&lt;li>This is an unordered list following a header.&lt;/li>
+&lt;/ul>
+&lt;h5 id="header-5">Header 5&lt;/h5>
+&lt;ol>
+&lt;li>This is an ordered list following a header.&lt;/li>
+&lt;li>This is an ordered list following a header.&lt;/li>
+&lt;li>This is an ordered list following a header.&lt;/li>
+&lt;/ol>
+&lt;h6 id="header-6">Header 6&lt;/h6>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>What&lt;/th>
+&lt;th>Follows&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>A table&lt;/td>
+&lt;td>A header&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A table&lt;/td>
+&lt;td>A header&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A table&lt;/td>
+&lt;td>A header&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>There&amp;rsquo;s a horizontal rule above and below this.&lt;/p>
+&lt;hr>
+&lt;p>Here is an unordered list:&lt;/p>
+&lt;ul>
+&lt;li>Liverpool F.C.&lt;/li>
+&lt;li>Chelsea F.C.&lt;/li>
+&lt;li>Manchester United F.C.&lt;/li>
+&lt;/ul>
+&lt;p>And an ordered list:&lt;/p>
+&lt;ol>
+&lt;li>Michael Brecker&lt;/li>
+&lt;li>Seamus Blake&lt;/li>
+&lt;li>Branford Marsalis&lt;/li>
+&lt;/ol>
+&lt;p>And an unordered task list:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Create a Hugo theme&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Add task lists to it&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Take a vacation&lt;/li>
+&lt;/ul>
+&lt;p>And a &amp;ldquo;mixed&amp;rdquo; task list:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Pack bags&lt;/li>
+&lt;li>?&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Travel!&lt;/li>
+&lt;/ul>
+&lt;p>And a nested list:&lt;/p>
+&lt;ul>
+&lt;li>Jackson 5
+&lt;ul>
+&lt;li>Michael&lt;/li>
+&lt;li>Tito&lt;/li>
+&lt;li>Jackie&lt;/li>
+&lt;li>Marlon&lt;/li>
+&lt;li>Jermaine&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>TMNT
+&lt;ul>
+&lt;li>Leonardo&lt;/li>
+&lt;li>Michelangelo&lt;/li>
+&lt;li>Donatello&lt;/li>
+&lt;li>Raphael&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Definition lists can be used with Markdown syntax. Definition headers are bold.&lt;/p>
+&lt;dl>
+&lt;dt>Name&lt;/dt>
+&lt;dd>Godzilla&lt;/dd>
+&lt;dt>Born&lt;/dt>
+&lt;dd>1952&lt;/dd>
+&lt;dt>Birthplace&lt;/dt>
+&lt;dd>Japan&lt;/dd>
+&lt;dt>Color&lt;/dt>
+&lt;dd>Green&lt;/dd>
+&lt;/dl>
+&lt;hr>
+&lt;p>Tables should have bold headings and alternating shaded rows.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Artist&lt;/th>
+&lt;th>Album&lt;/th>
+&lt;th>Year&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Michael Jackson&lt;/td>
+&lt;td>Thriller&lt;/td>
+&lt;td>1982&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prince&lt;/td>
+&lt;td>Purple Rain&lt;/td>
+&lt;td>1984&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Beastie Boys&lt;/td>
+&lt;td>License to Ill&lt;/td>
+&lt;td>1986&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>If a table is too wide, it should scroll horizontally.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Artist&lt;/th>
+&lt;th>Album&lt;/th>
+&lt;th>Year&lt;/th>
+&lt;th>Label&lt;/th>
+&lt;th>Awards&lt;/th>
+&lt;th>Songs&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Michael Jackson&lt;/td>
+&lt;td>Thriller&lt;/td>
+&lt;td>1982&lt;/td>
+&lt;td>Epic Records&lt;/td>
+&lt;td>Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical&lt;/td>
+&lt;td>Wanna Be Startin' Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prince&lt;/td>
+&lt;td>Purple Rain&lt;/td>
+&lt;td>1984&lt;/td>
+&lt;td>Warner Brothers Records&lt;/td>
+&lt;td>Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal&lt;/td>
+&lt;td>Let&amp;rsquo;s Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I&amp;rsquo;m a Star, Purple Rain&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Beastie Boys&lt;/td>
+&lt;td>License to Ill&lt;/td>
+&lt;td>1986&lt;/td>
+&lt;td>Mercury Records&lt;/td>
+&lt;td>noawardsbutthistablecelliswide&lt;/td>
+&lt;td>Rhymin &amp;amp; Stealin, The New Style, She&amp;rsquo;s Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>Code snippets like &lt;code>var foo = &amp;quot;bar&amp;quot;;&lt;/code> can be shown inline.&lt;/p>
+&lt;p>Also, &lt;code>this should vertically align&lt;/code> &lt;del>&lt;code>with this&lt;/code>&lt;/del> &lt;del>and this&lt;/del>.&lt;/p>
+&lt;p>Code can also be shown in a block element.&lt;/p>
+&lt;pre>&lt;code>foo := &amp;quot;bar&amp;quot;;
 bar := &amp;quot;foo&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Code can also use syntax highlighting.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;`var foo = &amp;#34;bar&amp;#34;;`&lt;/span&gt;
-
-  &lt;span style=&#34;color:#000&#34;&gt;lexer&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lexers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;javascript&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;iterator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lexer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Tokenise&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;input&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;style&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;styles&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;github&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;formatter&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;New&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;WithLineNumbers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;bytes&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Buffer&lt;/span&gt;
-  &lt;span style=&#34;color:#000&#34;&gt;formatter&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Format&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;iterator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-
-  &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;buff&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inline code inside table cells should still be distinguishable.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Language&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Javascript&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;var foo = &amp;quot;bar&amp;quot;;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ruby&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;foo = &amp;quot;bar&amp;quot;{&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;Small images should be shown at their actual size.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/240px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/1024px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;components&#34;&gt;Components&lt;/h2&gt;
-&lt;h3 id=&#34;alerts&#34;&gt;Alerts&lt;/h3&gt;
-&lt;p&gt;
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-
-
-    This is an alert.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;
-
-    This is an alert with a title.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;
-
-    This is an alert with a title and &lt;strong&gt;Markdown&lt;/strong&gt;.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-success&#34; role=&#34;alert&#34;&gt;
-
-
-    This is a successful alert.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
-
-
-    This is a warning.
-
-&lt;/div&gt;
-
-
-
-&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Warning&lt;/h4&gt;
-
-    This is a warning with a title.
-
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;another-heading&#34;&gt;Another Heading&lt;/h2&gt;
-&lt;p&gt;Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Segunda tarea</title>
-      <link>https://lmorillas.github.io/dwes/docs/staticsitegen/segundatarea/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://lmorillas.github.io/dwes/docs/staticsitegen/segundatarea/</guid>
-      <description>
-        
-        
-        
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Introducción a Hugo. Primer sitio sencillo&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&#34;creación-del-sitio&#34;&gt;Creación del sitio&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ hugo new site primeros-pasos
-
+&lt;/code>&lt;/pre>&lt;p>Code can also use syntax highlighting.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="color:#204a87;font-weight:bold">func&lt;/span> &lt;span style="color:#000">main&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">input&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#4e9a06">`var foo = &amp;#34;bar&amp;#34;;`&lt;/span>
+&lt;span style="color:#000">lexer&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">lexers&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;javascript&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">iterator&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">_&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">lexer&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Tokenise&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">nil&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">input&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">style&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">styles&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;github&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">formatter&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">html&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">New&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">html&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">WithLineNumbers&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">buff&lt;/span> &lt;span style="color:#000">bytes&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Buffer&lt;/span>
+&lt;span style="color:#000">formatter&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Format&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&lt;/span>&lt;span style="color:#000">buff&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">style&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">iterator&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">fmt&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Println&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">buff&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">String&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+&lt;/code>&lt;/pre>&lt;p>Inline code inside table cells should still be distinguishable.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Language&lt;/th>
+&lt;th>Code&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Javascript&lt;/td>
+&lt;td>&lt;code>var foo = &amp;quot;bar&amp;quot;;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ruby&lt;/td>
+&lt;td>&lt;code>foo = &amp;quot;bar&amp;quot;{&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>Small images should be shown at their actual size.&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/240px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg" alt="">&lt;/p>
+&lt;p>Large images should always scale down and fit in the content container.&lt;/p>
+&lt;p>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/1024px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg" alt="">&lt;/p>
+&lt;p>&lt;em>The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA.&lt;/em>&lt;/p>
+&lt;h2 id="components">Components&lt;/h2>
+&lt;h3 id="alerts">Alerts&lt;/h3>
+&lt;p>
+&lt;div class="alert alert-primary" role="alert">
+This is an alert.
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+This is an alert with a title.
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+This is an alert with a title and &lt;strong>Markdown&lt;/strong>.
+&lt;/div>
+&lt;div class="alert alert-success" role="alert">
+This is a successful alert.
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+This is a warning.
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Warning&lt;/h4>
+This is a warning with a title.
+&lt;/div>
+&lt;/p>
+&lt;h2 id="another-heading">Another Heading&lt;/h2>
+&lt;p>Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p></description></item><item><title>Docs: Segunda tarea</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/segundatarea/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/segundatarea/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Introducción a Hugo. Primer sitio sencillo&lt;/p>
+&lt;/div>
+&lt;h2 id="creación-del-sitio">Creación del sitio&lt;/h2>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ hugo new site primeros-pasos
 Congratulations! Your new Hugo site is created in /home/lm/proyectos/cpilosenlaces/primeros-pasos.
-
-Just a few more steps and you&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;re ready to go:
-
+Just a few more steps and you&lt;span style="color:#a40000">&amp;#39;&lt;/span>re ready to go:
 1. Download a theme into the same-named folder.
-   Choose a theme from https://themes.gohugo.io/ or
-   create your own with the &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34;&lt;/span&gt; command.
+Choose a theme from https://themes.gohugo.io/ or
+create your own with the &lt;span style="color:#4e9a06">&amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34;&lt;/span> command.
 2. Perhaps you want to add some content. You can add single files
-   with &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;&lt;/span&gt;.
-3. Start the built-in live server via &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;hugo server&amp;#34;&lt;/span&gt;.
-
-Visit https://gohugo.io/ &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; quickstart guide and full documentation.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Estructura creada:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;archetypes
+with &lt;span style="color:#4e9a06">&amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;&lt;/span>.
+3. Start the built-in live server via &lt;span style="color:#4e9a06">&amp;#34;hugo server&amp;#34;&lt;/span>.
+Visit https://gohugo.io/ &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> quickstart guide and full documentation.
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Estructura creada:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">archetypes
 config.toml
 content
 data
 layouts
 static
 themes
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;instalar-tema&#34;&gt;Instalar tema&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmielH/tale-hugo&#34;&gt;https://github.com/EmielH/tale-hugo&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Descargar a la carpeta themes. Renombrar la carpeta del tema a &lt;code&gt;tale&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Modificar &lt;code&gt;config.toml&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; theme = &amp;quot;tale&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;añadir-contenido&#34;&gt;Añadir contenido&lt;/h2&gt;
-&lt;p&gt;(3 páginas)&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;hugo new contacto.md&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;añadir-3-posts&#34;&gt;Añadir 3 posts&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;$ hugo new posts/esto-es-hugo.md&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Editar markdown. Una imagen por post por lo menos.&lt;/p&gt;
-&lt;h3 id=&#34;añadir-un-menú&#34;&gt;Añadir un menú&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;menu&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;menu&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]]&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;identifier&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;contacto&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Contacto&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Contacto&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/contacto/&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;weight&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;
-  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;menu&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]]&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;identifier&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Posts&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Posts&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;/posts/&amp;#34;&lt;/span&gt;
-	&lt;span style=&#34;color:#000&#34;&gt;weight&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;publicar&#34;&gt;Publicar&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;hugo 
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;gh-pages&#34;&gt;gh pages&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;hugo -d docs&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Modificar &lt;em&gt;config.toml&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;baseURL = &amp;quot;https://xxxxxxx.github.io/primeros-pasos&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;Crear un repositorio en GitHub&lt;/li&gt;
-&lt;li&gt;Hacer el commit, para confirmar los cambios del sitio web en tu repositorio local&lt;/li&gt;
-&lt;li&gt;Asociar el repositorio local con el repositorio remoto que has creado en Github&lt;/li&gt;
-&lt;li&gt;Sincronizar el contenido del repositorio local hacia remoto&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="instalar-tema">Instalar tema&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/EmielH/tale-hugo">https://github.com/EmielH/tale-hugo&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Descargar a la carpeta themes. Renombrar la carpeta del tema a &lt;code>tale&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Modificar &lt;code>config.toml&lt;/code>&lt;/p>
+&lt;pre>&lt;code> theme = &amp;quot;tale&amp;quot;
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ul>
+&lt;h2 id="añadir-contenido">Añadir contenido&lt;/h2>
+&lt;p>(3 páginas)&lt;/p>
+&lt;p>&lt;code>hugo new contacto.md&lt;/code>&lt;/p>
+&lt;h2 id="añadir-3-posts">Añadir 3 posts&lt;/h2>
+&lt;p>&lt;code>$ hugo new posts/esto-es-hugo.md&lt;/code>&lt;/p>
+&lt;p>Editar markdown. Una imagen por post por lo menos.&lt;/p>
+&lt;h3 id="añadir-un-menú">Añadir un menú&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#000">menu&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;span style="color:#000;font-weight:bold">[[&lt;/span>&lt;span style="color:#000">menu&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">main&lt;/span>&lt;span style="color:#000;font-weight:bold">]]&lt;/span>
+&lt;span style="color:#000">identifier&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;contacto&amp;#34;&lt;/span>
+&lt;span style="color:#000">name&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Contacto&amp;#34;&lt;/span>
+&lt;span style="color:#000">title&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Contacto&amp;#34;&lt;/span>
+&lt;span style="color:#000">url&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/contacto/&amp;#34;&lt;/span>
+&lt;span style="color:#000">weight&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>
+&lt;span style="color:#000;font-weight:bold">[[&lt;/span>&lt;span style="color:#000">menu&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">main&lt;/span>&lt;span style="color:#000;font-weight:bold">]]&lt;/span>
+&lt;span style="color:#000">identifier&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;posts&amp;#34;&lt;/span>
+&lt;span style="color:#000">name&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Posts&amp;#34;&lt;/span>
+&lt;span style="color:#000">title&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Posts&amp;#34;&lt;/span>
+&lt;span style="color:#000">url&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/posts/&amp;#34;&lt;/span>
+&lt;span style="color:#000">weight&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">3&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="publicar">Publicar&lt;/h2>
+&lt;pre>&lt;code>hugo
+&lt;/code>&lt;/pre>&lt;h2 id="gh-pages">gh pages&lt;/h2>
+&lt;p>&lt;code>hugo -d docs&lt;/code>&lt;/p>
+&lt;p>Modificar &lt;em>config.toml&lt;/em>&lt;/p>
+&lt;pre>&lt;code>baseURL = &amp;quot;https://xxxxxxx.github.io/primeros-pasos&amp;quot;
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>Crear un repositorio en GitHub&lt;/li>
+&lt;li>Hacer el commit, para confirmar los cambios del sitio web en tu repositorio local&lt;/li>
+&lt;li>Asociar el repositorio local con el repositorio remoto que has creado en Github&lt;/li>
+&lt;li>Sincronizar el contenido del repositorio local hacia remoto&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Plantillas</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/templates/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/templates/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Algunas notas sobre el trabajo con templates&lt;/p>
+&lt;p>&lt;strong>Documentación:&lt;/strong> &lt;a href="https://gohugo.io/templates/">https://gohugo.io/templates/&lt;/a>&lt;/p>
+&lt;/div>
+&lt;h2 id="sintaxis-básica">Sintaxis básica&lt;/h2>
+&lt;p>Acceso a variables predefinidas:&lt;/p>
+&lt;pre>&lt;code>{{ .Title }}
+{{ .Params.bar }}
+{{ if or (isset .Params &amp;quot;alt&amp;quot;) (isset .Params &amp;quot;caption&amp;quot;) }} Caption {{ end }}
+&amp;lt;title&amp;gt;{{ .Title }}&amp;lt;/title&amp;gt;
+&lt;/code>&lt;/pre>&lt;h2 id="partial">Partial&lt;/h2>
+&lt;p>Incluye un fragmento en una plantilla:&lt;/p>
+&lt;pre>&lt;code>{{ partial &amp;quot;&amp;lt;PATH&amp;gt;/&amp;lt;PARTIAL&amp;gt;.&amp;lt;EXTENSION&amp;gt;&amp;quot; . }}.
+# Por ejemplo: layouts/partials/header.html partial
+{{ partial &amp;quot;header.html&amp;quot; . }}
+&lt;/code>&lt;/pre>&lt;h2 id="plantillas-base-y-bloques">Plantillas base y bloques&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/templates/base/">https://gohugo.io/templates/base/&lt;/a>&lt;/p>
+&lt;p>&lt;code>layouts/_default/baseof.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#8f5902;font-style:italic">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">html&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">head&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">meta&lt;/span> &lt;span style="color:#c4a000">charset&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">title&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>{{ block &amp;#34;title&amp;#34; . }}
+&lt;span style="color:#8f5902;font-style:italic">&amp;lt;!-- Blocks may include default content. --&amp;gt;&lt;/span>
+{{ .Site.Title }}
+{{ end }}&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">title&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">head&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">body&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">&amp;lt;!-- Code that all your templates share, like a header --&amp;gt;&lt;/span>
+{{ block &amp;#34;main&amp;#34; . }}
+&lt;span style="color:#8f5902;font-style:italic">&amp;lt;!-- The part of the page that begins to differ between templates --&amp;gt;&lt;/span>
+{{ end }}
+{{ block &amp;#34;footer&amp;#34; . }}
+&lt;span style="color:#8f5902;font-style:italic">&amp;lt;!-- More shared code, perhaps a footer but that can be overridden if need be in --&amp;gt;&lt;/span>
+{{ end }}
+&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">body&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">html&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>layouts/_default/single.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">{{ define &amp;#34;title&amp;#34; }}
+&lt;span style="color:#8f5902;font-style:italic">&amp;lt;!-- Sobreescribe el valor de baseof.html --&amp;gt;&lt;/span>
+{{ .Title }} &lt;span style="color:#ce5c00">&amp;amp;ndash;&lt;/span> {{ .Site.Title }}
+{{ end }}
+{{ define &amp;#34;main&amp;#34; }}
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">h1&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>{{ .Title }}&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">h1&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+{{ .Content }}
+{{ end }}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="funciones">Funciones&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/templates/introduction/">https://gohugo.io/templates/introduction/&lt;/a>&lt;/p>
+&lt;h2 id="parámetros-de-las-páginas">Parámetros de las páginas&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/templates/introduction/#use-content-page-parameters">https://gohugo.io/templates/introduction/#use-content-page-parameters&lt;/a>&lt;/p>
+&lt;pre>&lt;code>{{ if not .Params.notoc }}
+&amp;lt;aside&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;a href=&amp;quot;#{{.Title | urlize}}&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;{{.Title}}&amp;lt;/h3&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/header&amp;gt;
+{{.TableOfContents}}
+&amp;lt;/aside&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; id=&amp;quot;toc-toggle&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+{{ end }}
+&lt;/code>&lt;/pre>&lt;h2 id="uso-de-la-configuración-del-sitio">Uso de la configuración del sitio&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/templates/introduction/#use-site-configuration-parameters">https://gohugo.io/templates/introduction/#use-site-configuration-parameters&lt;/a>&lt;/p>
+&lt;pre>&lt;code>{{ if .Site.Params.copyrighthtml }}
+&amp;lt;footer&amp;gt;
+&amp;lt;div class=&amp;quot;text-center&amp;quot;&amp;gt;{{.Site.Params.CopyrightHTML | safeHTML}}&amp;lt;/div&amp;gt;
+&amp;lt;/footer&amp;gt;
+{{ end }}
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Shortcodes</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/shortcodes/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/shortcodes/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Extensiones a markdown&lt;/p>
+&lt;p>Doc: &lt;a href="https://gohugo.io/content-management/shortcodes">https://gohugo.io/content-management/shortcodes&lt;/a>&lt;/p>
+&lt;/div>
+&lt;p>Se usan en el texto escrito en &lt;code>.md&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">
+&lt;span style="color:#000;font-weight:bold">{{&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#000">instagram&lt;/span> &lt;span style="color:#000">BWNjjyYFxVx&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;gt;}}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BWNjjyYFxVx/?utm_source=ig_embed&amp;amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">&lt;div style="padding:16px;"> &lt;a href="https://www.instagram.com/p/BWNjjyYFxVx/?utm_source=ig_embed&amp;amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> &lt;div style=" display: flex; flex-direction: row; align-items: center;"> &lt;div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">&lt;/div> &lt;div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> &lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">&lt;/div> &lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">&lt;/div>&lt;/div>&lt;/div>&lt;div style="padding: 19% 0;">&lt;/div> &lt;div style="display:block; height:50px; margin:0 auto 12px; width:50px;">&lt;svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">&lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">&lt;g transform="translate(-511.000000, -20.000000)" fill="#000000">&lt;g>&lt;path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">&lt;/path>&lt;/g>&lt;/g>&lt;/g>&lt;/svg>&lt;/div>&lt;div style="padding-top: 8px;"> &lt;div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram&lt;/div>&lt;/div>&lt;div style="padding: 12.5% 0;">&lt;/div> &lt;div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">&lt;div> &lt;div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">&lt;/div> &lt;div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">&lt;/div> &lt;div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">&lt;/div>&lt;/div>&lt;div style="margin-left: 8px;"> &lt;div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">&lt;/div> &lt;div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">&lt;/div>&lt;/div>&lt;div style="margin-left: auto;"> &lt;div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">&lt;/div> &lt;div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">&lt;/div> &lt;div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">&lt;/div>&lt;/div>&lt;/div> &lt;div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> &lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">&lt;/div> &lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">&lt;/div>&lt;/div>&lt;/a>&lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">&lt;a href="https://www.instagram.com/p/BWNjjyYFxVx/?utm_source=ig_embed&amp;amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Bjørn Erik Pedersen (@bepsays)&lt;/a>&lt;/p>&lt;/div>&lt;/blockquote>
+&lt;script async src="//www.instagram.com/embed.js">&lt;/script></description></item><item><title>Docs: Búsqueda y acciones dinámicas</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/</guid><description>
+&lt;h2 id="búsqueda-en-el-contenido-de-nuestro-sitio">Búsqueda en el contenido de nuestro sitio&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/tools/search/">https://gohugo.io/tools/search/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae">Búsqueda con Fuse.js&lt;/a>&lt;/p>
+&lt;h2 id="formularios-de-contacto">Formularios de contacto&lt;/h2>
+&lt;p>Hay muchos servicios. Formik, StaticKit, FormKeep, Netlify Forms, Formspree, FormPlug, Google Forms &amp;hellip;&lt;/p>
+&lt;p>Por ejemplo:&lt;/p>
+&lt;p>&lt;strong>Formspree&lt;/strong> Ejemplo: &lt;a href="https://formspree.io/blog/a-hugo-theme-for-blogs/">https://formspree.io/blog/a-hugo-theme-for-blogs/&lt;/a>&lt;/p>
+&lt;h2 id="comentarios">Comentarios&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/content-management/comments/">https://gohugo.io/content-management/comments/&lt;/a>&lt;/p></description></item><item><title>Docs: Configuración GDPR</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/privacidad/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/privacidad/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Configurar Hugo para General Data Protection Regulation (GDPR)&lt;/p>
+&lt;p>&lt;a href="https://gohugo.io/about/hugo-and-gdpr/">https://gohugo.io/about/hugo-and-gdpr/&lt;/a>&lt;/p>
+&lt;/div>
+&lt;p>Por defecto:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">privacy&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disqus&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">googleAnalytics&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">anonymizeIP&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">respectDoNotTrack&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">useSessionStorage&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">instagram&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">simple&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">twitter&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">enableDNT&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">simple&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">vimeo&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">enableDNT&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">simple&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">youtube&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">privacyEnhanced&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para deshabilitar servicios:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">privacy&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disqus&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">googleAnalytics&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">instagram&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">twitter&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">vimeo&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">youtube&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">disable&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">```&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

@@ -21,6 +21,10 @@ Se usan en el texto escrito en `.md`
 
 ```
 
-
-
 {{< instagram BWNjjyYFxVx >}}
+
+
+{{< tweet 877500564405444608 >}}
+
+
+{< vimeo 146022717 >}}

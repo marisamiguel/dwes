@@ -7,7 +7,12 @@ description:
 ---
 
 {{% pageinfo %}}
-Algunas notas sobre el trabajo con templates
+Algunas notas sobre el trabajo con las plantillas:
+* Sintaxis básica de las plantillas en Hugo
+* Organización de las plantillas. Directorio `layout`
+* Modificación de una plantilla
+* Creación de plantillas
+
 
 **Documentación:**  https://gohugo.io/templates/
 {{% /pageinfo %}}
@@ -15,7 +20,7 @@ Algunas notas sobre el trabajo con templates
 ## Sintaxis básica
 
 Acceso a variables predefinidas:
-```
+```go-html-template
 {{ .Title }}
 
 {{ .Params.bar }}
@@ -27,9 +32,9 @@ Acceso a variables predefinidas:
 
 ## Partial 
 
-Incluye un fragmento en una plantilla:
+Incluye un fragmento en una plantilla para no tener que repetirlo:
 
-```
+```go-html-template
 {{ partial "<PATH>/<PARTIAL>.<EXTENSION>" . }}.
 
 # Por ejemplo: layouts/partials/header.html partial
@@ -37,6 +42,10 @@ Incluye un fragmento en una plantilla:
 {{ partial "header.html" . }}
 
 ```
+
+{{% alert title="Importante" color="danger" %}}
+Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
+{{% /alert %}}
 
 ## Plantillas base y bloques
 https://gohugo.io/templates/base/
@@ -65,7 +74,7 @@ https://gohugo.io/templates/base/
 ```
 
 `layouts/_default/single.html`
-```html
+```go-html-template
 {{ define "title" }}
   <!-- Sobreescribe el valor de  baseof.html -->
   {{ .Title }} &ndash; {{ .Site.Title }}
@@ -76,14 +85,16 @@ https://gohugo.io/templates/base/
 {{ end }}
 ```
 
-
 ## Funciones
 
 https://gohugo.io/templates/introduction/
 
 ## Parámetros de las páginas
 https://gohugo.io/templates/introduction/#use-content-page-parameters
-```
+
+Podemos usar datos escritos en el **front-matter** de la página desde la plantilla:
+
+```go-html-template
 {{ if not .Params.notoc }}
 <aside>
   <header>
@@ -102,7 +113,9 @@ https://gohugo.io/templates/introduction/#use-content-page-parameters
 
 https://gohugo.io/templates/introduction/#use-site-configuration-parameters
 
-```
+Y también datos del archivo de configuración general: 
+
+```go-html-template
 {{ if .Site.Params.copyrighthtml }}
     <footer>
         <div class="text-center">{{.Site.Params.CopyrightHTML | safeHTML}}</div>

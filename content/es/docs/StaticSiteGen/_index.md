@@ -33,13 +33,19 @@ Recuerda:
 {{% /pageinfo %}}
 
 ## Primeros pasos 
+
+{{% alert title="Crear nuevo sitio"  %}}
+{{% /alert %}}
+
 ```bash
 $ hugo new site <nombre_del_sitio>
 ```
 
-## Markdown
-Repaso de sintaxis:
+
+{{% alert title="Crear contenido"  %}}
+{{% /alert %}}
+
+Repaso de sintaxis **markdown**:
 
 * [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * https://programminghistorian.org/es/lecciones/introduccion-a-markdown
-* 

@@ -7,8 +7,9 @@ description:
 ---
 
 {{% pageinfo %}}
-Introducción a Hugo. Primer sitio sencillo
+**Objetivo:** Construcción de un primer sitio sencillo con un tema simple.
 
+**Recursos externos:** Tema de hugo https://github.com/EmielH/tale-hugo
 {{% /pageinfo %}}
 
 ## Creación del sitio

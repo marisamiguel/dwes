@@ -7,8 +7,9 @@ description: >
 ---
 
 {{% pageinfo %}}
-Escritura de texto en markdown
+**Objetivo**: Escritura de texto en markdown
 
+Intenta escribir el siguiente texto en Markdown. Usa un visualizador de *visual studio code* por ejemplo para ver el resultado.
 {{% /pageinfo %}}
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Configuración GDPR"
 date: 2017-01-05
-weight: 8
+weight: 15
 description: 
 
 ---

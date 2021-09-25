@@ -8,23 +8,24 @@ description:
 
 
 {{% pageinfo %}}
-Extensiones a markdown
+Extensiones a markdown. 
+
+**IMPORTANTE:** Se usan dentro del texto **.md** no en las plantillas
 
 Doc: https://gohugo.io/content-management/shortcodes
 {{% /pageinfo %}}
 
-Se usan en el texto escrito en `.md`
-
-```go
+Ejemplo:
+```go-html-template
 
 {{ < instagram BWNjjyYFxVx >}}
 
 ```
-
+## Instagram
 {{< instagram BWNjjyYFxVx >}}
 
-
+## Twitter
 {{< tweet 877500564405444608 >}}
 
-
-{< vimeo 146022717 >}}
+## Vimeo
+{{< vimeo 146022717 >}}

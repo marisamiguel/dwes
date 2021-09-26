@@ -126,7 +126,7 @@ Si se quiere deshabilitar:
 disableKinds = ['taxonomy', 'term']
 ```
 
-En **frontmatter*
+En **frontmatter**
 ```yaml
 categories:
 - Personal

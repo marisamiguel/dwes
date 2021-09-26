@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/dwes/favicons/favicon.ico" >
@@ -36,16 +36,16 @@ Organización de las plantillas. Directorio layout …">
 {{partial&#34;&lt;PATH&gt;/&lt;PARTIAL&gt;.&lt;EXTENSION&gt;&#34;.}}. # Por ejemplo: layouts/partials/header.html partial {{partial&#34;header.html&#34;.}}  Importante Los partials nos ayudan a reutilizar el código y a no repetir fragmentos." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lmorillas.github.io/dwes/docs/staticsitegen/templates/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2017-01-05T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-09-25T17:05:42&#43;02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-25T17:05:42+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
 <meta itemprop="name" content="Plantillas">
 <meta itemprop="description" content="Algunas notas sobre el trabajo con las plantillas:
  Sintaxis básica de las plantillas en Hugo Organización de las plantillas. Directorio layout Modificación de una plantilla Creación de plantillas  Documentación: https://gohugo.io/templates/
  Sintaxis básica Acceso a variables predefinidas:
 {{.Title}} {{.Params.bar}} {{ifor(isset.Params&#34;alt&#34;)(isset.Params&#34;caption&#34;)}} Caption {{end}} &lt;title&gt;{{.Title}}&lt;/title&gt; Partial Incluye un fragmento en una plantilla para no tener que repetirlo:
-{{partial&#34;&lt;PATH&gt;/&lt;PARTIAL&gt;.&lt;EXTENSION&gt;&#34;.}}. # Por ejemplo: layouts/partials/header.html partial {{partial&#34;header.html&#34;.}}  Importante Los partials nos ayudan a reutilizar el código y a no repetir fragmentos."><meta itemprop="datePublished" content="2017-01-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-09-25T17:05:42&#43;02:00" />
+{{partial&#34;&lt;PATH&gt;/&lt;PARTIAL&gt;.&lt;EXTENSION&gt;&#34;.}}. # Por ejemplo: layouts/partials/header.html partial {{partial&#34;header.html&#34;.}}  Importante Los partials nos ayudan a reutilizar el código y a no repetir fragmentos."><meta itemprop="datePublished" content="2017-01-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-09-25T17:05:42+02:00" />
 <meta itemprop="wordCount" content="238">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Plantillas"/>
@@ -58,8 +58,8 @@ Organización de las plantillas. Directorio layout …">
 
 
 
-<link rel="preload" href="/dwes/scss/main.min.ac4296fd89333f8d244c81a5eeb9ef92dbe5474c334d564c543ebd31f1f170bf.css" as="style">
-<link href="/dwes/scss/main.min.ac4296fd89333f8d244c81a5eeb9ef92dbe5474c334d564c543ebd31f1f170bf.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/dwes/scss/main.min.93be7723579b79373235edba63b64ec3a477823ef01c6ac9507f2157d195802f.css" as="style">
+<link href="/dwes/scss/main.min.93be7723579b79373235edba63b64ec3a477823ef01c6ac9507f2157d195802f.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -143,8 +143,8 @@ Organización de las plantillas. Directorio layout …">
   <a href="/dwes/docs/staticsitegen/busqueda/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenbusqueda"><span class="">Búsqueda de páginas</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenformulario-li">
   <a href="/dwes/docs/staticsitegen/formulario/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenformulario"><span class="">Inserción de formularios dinámicos</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenarchetipes-li">
-  <a href="/dwes/docs/staticsitegen/archetipes/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenarchetipes"><span class="">Tipos de contenido</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegencontenido-li">
+  <a href="/dwes/docs/staticsitegen/contenido/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegencontenido"><span class="">Cómo añadir contenido</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenprivacidad-li">
   <a href="/dwes/docs/staticsitegen/privacidad/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenprivacidad"><span class="">Configuración GDPR</span></a>
 </li>
@@ -233,7 +233,7 @@ Organización de las plantillas. Directorio layout …">
 
 <h2 id="sintaxis-básica">Sintaxis básica</h2>
 <p>Acceso a variables predefinidas:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
 
 <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Params.bar</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
 
@@ -242,7 +242,7 @@ Organización de las plantillas. Directorio layout …">
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>
 </code></pre></div><h2 id="partial">Partial</h2>
 <p>Incluye un fragmento en una plantilla para no tener que repetirlo:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">partial</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;&lt;PATH&gt;/&lt;PARTIAL&gt;.&lt;EXTENSION&gt;&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>.
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">partial</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;&lt;PATH&gt;/&lt;PARTIAL&gt;.&lt;EXTENSION&gt;&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>.
 
 # Por ejemplo: layouts/partials/header.html partial
 
@@ -260,7 +260,7 @@ Organización de las plantillas. Directorio layout …">
 <h2 id="plantillas-base-y-bloques">Plantillas base y bloques</h2>
 <p><a href="https://gohugo.io/templates/base/">https://gohugo.io/templates/base/</a></p>
 <p><code>layouts/_default/baseof.html</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#8f5902;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#8f5902;font-style:italic">&lt;!DOCTYPE html&gt;</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
   <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
     <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">meta</span> <span style="color:#c4a000">charset</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;utf-8&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
@@ -280,7 +280,7 @@ Organización de las plantillas. Directorio layout …">
   <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;</span>
 <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
 </code></pre></div><p><code>layouts/_default/single.html</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">define</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;title&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">define</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;title&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
   <span style="color:#8f5902;font-style:italic">&lt;!-- Sobreescribe el valor de  baseof.html --&gt;</span>
   <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span> <span style="color:#ce5c00">&amp;ndash;</span> <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Site.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
 <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
@@ -293,7 +293,7 @@ Organización de las plantillas. Directorio layout …">
 <h2 id="parámetros-de-las-páginas">Parámetros de las páginas</h2>
 <p><a href="https://gohugo.io/templates/introduction/#use-content-page-parameters">https://gohugo.io/templates/introduction/#use-content-page-parameters</a></p>
 <p>Podemos usar datos escritos en el <strong>front-matter</strong> de la página desde la plantilla:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">not</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Params.notoc</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">not</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Params.notoc</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">aside</span><span style="color:#000;font-weight:bold">&gt;</span>
   <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">header</span><span style="color:#000;font-weight:bold">&gt;</span>
     <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">urlize</span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
@@ -307,7 +307,7 @@ Organización de las plantillas. Directorio layout …">
 </code></pre></div><h2 id="uso-de-la-configuración-del-sitio">Uso de la configuración del sitio</h2>
 <p><a href="https://gohugo.io/templates/introduction/#use-site-configuration-parameters">https://gohugo.io/templates/introduction/#use-site-configuration-parameters</a></p>
 <p>Y también datos del archivo de configuración general:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Site.Params.copyrighthtml</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Site.Params.copyrighthtml</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
     <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">footer</span><span style="color:#000;font-weight:bold">&gt;</span>
         <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;text-center&#34;</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#c4a000">.Site.Params.CopyrightHTML</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">safeHTML</span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
     <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">footer</span><span style="color:#000;font-weight:bold">&gt;</span>
@@ -356,7 +356,22 @@ Organización de las plantillas. Directorio layout …">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.11.2/dist/mermaid.min.js" integrity="sha384-m8Pdaep6Qk8sW3J6XhPOiwUww3maU9HxZTLvEfSEB4e1UVvTdHyfJsYmEfYqvwLC" crossorigin="anonymous"></script>
 
+
+
+<style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: { manual: true },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
 
 
 <script src='/dwes/js/tabpane-persist.js'></script>
@@ -377,7 +392,7 @@ Organización de las plantillas. Directorio layout …">
 
 
 
-<script src="/dwes/js/main.min.95ef9134e0a6612075234ad1e0660df16d2acdc2d62c83661e0fd62925efc3e7.js" integrity="sha256-le&#43;RNOCmYSB1I0rR4GYN8W0qzcLWLINmHg/WKSXvw&#43;c=" crossorigin="anonymous"></script>
+<script src="/dwes/js/main.min.755a6d235852fb507b21b0e4afd9cb28fa18a9d04dfc195909285087a285702b.js" integrity="sha256-dVptI1hS&#43;1B7IbDkr9nLKPoYqdBN/BlZCShQh6KFcCs=" crossorigin="anonymous"></script>
 
 
 

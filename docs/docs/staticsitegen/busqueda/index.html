@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/dwes/favicons/favicon.ico" >
@@ -42,8 +42,8 @@ content/buscar.md
 --- title: &#34;Resultados de búsqueda&#34; sitemap: priority : 0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2017-01-05T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-09-25T17:05:42&#43;02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-25T17:05:42+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
 <meta itemprop="name" content="Búsqueda de páginas">
 <meta itemprop="description" content="Objetivo: Introducir un motor de búsqueda en el sitio.
@@ -51,8 +51,8 @@ content/buscar.md
 Búsqueda en nuestro sitio con fuse.js Ejemplo: https://www.edwardawebb.com/search/
 Configuración Página de búsqueda (contenido) Esta página responde a la url /buscar. No tiene contenido. El contenido se generará con la plantilla layouts/page/search.html
 content/buscar.md
---- title: &#34;Resultados de búsqueda&#34; sitemap: priority : 0."><meta itemprop="datePublished" content="2017-01-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-09-25T17:05:42&#43;02:00" />
+--- title: &#34;Resultados de búsqueda&#34; sitemap: priority : 0."><meta itemprop="datePublished" content="2017-01-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-09-25T17:05:42+02:00" />
 <meta itemprop="wordCount" content="540">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Búsqueda de páginas"/>
@@ -66,8 +66,8 @@ content/buscar.md
 
 
 
-<link rel="preload" href="/dwes/scss/main.min.ac4296fd89333f8d244c81a5eeb9ef92dbe5474c334d564c543ebd31f1f170bf.css" as="style">
-<link href="/dwes/scss/main.min.ac4296fd89333f8d244c81a5eeb9ef92dbe5474c334d564c543ebd31f1f170bf.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/dwes/scss/main.min.93be7723579b79373235edba63b64ec3a477823ef01c6ac9507f2157d195802f.css" as="style">
+<link href="/dwes/scss/main.min.93be7723579b79373235edba63b64ec3a477823ef01c6ac9507f2157d195802f.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -151,8 +151,8 @@ content/buscar.md
   <a href="/dwes/docs/staticsitegen/busqueda/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenbusqueda"><span class="td-sidebar-nav-active-item">Búsqueda de páginas</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenformulario-li">
   <a href="/dwes/docs/staticsitegen/formulario/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenformulario"><span class="">Inserción de formularios dinámicos</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenarchetipes-li">
-  <a href="/dwes/docs/staticsitegen/archetipes/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenarchetipes"><span class="">Tipos de contenido</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegencontenido-li">
+  <a href="/dwes/docs/staticsitegen/contenido/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegencontenido"><span class="">Cómo añadir contenido</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenprivacidad-li">
   <a href="/dwes/docs/staticsitegen/privacidad/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenprivacidad"><span class="">Configuración GDPR</span></a>
 </li>
@@ -243,7 +243,7 @@ content/buscar.md
 <h3 id="página-de-búsqueda-contenido">Página de búsqueda (contenido)</h3>
 <p>Esta página responde a la url <code>/buscar</code>. No tiene contenido. El contenido se generará con la plantilla <strong>layouts/page/search.html</strong></p>
 <p><strong>content/buscar.md</strong></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ce5c00;font-weight:bold">---</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ce5c00;font-weight:bold">---</span>
 <span style="color:#000">title</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Resultados de búsqueda&#34;</span>
 <span style="color:#000">sitemap</span><span style="color:#000;font-weight:bold">:</span>
   <span style="color:#000">priority</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0.1</span>
@@ -251,17 +251,17 @@ content/buscar.md
 <span style="color:#ce5c00;font-weight:bold">---</span>
 </code></pre></div><h3 id="configurar-salidas-en-configtoml">Configurar salidas en <code>config.toml</code></h3>
 <p>Incluir <strong>JSON</strong></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000;font-weight:bold">[</span><span style="color:#000">outputs</span><span style="color:#000;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000;font-weight:bold">[</span><span style="color:#000">outputs</span><span style="color:#000;font-weight:bold">]</span>
   <span style="color:#000">home</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;HTML&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;JSON&#34;</span><span style="color:#000;font-weight:bold">]</span>
 </code></pre></div><h3 id="crear-indexjson">Crear <code>index.json</code></h3>
 <p><strong>layouts/index.json</strong></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">{{</span><span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Scratch</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span> <span style="color:#4e9a06">&#34;index&#34;</span> <span style="color:#000">slice</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000;font-weight:bold">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">{{</span><span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Scratch</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span> <span style="color:#4e9a06">&#34;index&#34;</span> <span style="color:#000">slice</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000;font-weight:bold">}}</span>
 <span style="color:#000;font-weight:bold">{{</span><span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#204a87;font-weight:bold">range</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Site</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">RegularPages</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000;font-weight:bold">}}</span>
     <span style="color:#000;font-weight:bold">{{</span><span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Scratch</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span> <span style="color:#4e9a06">&#34;index&#34;</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">dict</span> <span style="color:#4e9a06">&#34;title&#34;</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Title</span> <span style="color:#4e9a06">&#34;tags&#34;</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Params</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">tags</span> <span style="color:#4e9a06">&#34;categories&#34;</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Params</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">categories</span> <span style="color:#4e9a06">&#34;contents&#34;</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Plain</span> <span style="color:#4e9a06">&#34;permalink&#34;</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Permalink</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000;font-weight:bold">}}</span>
 <span style="color:#000;font-weight:bold">{{</span><span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">end</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000;font-weight:bold">}}</span>
 <span style="color:#000;font-weight:bold">{{</span><span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#a40000">$</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Scratch</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Get</span> <span style="color:#4e9a06">&#34;index&#34;</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">jsonify</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000;font-weight:bold">}}</span>
 </code></pre></div><p>Para buscar en más campos, modifica el <strong>index.json</strong></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  <span style="color:#4e9a06">&#34;contents&#34;</span><span style="color:#000;font-weight:bold">:{{</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Content</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">plainify</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">jsonify</span> <span style="color:#000;font-weight:bold">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  <span style="color:#4e9a06">&#34;contents&#34;</span><span style="color:#000;font-weight:bold">:{{</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Content</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">plainify</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">jsonify</span> <span style="color:#000;font-weight:bold">}}</span>
   <span style="color:#000;font-weight:bold">{{</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Params</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">tags</span> <span style="color:#000;font-weight:bold">}},</span>
   <span style="color:#4e9a06">&#34;tags&#34;</span><span style="color:#000;font-weight:bold">:{{</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Params</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">tags</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">jsonify</span> <span style="color:#000;font-weight:bold">}}{{</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">}},</span>
   <span style="color:#4e9a06">&#34;categories&#34;</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{{</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">Params</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">categories</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#000">jsonify</span> <span style="color:#000;font-weight:bold">}},</span>
@@ -271,7 +271,7 @@ content/buscar.md
 <p><strong>ATENCIÓN:</strong> La plantilla base tiene que tener los bloques <strong>footerfiles</strong> y <strong>main</strong>. Si no renómbralos o crea los bloques en la plantilla base.</p>
 </blockquote>
 <p><strong>layouts/_default/buscar.html</strong></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">define</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;footerfiles&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">define</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;footerfiles&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://code.jquery.com/jquery-3.3.1.min.js&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
@@ -302,7 +302,7 @@ content/buscar.md
 </code></pre></div><h3 id="searchjs">Search.js</h3>
 <p>Usa jquery, fuse.js y mark.js.  Busca el index de hugo y devuelve el contenido con coloreado.</p>
 <p><strong>static/js/search.js</strong></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">summaryInclude</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">60</span><span style="color:#000;font-weight:bold">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">summaryInclude</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">60</span><span style="color:#000;font-weight:bold">;</span>
 <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">fuseOptions</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
   <span style="color:#000">shouldSort</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
   <span style="color:#000">includeMatches</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
@@ -454,7 +454,22 @@ content/buscar.md
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.11.2/dist/mermaid.min.js" integrity="sha384-m8Pdaep6Qk8sW3J6XhPOiwUww3maU9HxZTLvEfSEB4e1UVvTdHyfJsYmEfYqvwLC" crossorigin="anonymous"></script>
 
+
+
+<style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: { manual: true },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
 
 
 <script src='/dwes/js/tabpane-persist.js'></script>
@@ -475,7 +490,7 @@ content/buscar.md
 
 
 
-<script src="/dwes/js/main.min.95ef9134e0a6612075234ad1e0660df16d2acdc2d62c83661e0fd62925efc3e7.js" integrity="sha256-le&#43;RNOCmYSB1I0rR4GYN8W0qzcLWLINmHg/WKSXvw&#43;c=" crossorigin="anonymous"></script>
+<script src="/dwes/js/main.min.755a6d235852fb507b21b0e4afd9cb28fa18a9d04dfc195909285087a285702b.js" integrity="sha256-dVptI1hS&#43;1B7IbDkr9nLKPoYqdBN/BlZCShQh6KFcCs=" crossorigin="anonymous"></script>
 
 
 

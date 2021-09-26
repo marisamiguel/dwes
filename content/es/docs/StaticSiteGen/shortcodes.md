@@ -16,13 +16,12 @@ Doc: https://gohugo.io/content-management/shortcodes
 {{% /pageinfo %}}
 
 Ejemplo:
+
 ```go-html-template
 
 {{ < instagram BWNjjyYFxVx >}}
 
 ```
-## Instagram
-{{< instagram BWNjjyYFxVx >}}
 
 ## Twitter
 {{< tweet 877500564405444608 >}}

@@ -56,6 +56,20 @@ Por defecto Hugo asume que las páginas pertenecen al **Content Type** de la sec
 content/posts/_index.md
 ```
 
+Ejemplo de **list.html** 
+
+```go-html-template
+{{ define "main" }}
+    <h2>{{ .Title }}</h2>
+    <ul>
+    {{ range .Pages }}
+        <li><a href=​ "{{ .RelPermalink }}"​ >{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+{{ end }}
+```
+
+
 ## Páginas normales en secciones
 
 * Se muestran conlas **single page templates**

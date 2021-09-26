@@ -1,7 +1,7 @@
 ---
 title: "Plantillas"
 date: 2017-01-05
-weight: 5
+weight: 20
 description: 
 
 ---
@@ -123,3 +123,52 @@ Y también datos del archivo de configuración general:
 {{ end }}
 ```
 
+## Uso de datos de la página
+
+**Archetype** ejemplo
+```toml
+---
+title: ​ " ​ {{​ ​ replace​ ​ .Name​ ​ "-" " " | title }}"
+draft: false
+image: ​ //via.placeholder.com/640x150
+alt_text: ​ " ​ {{​ ​ replace​ ​ .Name​ ​ "-" " " | title }} screenshot"
+summary: ​ " ​ Summary​ ​ of​ ​ the​ ​ {{​ ​ replace​ ​ .Name​ ​ "-" " " | title }} project"
+tech_used:
+- ​ JavaScript
+- ​ CSS
+- ​ HTML
+---
+
+```
+
+**Template**
+```go-html-template
+{{ define "main" }}
+  <div class="project-container">
+    <section class="project-list">
+      <h2>Projects</h2>
+      <ul>
+        {{ range (where .Site.RegularPages "Type" "in" "projects") }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section class="project">
+      <h2>{{ .Title }}</h2>
+
+      {{ .Content }}
+      <img alt="{{ .Params.alt_text }}" src="{{ .Params.image }}">
+
+      <h3>Tech used</h3>
+      <ul>
+        {{ range .Params.tech_used }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+
+    </section>
+
+  </div>
+{{ end }}
+```

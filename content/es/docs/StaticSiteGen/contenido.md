@@ -1,9 +1,9 @@
 ---
 title: "Cómo añadir contenido"
 date: 2017-01-05
-weight: 12
+weight: 10
 description: 
-  
+
 ---
 
 {{% pageinfo %}}
@@ -107,6 +107,34 @@ Esta página y todas las que descienden de la sección `blog` devuelven `images/
 * https://gohugo.io/variables/page/
 
 ## Taxonomías
+https://gohugo.io/content-management/taxonomies
+
 Una taxonomía es una categorización que nos permite clasificar contenido.
 
-Por ejemplo, en una web de Películas podríamos tener actores, directores, estudios, géneros, años, premios ...
+Por ejemplo, en una web de Películas podríamos tener actores, directores, estudios, géneros, años, premios ... 
+
+Por defecto Hugo añade las taxonomías **categories** y **tags**. Se pueden añadir más en **config**
+
+```toml
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+```
+Si se quiere deshabilitar:
+
+```toml
+disableKinds = ['taxonomy', 'term']
+```
+
+En **frontmatter*
+```yaml
+categories:
+- Personal
+- Trabajo
+tags:
+- software
+- html
+```
+
+
+

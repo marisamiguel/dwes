@@ -82,9 +82,10 @@ Versión imprimible multipagina.
 <li>2.3: <a href=#pg-a1cdf8999a1eb166cfac4869b30ae9a2>Cómo añadir contenido</a></li>
 <li>2.4: <a href=#pg-42d2781871bda073e81ead9a376e3468>Plantillas</a></li>
 <li>2.5: <a href=#pg-24831692153d2ad6881121b6fcdf7124>Shortcodes</a></li>
-<li>2.6: <a href=#pg-a7304746b15ac94e89fac1751b4a0239>Búsqueda de páginas</a></li>
-<li>2.7: <a href=#pg-bb37aa76c1122855eaad534ad2f4aba9>Inserción de formularios dinámicos</a></li>
-<li>2.8: <a href=#pg-09be1c9d92839611ca50ed89286c80ea>Configuración GDPR</a></li>
+<li>2.6: <a href=#pg-d98f5ba25f6c7aac1692d69ab2d588b7>Estructura proyecto</a></li>
+<li>2.7: <a href=#pg-a7304746b15ac94e89fac1751b4a0239>Búsqueda de páginas</a></li>
+<li>2.8: <a href=#pg-bb37aa76c1122855eaad534ad2f4aba9>Inserción de formularios dinámicos</a></li>
+<li>2.9: <a href=#pg-09be1c9d92839611ca50ed89286c80ea>Configuración GDPR</a></li>
 </ul>
 <li>3: <a href=#pg-65fa7948f76f2ce62365a1ccd185ebec>Inmersión en Python</a></li>
 <ul>
@@ -735,7 +736,47 @@ Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
 </div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-a7304746b15ac94e89fac1751b4a0239>2.6 - Búsqueda de páginas</h1>
+<h1 id=pg-d98f5ba25f6c7aac1692d69ab2d588b7>2.6 - Estructura proyecto</h1>
+<h2 id=estructura-del-sitio>Estructura del sitio</h2>
+<pre tabindex=0><code>misitio
+├── archetypes
+|   └── default.md
+├── content
+├── data
+├── layouts
+|   ├── _default
+|   |   └── baseof.html
+|   └── index.html
+├── static
+├── themes
+└── config.toml
+</code></pre><h2 id=un-tutorial>Un tutorial</h2>
+<ul>
+<li><a href=https://hugo-mini-course.netlify.app/sections/templating/singlepage/>https://hugo-mini-course.netlify.app/sections/templating/singlepage/</a></li>
+</ul>
+<h2 id=sintaxis-de-templates>Sintaxis de templates</h2>
+<p><strong>Variables</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go-html-template data-lang=go-html-template><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>title</span><span style=color:#000;font-weight:700>&gt;</span><span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#c4a000>.Title</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>title</span><span style=color:#000;font-weight:700>&gt;</span>
+</code></pre></div><p><strong>Contenido md de la página</strong>
+<code>{{.Content}}</code></p>
+<p><strong>Bucles</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go-html-template data-lang=go-html-template><span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#204a87;font-weight:700>range</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#c4a000>.Pages.ByWeight</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span>
+        <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>li</span><span style=color:#000;font-weight:700>&gt;</span>
+            <span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>a</span> <span style=color:#c4a000>href</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;</span><span style=color:#8f5902;font-style:italic>{{</span><span style=color:#c4a000>.Permalink</span><span style=color:#8f5902;font-style:italic>}}</span><span style=color:#4e9a06>&#34;</span><span style=color:#000;font-weight:700>&gt;</span><span style=color:#8f5902;font-style:italic>{{</span><span style=color:#c4a000>.Date.Format</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#4e9a06>&#34;2006-01-02&#34;</span><span style=color:#8f5902;font-style:italic>}}</span> | <span style=color:#8f5902;font-style:italic>{{</span><span style=color:#c4a000>.Title</span><span style=color:#8f5902;font-style:italic>}}</span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>a</span><span style=color:#000;font-weight:700>&gt;</span>
+        <span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>li</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#204a87;font-weight:700>end</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span>
+
+</code></pre></div><h2 id=proceso-de-imágenes>Proceso de imágenes</h2>
+<p><a href=https://gohugo.io/content-management/image-processing/>https://gohugo.io/content-management/image-processing/</a></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#000;font-weight:700>{{</span> <span style=color:#a40000>$</span><span style=color:#000>asset</span> <span style=color:#ce5c00;font-weight:700>:=</span> <span style=color:#000>resources</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Get</span> <span style=color:#4e9a06>&#34;/duck.png&#34;</span> <span style=color:#000;font-weight:700>}}</span>
+<span style=color:#000;font-weight:700>{{</span> <span style=color:#a40000>$</span><span style=color:#000>img</span> <span style=color:#ce5c00;font-weight:700>:=</span> <span style=color:#a40000>$</span><span style=color:#000>asset</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Fit</span> <span style=color:#4e9a06>&#34;600x400&#34;</span> <span style=color:#000;font-weight:700>}}</span>
+<span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>figure</span> <span style=color:#000>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;image is-3by2&#34;</span><span style=color:#000;font-weight:700>&gt;</span>
+  <span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>img</span> <span style=color:#000>alt</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;Yellow Duck&#34;</span> <span style=color:#000>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#4e9a06>&#34;{{ $img.RelPermalink }}&#34;</span> <span style=color:#ce5c00;font-weight:700>/</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#000;font-weight:700>&lt;</span><span style=color:#ce5c00;font-weight:700>/</span><span style=color:#000>figure</span><span style=color:#000;font-weight:700>&gt;</span>
+</code></pre></div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-a7304746b15ac94e89fac1751b4a0239>2.7 - Búsqueda de páginas</h1>
 <div class="pageinfo pageinfo-primary">
 <p><strong>Objetivo</strong>: Introducir un motor de búsqueda en el sitio.</p>
 <ul>
@@ -920,7 +961,7 @@ Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-bb37aa76c1122855eaad534ad2f4aba9>2.7 - Inserción de formularios dinámicos</h1>
+<h1 id=pg-bb37aa76c1122855eaad534ad2f4aba9>2.8 - Inserción de formularios dinámicos</h1>
 <div class="pageinfo pageinfo-primary">
 <p><strong>Objetivo</strong>: Introducir un formulario con envío de correo.</p>
 <ul>
@@ -974,7 +1015,7 @@ Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
 <p><a href=https://gohugo.io/content-management/comments/>https://gohugo.io/content-management/comments/</a></p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-09be1c9d92839611ca50ed89286c80ea>2.8 - Configuración GDPR</h1>
+<h1 id=pg-09be1c9d92839611ca50ed89286c80ea>2.9 - Configuración GDPR</h1>
 <div class="pageinfo pageinfo-primary">
 <p>Configurar Hugo para General Data Protection Regulation (GDPR)</p>
 <p><a href=https://gohugo.io/about/hugo-and-gdpr/>https://gohugo.io/about/hugo-and-gdpr/</a></p>

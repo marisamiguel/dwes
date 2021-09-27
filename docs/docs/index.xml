@@ -549,44 +549,7 @@ Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
 &lt;h2 id="vimeo">Vimeo&lt;/h2>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/146022717" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
-&lt;/div></description></item><item><title>Docs: Algunas notas de repaso</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</guid><description>
-&lt;h2 id="estructura-del-sitio">Estructura del sitio&lt;/h2>
-&lt;pre tabindex="0">&lt;code>misitio
-├── archetypes
-| └── default.md
-├── content
-├── data
-├── layouts
-| ├── _default
-| | └── baseof.html
-| └── index.html
-├── static
-├── themes
-└── config.toml
-&lt;/code>&lt;/pre>&lt;h2 id="un-tutorial">Un tutorial&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://hugo-mini-course.netlify.app/sections/templating/singlepage/">https://hugo-mini-course.netlify.app/sections/templating/singlepage/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="sintaxis-de-templates">Sintaxis de templates&lt;/h2>
-&lt;p>&lt;strong>Variables&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go-html-template" data-lang="go-html-template">&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">title&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#c4a000">.Title&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">title&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Contenido md de la página&lt;/strong>
-&lt;code>{{.Content}}&lt;/code>&lt;/p>
-&lt;p>&lt;strong>Bucles&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go-html-template" data-lang="go-html-template">&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">range&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#c4a000">.Pages.ByWeight&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">li&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">a&lt;/span> &lt;span style="color:#c4a000">href&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#c4a000">.Permalink&lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#c4a000">.Date.Format&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;2006-01-02&amp;#34;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span> | &lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#c4a000">.Title&lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">a&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">li&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">end&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="proceso-de-imágenes">Proceso de imágenes&lt;/h2>
-&lt;p>&lt;a href="https://gohugo.io/content-management/image-processing/">https://gohugo.io/content-management/image-processing/&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="color:#000;font-weight:bold">{{&lt;/span> &lt;span style="color:#a40000">$&lt;/span>&lt;span style="color:#000">asset&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">resources&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/duck.png&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">}}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{{&lt;/span> &lt;span style="color:#a40000">$&lt;/span>&lt;span style="color:#000">img&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#a40000">$&lt;/span>&lt;span style="color:#000">asset&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Fit&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;600x400&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">}}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">figure&lt;/span> &lt;span style="color:#000">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;image is-3by2&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">img&lt;/span> &lt;span style="color:#000">alt&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Yellow Duck&amp;#34;&lt;/span> &lt;span style="color:#000">src&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;{{ $img.RelPermalink }}&amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">/&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">/&lt;/span>&lt;span style="color:#000">figure&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tema-sencillo-pare-test">Tema sencillo pare test&lt;/h2>
-&lt;p>&lt;a href="https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme">https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme&lt;/a>&lt;/p></description></item><item><title>Docs: Búsqueda de páginas</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/</guid><description>
+&lt;/div></description></item><item><title>Docs: Búsqueda de páginas</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/busqueda/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>&lt;strong>Objetivo&lt;/strong>: Introducir un motor de búsqueda en el sitio.&lt;/p>
 &lt;ul>
@@ -806,7 +769,44 @@ Your message:
 &lt;/ol>
 &lt;h2 id="comentarios">Comentarios&lt;/h2>
 &lt;p>Inserción de comentarios dinámicos en las páginas.&lt;/p>
-&lt;p>&lt;a href="https://gohugo.io/content-management/comments/">https://gohugo.io/content-management/comments/&lt;/a>&lt;/p></description></item><item><title>Docs: Configuración GDPR</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/privacidad/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/privacidad/</guid><description>
+&lt;p>&lt;a href="https://gohugo.io/content-management/comments/">https://gohugo.io/content-management/comments/&lt;/a>&lt;/p></description></item><item><title>Docs: Algunas notas de repaso</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</guid><description>
+&lt;h2 id="estructura-del-sitio">Estructura del sitio&lt;/h2>
+&lt;pre tabindex="0">&lt;code>misitio
+├── archetypes
+| └── default.md
+├── content
+├── data
+├── layouts
+| ├── _default
+| | └── baseof.html
+| └── index.html
+├── static
+├── themes
+└── config.toml
+&lt;/code>&lt;/pre>&lt;h2 id="un-tutorial">Un tutorial&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://hugo-mini-course.netlify.app/sections/templating/singlepage/">https://hugo-mini-course.netlify.app/sections/templating/singlepage/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="sintaxis-de-templates">Sintaxis de templates&lt;/h2>
+&lt;p>&lt;strong>Variables&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go-html-template" data-lang="go-html-template">&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">title&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#c4a000">.Title&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">title&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Contenido md de la página&lt;/strong>
+&lt;code>{{.Content}}&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Bucles&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go-html-template" data-lang="go-html-template">&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">range&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#c4a000">.Pages.ByWeight&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">li&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">a&lt;/span> &lt;span style="color:#c4a000">href&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#c4a000">.Permalink&lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#c4a000">.Date.Format&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;2006-01-02&amp;#34;&lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span> | &lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#c4a000">.Title&lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">a&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;/&lt;/span>&lt;span style="color:#204a87;font-weight:bold">li&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">{{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">end&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">}}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="proceso-de-imágenes">Proceso de imágenes&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io/content-management/image-processing/">https://gohugo.io/content-management/image-processing/&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="color:#000;font-weight:bold">{{&lt;/span> &lt;span style="color:#a40000">$&lt;/span>&lt;span style="color:#000">asset&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">resources&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/duck.png&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">}}&lt;/span>
+&lt;span style="color:#000;font-weight:bold">{{&lt;/span> &lt;span style="color:#a40000">$&lt;/span>&lt;span style="color:#000">img&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#a40000">$&lt;/span>&lt;span style="color:#000">asset&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Fit&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;600x400&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">}}&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">figure&lt;/span> &lt;span style="color:#000">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;image is-3by2&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#000">img&lt;/span> &lt;span style="color:#000">alt&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Yellow Duck&amp;#34;&lt;/span> &lt;span style="color:#000">src&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;{{ $img.RelPermalink }}&amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">/&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">/&lt;/span>&lt;span style="color:#000">figure&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tema-sencillo-pare-test">Tema sencillo pare test&lt;/h2>
+&lt;p>&lt;a href="https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme">https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme&lt;/a>&lt;/p></description></item><item><title>Docs: Configuración GDPR</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/privacidad/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/privacidad/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Configurar Hugo para General Data Protection Regulation (GDPR)&lt;/p>
 &lt;p>&lt;a href="https://gohugo.io/about/hugo-and-gdpr/">https://gohugo.io/about/hugo-and-gdpr/&lt;/a>&lt;/p>

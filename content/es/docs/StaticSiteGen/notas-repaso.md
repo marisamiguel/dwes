@@ -1,7 +1,7 @@
 ---
 title: "Algunas notas de repaso"
 date: 2021-09-27
-weight: 40
+weight: 99
 description: 
 
 ---

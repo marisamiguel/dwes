@@ -549,7 +549,7 @@ Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
 &lt;h2 id="vimeo">Vimeo&lt;/h2>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/146022717" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
-&lt;/div></description></item><item><title>Docs: Estructura proyecto</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</guid><description>
+&lt;/div></description></item><item><title>Docs: Algunas notas de repaso</title><link>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/</guid><description>
 &lt;h2 id="estructura-del-sitio">Estructura del sitio&lt;/h2>
 &lt;pre tabindex="0">&lt;code>misitio
 ├── archetypes

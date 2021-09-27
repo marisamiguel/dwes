@@ -57,3 +57,7 @@ https://gohugo.io/content-management/image-processing/
   <img alt="Yellow Duck" src="{{ $img.RelPermalink }}" />
 </figure>
 ```
+
+## Tema sencillo pare test
+
+https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme

@@ -2,8 +2,7 @@
 title: "Algunas notas de repaso"
 date: 2021-09-27
 weight: 99
-description: 
-
+description:
 ---
 
 ## Estructura del sitio
@@ -23,20 +22,23 @@ misitio
 └── config.toml
 ```
 
-## Un tutorial 
-* https://hugo-mini-course.netlify.app/sections/templating/singlepage/
+## Un tutorial
 
+- https://hugo-mini-course.netlify.app/sections/templating/singlepage/
 
 ## Sintaxis de templates
 
 **Variables**
+
 ```go-html-template
 <title>{{ .Title }}</title>
 ```
+
 **Contenido md de la página**
- ```{{.Content}}```
+`{{.Content}}`
 
 **Bucles**
+
 ```go-html-template
 {{ range .Pages.ByWeight }}
         <li>
@@ -61,3 +63,32 @@ https://gohugo.io/content-management/image-processing/
 ## Tema sencillo pare test
 
 https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme
+
+## Trabajando con ficheros de datos:
+
+`data/socialmedia.json`
+
+```json
+{ ​ "accounts"​ :
+  [
+    {
+      "name"​ : ​ "Twitter"​ ,
+      "url"​ : ​ "https://twitter.com/bphogan"
+    },
+    {
+      "name"​ : ​ "LinkedIn"​ ,
+      "url"​ : ​ "https://linkedin.com/in/bphogan"
+    }
+  ]
+}
+```
+
+
+```go-html-template
+<h3>Social Media</h3>
+<ul>
+{{ range .Site.Data.socialmedia.accounts }}
+<li><a href=​ "{{ .url }}"​ >{{ .name }}</a></li>
+{{ end }}
+</ul>
+```

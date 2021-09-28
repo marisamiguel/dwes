@@ -1014,6 +1014,27 @@ Los partials nos ayudan a reutilizar el código y a no repetir fragmentos.
 <span style=color:#000;font-weight:700>&lt;</span><span style=color:#ce5c00;font-weight:700>/</span><span style=color:#000>figure</span><span style=color:#000;font-weight:700>&gt;</span>
 </code></pre></div><h2 id=tema-sencillo-pare-test>Tema sencillo pare test</h2>
 <p><a href=https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme>https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme</a></p>
+<h2 id=trabajando-con-ficheros-de-datos>Trabajando con ficheros de datos:</h2>
+<p><code>data/socialmedia.json</code></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=color:#000;font-weight:700>{</span> <span style=color:#a40000>​</span> <span style=color:#204a87;font-weight:700>&#34;accounts&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>:</span>
+  <span style=color:#000;font-weight:700>[</span>
+    <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#204a87;font-weight:700>&#34;name&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#a40000>​</span> <span style=color:#4e9a06>&#34;Twitter&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>,</span>
+      <span style=color:#204a87;font-weight:700>&#34;url&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#a40000>​</span> <span style=color:#4e9a06>&#34;https://twitter.com/bphogan&#34;</span>
+    <span style=color:#000;font-weight:700>},</span>
+    <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#204a87;font-weight:700>&#34;name&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#a40000>​</span> <span style=color:#4e9a06>&#34;LinkedIn&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>,</span>
+      <span style=color:#204a87;font-weight:700>&#34;url&#34;</span><span style=color:#a40000>​</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#a40000>​</span> <span style=color:#4e9a06>&#34;https://linkedin.com/in/bphogan&#34;</span>
+    <span style=color:#000;font-weight:700>}</span>
+  <span style=color:#000;font-weight:700>]</span>
+<span style=color:#000;font-weight:700>}</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go-html-template data-lang=go-html-template><span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>h3</span><span style=color:#000;font-weight:700>&gt;</span>Social Media<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>h3</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>ul</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#204a87;font-weight:700>range</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#c4a000>.Site.Data.socialmedia.accounts</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span>
+<span style=color:#000;font-weight:700>&lt;</span><span style=color:#204a87;font-weight:700>li</span><span style=color:#000;font-weight:700>&gt;&lt;</span><span style=color:#204a87;font-weight:700>a</span> <span style=color:#c4a000>href</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>​</span> <span style=color:#a40000>&#34;</span><span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#c4a000>.url</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span><span style=color:#a40000>&#34;​</span> <span style=color:#000;font-weight:700>&gt;</span><span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#c4a000>.name</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span><span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>a</span><span style=color:#000;font-weight:700>&gt;&lt;/</span><span style=color:#204a87;font-weight:700>li</span><span style=color:#000;font-weight:700>&gt;</span>
+<span style=color:#8f5902;font-style:italic>{{</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#204a87;font-weight:700>end</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#8f5902;font-style:italic>}}</span>
+<span style=color:#000;font-weight:700>&lt;/</span><span style=color:#204a87;font-weight:700>ul</span><span style=color:#000;font-weight:700>&gt;</span>
+</code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-09be1c9d92839611ca50ed89286c80ea>2.9 - Configuración GDPR</h1>

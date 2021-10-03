@@ -14,6 +14,7 @@ description:
 
 {{% /pageinfo %}}
 
+
 Alternativas a la búsqueda en sitios estáticos. Para sitios con muchas páginas, considerar [Algolia](https://www.algolia.com/)
 
 ## Búsqueda en nuestro sitio con `fuse.js`

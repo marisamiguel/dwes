@@ -92,3 +92,27 @@ https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme
 {{ end }}
 </ul>
 ```
+
+**Ejemplo csv remoto**
+```go-html-template
+<table>
+    <thead>
+      <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{ $url := "https://example.com/finance/employee-salaries.csv" }}
+    {{ $sep := "," }}
+    {{ range $i, $r := getCSV $sep $url }}
+      <tr>
+        <td>{{ index $r 0 }}</td>
+        <td>{{ index $r 1 }}</td>
+        <td>{{ index $r 2 }}</td>
+      </tr>
+    {{ end }}
+    </tbody>
+  </table>
+  ```

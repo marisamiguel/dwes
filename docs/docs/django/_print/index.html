@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="https://lmorillas.github.io/dwes/docs/inmersi%C3%B3n-en-python/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://lmorillas.github.io/dwes/docs/inmersi%C3%B3n-en-python/index.xml">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="https://lmorillas.github.io/dwes/docs/django/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://lmorillas.github.io/dwes/docs/django/index.xml">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -19,22 +19,22 @@
 <link rel="icon" type="image/png" href="/dwes/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/dwes/favicons/android-192x192.png" sizes="192x192">
 
-<title>Inmersión en Python | Desarrollo Web Entorno Servidor</title>
+<title>Django | Desarrollo Web Entorno Servidor</title>
 
 
-  <meta name="description" content="Inmersión a la programación con Python
+  <meta name="description" content="Desarrollo web con Django: &#34;The web framework for perfectionists with deadlines&#34;
 ">
-<meta property="og:title" content="Inmersión en Python" />
-<meta property="og:description" content="Inmersión a la programación con Python
+<meta property="og:title" content="Django" />
+<meta property="og:description" content="Desarrollo web con Django: &#34;The web framework for perfectionists with deadlines&#34;
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://lmorillas.github.io/dwes/docs/inmersi%C3%B3n-en-python/" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="og:url" content="https://lmorillas.github.io/dwes/docs/django/" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
-<meta itemprop="name" content="Inmersión en Python">
-<meta itemprop="description" content="Inmersión a la programación con Python
+<meta itemprop="name" content="Django">
+<meta itemprop="description" content="Desarrollo web con Django: &#34;The web framework for perfectionists with deadlines&#34;
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Inmersión en Python"/>
-<meta name="twitter:description" content="Inmersión a la programación con Python
+<meta name="twitter:title" content="Django"/>
+<meta name="twitter:description" content="Desarrollo web con Django: &#34;The web framework for perfectionists with deadlines&#34;
 "/>
 
 
@@ -110,14 +110,14 @@
 Versión imprimible multipagina.
 <a href="#" onclick="print();return false;">Haga click aquí para imprimir</a>.
 </p><p>
-<a href="/dwes/docs/inmersi%C3%B3n-en-python/">Volver a la vista normal de esta página</a>.
+<a href="/dwes/docs/django/">Volver a la vista normal de esta página</a>.
 </p>
 </div>
 
 
 
-<h1 class="title">Inmersión en Python</h1>
-<div class="lead">Inmersión a la programación con Python</div>
+<h1 class="title">Django</h1>
+<div class="lead">Desarrollo web con Django: &ldquo;The web framework for perfectionists with deadlines&rdquo;</div>
 
 
 
@@ -130,68 +130,236 @@ Versión imprimible multipagina.
   
 
   
+    
+    
+	
+<li>1: <a href="#pg-e59ea48a29e5573048bff80b7d69ac7b">Instalación</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-7689592482baf6e198edc0b9f14914ad">Creación de un proyecto y una app</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-f7ec2ca618dc22ad79a654aabf33d978">Introducción a HTTP</a></li>
+
+
+    
+  
 
     </ul>
 
 
 <div class="content">
       
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-e59ea48a29e5573048bff80b7d69ac7b">1 - Instalación</h1>
+    <div class="lead">Instalación entorno</div>
+	
 
 <div class="pageinfo pageinfo-primary">
-<p>Primeros pasos:</p>
+<p>Instalación y configuración del entorno para desarrollo:</p>
 <ul>
-<li>Instalar python (windows)</li>
-<li>Instalar pip <a href="https://pip.pypa.io/en/stable/installation/">https://pip.pypa.io/en/stable/installation/</a></li>
-<li>Instalar extensión VS Code Python</li>
-<li>Algunas extensiones interesantes para iniciar</li>
+<li><a href="https://docs.djangoproject.com/en/3.2/intro/install/">https://docs.djangoproject.com/en/3.2/intro/install/</a></li>
 </ul>
 
 </div>
 
-<h2 id="documentación-básica">Documentación básica</h2>
+<h2 id="instalación-de-python">Instalación de Python</h2>
 <ul>
-<li><a href="https://www.python.org/">https://www.python.org/</a></li>
-<li><a href="https://docs.python.org/3/">https://docs.python.org/3/</a></li>
+<li>Versión de python? <a href="https://docs.djangoproject.com/en/3.2/faq/install/#faq-python-version-support">https://docs.djangoproject.com/en/3.2/faq/install/#faq-python-version-support</a></li>
+<li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
 </ul>
-<h2 id="documentación-de-instalación">Documentación de instalación</h2>
+<h2 id="configuración-de-una-base-de-datos">Configuración de una base de datos</h2>
+<p>Al inicio no será necesario. Luego podremos usar PostgreSQL, MariaDB, MySQL, Oracle (<a href="https://docs.djangoproject.com/en/3.2/topics/install/#database-installation">https://docs.djangoproject.com/en/3.2/topics/install/#database-installation</a>)</p>
+<h2 id="entorno-virtual">Entorno virtual</h2>
+<p>Creamos carpeta para el proyecto y dentro de esa carpeta:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Linux</span>
+sudo apt-get install python3-venv    <span style="color:#8f5902;font-style:italic"># Si es necesario instalamos este módulo</span>
+python3 -m venv env
+
+<span style="color:#8f5902;font-style:italic"># macOS</span>
+python3 -m venv env
+
+<span style="color:#8f5902;font-style:italic"># Windows</span>
+python -m venv env
+</code></pre></div><p>Activar entorno:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Windows</span>
+env<span style="color:#4e9a06">\S</span>cripts<span style="color:#4e9a06">\a</span>ctivate.bat
+<span style="color:#8f5902;font-style:italic"># linux/mac</span>
+<span style="color:#204a87">source</span> tutorial-env/bin/activate
+
+</code></pre></div><h2 id="instalación-de-django">Instalación de Django</h2>
+<p>Instalación de una versión oficial: <a href="https://docs.djangoproject.com/en/3.2/topics/install/#installing-official-release">https://docs.djangoproject.com/en/3.2/topics/install/#installing-official-release</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Linux / Mac</span>
+$ pip install Django
+
+<span style="color:#8f5902;font-style:italic"># Windows</span>
+...<span style="color:#4e9a06">\&gt;</span> py -m pip install Django
+
+</code></pre></div><h2 id="comprobación">Comprobación</h2>
+<p>Usa el intérprete de python</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">django</span>
+<span style="color:#ce5c00;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#204a87">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">django</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get_version</span><span style="color:#000;font-weight:bold">())</span>
+<span style="color:#0000cf;font-weight:bold">3.2</span>
+</code></pre></div><h2 id="configuración-del-entorno-visual-studio-code">Configuración del entorno (Visual Studio Code)</h2>
 <ul>
-<li><a href="https://code.visualstudio.com/docs/python/python-tutorial">https://code.visualstudio.com/docs/python/python-tutorial</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/tutorial-django">https://code.visualstudio.com/docs/python/tutorial-django</a></li>
+<li><a href="https://docs.microsoft.com/es-es/visualstudio/python/learn-django-in-visual-studio-step-01-project-and-solution">https://docs.microsoft.com/es-es/visualstudio/python/learn-django-in-visual-studio-step-01-project-and-solution</a></li>
 </ul>
-<h2 id="introducción">Introducción</h2>
+<h2 id="browser-para-sqlite">Browser para SQLite</h2>
 <ul>
-<li><a href="https://docs.python.org/es/3/tutorial/introduction.html">https://docs.python.org/es/3/tutorial/introduction.html</a></li>
-</ul>
-<h2 id="cuadernos-de-tutoriales-y-ejercicios">Cuadernos de tutoriales y ejercicios</h2>
-<ul>
-<li><a href="https://github.com/lmorillas/Introduccion-Python-3">https://github.com/lmorillas/Introduccion-Python-3</a></li>
-</ul>
-<h3 id="secuencia-propuesta">Secuencia propuesta:</h3>
-<ul>
-<li>Strings</li>
-<li>Numbers</li>
-<li>Conditionals</li>
-<li>Listas</li>
-<li>Dictionaries</li>
-<li>For loops</li>
-<li>Functions</li>
-<li>File I/O</li>
-<li>Classes</li>
-<li>Modules y packages</li>
-<li>Virtual environment</li>
+<li><a href="https://sqlitebrowser.org/dl/">https://sqlitebrowser.org/dl/</a></li>
 </ul>
 
 </div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7689592482baf6e198edc0b9f14914ad">2 - Creación de un proyecto y una app</h1>
+    <div class="lead">Creación de un proyecto y una app</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación</p>
+<ul>
+<li><a href="https://docs.djangoproject.com/es/3.2/intro/tutorial01/">https://docs.djangoproject.com/es/3.2/intro/tutorial01/</a></li>
+</ul>
+
+</div>
+
+<h2 id="creación-de-proyecto">Creación de proyecto</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ django-admin startproject bookr
+</code></pre></div><pre tabindex="0"><code>bookr/
+    manage.py
+    bookr/
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 manage.py runserver
+</code></pre></div><p>Parar con <code>Ctrl+C</code></p>
+<h2 id="creación-aplicación">Creación aplicación</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 manage.py startapp reviews
+</code></pre></div><h2 id="modelo-vista-template">Modelo Vista Template</h2>
+<p>Diseño común: patrón Modelo Vista Controlador (<strong>MVC</strong>)
+Django usa: <strong>MVT</strong>: Permite que las templates puedan desarrollarse en cualquier lenguaje:</p>
+<ul>
+<li>Modelos y Vistas se escriben en <strong>Python</strong></li>
+<li>Templates se escriben en <strong>html</strong></li>
+</ul>
+
 </div>
 
 
-  
-  
-  
-  
 
+    
+	
   
-  
+    
+    
+	
+    
 
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f7ec2ca618dc22ad79a654aabf33d978">3 - Introducción a HTTP</h1>
+    <div class="lead">HTTP requests &amp; responses</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">https://developer.mozilla.org/en-US/docs/Web/HTTP</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview</a></li>
+</ul>
+
+</div>
+
+<h2 id="http">HTTP</h2>
+<p>Djando procesa peticiones HTTP y genera respuestas HTTP</p>
+<h3 id="petición">Petición</h3>
+<pre tabindex="0"><code>GET / HTTP/1.1
+Host: www.cpilosenlaces.com
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: es-ES,es;q=0.9,en;q=0.8,gl;q=0.7,ca;q=0.6
+Cookie: _ga=GA1.2.35175891.163;
+</code></pre><p>Verbos: GET, POST, PUT, DELETE</p>
+<h3 id="respuesta">Respuesta</h3>
+<pre tabindex="0"><code>HTTP/1.1 200 OK
+Server: nginx/1.14.1
+Date: Thu, 21 Oct 2021 10:09:34 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 15482
+Connection: keep-alive
+Vary: Accept-Encoding
+Last-Modified: Thu, 21 Oct 2021 09:54:43 GMT
+ETag: &quot;3a7f-5xxx9e24f3b6f&quot;
+Accept-Ranges: bytes
+Cache-Control: max-age=2708
+Expires: Thu, 21 Oct 2021 10:54:43 GMT
+Content-Encoding: gzip
+
+</code></pre><h3 id="status-codes">Status Codes</h3>
+<ul>
+<li><a href="https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP">https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">https://developer.mozilla.org/en-US/docs/Web/HTTP/Status</a></li>
+</ul>
+<ol>
+<li>Respuestas informativas (100–199)</li>
+<li>Respuestas satisfactorias (200–299)</li>
+<li>Redirecciones (300–399)</li>
+<li>Errores de los clientes (400–499)</li>
+<li>Errores de los servidores (500–599)</li>
+</ol>
+
+</div>
+
+
+
+    
+	
   
 
 

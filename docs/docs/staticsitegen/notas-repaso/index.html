@@ -40,7 +40,7 @@ Bucles
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lmorillas.github.io/dwes/docs/staticsitegen/notas-repaso/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-09-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-09-28T21:50:53+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="article:modified_time" content="2021-10-21T10:24:12+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
 <meta itemprop="name" content="Algunas notas de repaso">
 <meta itemprop="description" content="Estructura del sitio misitio ├── archetypes | └── default.md ├── content ├── data ├── layouts | ├── _default | | └── baseof.html | └── index.html ├── static ├── themes └── config.toml Un tutorial  https://hugo-mini-course.netlify.app/sections/templating/singlepage/  Sintaxis de templates Variables
@@ -48,8 +48,8 @@ Bucles
 Bucles
 {{range.Pages.ByWeight}} &lt;li&gt; &lt;a href=&#34;{{.Permalink}}&#34;&gt;{{.Date.Format&#34;2006-01-02&#34;}} | {{.Title}}&lt;/a&gt; &lt;/li&gt; {{end}} Proceso de imágenes https://gohugo.io/content-management/image-processing/
 {{ $asset := resources.Get &#34;/duck.png&#34; }} {{ $img := $asset.Fit &#34;600x400&#34; }} &lt;figure class=&#34;image is-3by2&#34;&gt; &lt;img alt=&#34;Yellow Duck&#34; src=&#34;{{ $img."><meta itemprop="datePublished" content="2021-09-27T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-09-28T21:50:53+02:00" />
-<meta itemprop="wordCount" content="131">
+<meta itemprop="dateModified" content="2021-10-21T10:24:12+02:00" />
+<meta itemprop="wordCount" content="154">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Algunas notas de repaso"/>
 <meta name="twitter:description" content="Estructura del sitio misitio ├── archetypes | └── default.md ├── content ├── data ├── layouts | ├── _default | | └── baseof.html | └── index.html ├── static ├── themes └── config.toml Un tutorial  https://hugo-mini-course.netlify.app/sections/templating/singlepage/  Sintaxis de templates Variables
@@ -124,40 +124,85 @@ Bucles
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dwesdocs-li">
   <a href="/dwes/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-dwesdocs"><span class="">Recursos</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocspresentacic3b3n-li">
-  <a href="/dwes/docs/presentaci%C3%B3n/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dwesdocspresentacic3b3n"><span class="">Presentación</span></a>
+  <input type="checkbox" id="m-dwesdocspresentacic3b3n-check"/>
+  <label for="m-dwesdocspresentacic3b3n-check"><a href="/dwes/docs/presentaci%C3%B3n/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocspresentacic3b3n"><span class="">Presentación</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dwesdocsstaticsitegen-li">
-  <a href="/dwes/docs/staticsitegen/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dwesdocsstaticsitegen"><span class="">Generadores de Sitios Estáticos</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegen-check" checked/>
+  <label for="m-dwesdocsstaticsitegen-check"><a href="/dwes/docs/staticsitegen/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsstaticsitegen"><span class="">Generadores de Sitios Estáticos</span></a></label>
+  
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenprimeratarea-li">
-  <a href="/dwes/docs/staticsitegen/primeratarea/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenprimeratarea"><span class="">Primera tarea</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegenprimeratarea-check"/>
+  <label for="m-dwesdocsstaticsitegenprimeratarea-check"><a href="/dwes/docs/staticsitegen/primeratarea/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenprimeratarea"><span class="">Primera tarea</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegensegundatarea-li">
-  <a href="/dwes/docs/staticsitegen/segundatarea/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegensegundatarea"><span class="">Segunda tarea</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegensegundatarea-check"/>
+  <label for="m-dwesdocsstaticsitegensegundatarea-check"><a href="/dwes/docs/staticsitegen/segundatarea/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegensegundatarea"><span class="">Segunda tarea</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegencontenido-li">
-  <a href="/dwes/docs/staticsitegen/contenido/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegencontenido"><span class="">Cómo añadir contenido</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegencontenido-check"/>
+  <label for="m-dwesdocsstaticsitegencontenido-check"><a href="/dwes/docs/staticsitegen/contenido/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegencontenido"><span class="">Cómo añadir contenido</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegentemplates-li">
-  <a href="/dwes/docs/staticsitegen/templates/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegentemplates"><span class="">Plantillas</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegentemplates-check"/>
+  <label for="m-dwesdocsstaticsitegentemplates-check"><a href="/dwes/docs/staticsitegen/templates/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegentemplates"><span class="">Plantillas</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenshortcodes-li">
-  <a href="/dwes/docs/staticsitegen/shortcodes/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenshortcodes"><span class="">Shortcodes</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegenshortcodes-check"/>
+  <label for="m-dwesdocsstaticsitegenshortcodes-check"><a href="/dwes/docs/staticsitegen/shortcodes/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenshortcodes"><span class="">Shortcodes</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegendatos-li">
-  <a href="/dwes/docs/staticsitegen/datos/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegendatos"><span class="">Trabajo con datos</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegendatos-check"/>
+  <label for="m-dwesdocsstaticsitegendatos-check"><a href="/dwes/docs/staticsitegen/datos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegendatos"><span class="">Trabajo con datos</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenbusqueda-li">
-  <a href="/dwes/docs/staticsitegen/busqueda/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenbusqueda"><span class="">Búsqueda de páginas</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegenbusqueda-check"/>
+  <label for="m-dwesdocsstaticsitegenbusqueda-check"><a href="/dwes/docs/staticsitegen/busqueda/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenbusqueda"><span class="">Búsqueda de páginas</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenformulario-li">
-  <a href="/dwes/docs/staticsitegen/formulario/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenformulario"><span class="">Inserción de formularios dinámicos</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegenformulario-check"/>
+  <label for="m-dwesdocsstaticsitegenformulario-check"><a href="/dwes/docs/staticsitegen/formulario/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenformulario"><span class="">Inserción de formularios dinámicos</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dwesdocsstaticsitegennotas-repaso-li">
-  <a href="/dwes/docs/staticsitegen/notas-repaso/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegennotas-repaso"><span class="td-sidebar-nav-active-item">Algunas notas de repaso</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegennotas-repaso-check" checked/>
+  <label for="m-dwesdocsstaticsitegennotas-repaso-check"><a href="/dwes/docs/staticsitegen/notas-repaso/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegennotas-repaso"><span class="td-sidebar-nav-active-item">Algunas notas de repaso</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegenprivacidad-li">
-  <a href="/dwes/docs/staticsitegen/privacidad/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenprivacidad"><span class="">Configuración GDPR</span></a>
+  <input type="checkbox" id="m-dwesdocsstaticsitegenprivacidad-check"/>
+  <label for="m-dwesdocsstaticsitegenprivacidad-check"><a href="/dwes/docs/staticsitegen/privacidad/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegenprivacidad"><span class="">Configuración GDPR</span></a></label>
+  
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsinmersic3b3n-en-python-li">
-  <a href="/dwes/docs/inmersi%C3%B3n-en-python/" title="Inmersión en Python" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-dwesdocsinmersic3b3n-en-python"><span class="">Python</span></a>
+  <input type="checkbox" id="m-dwesdocsinmersic3b3n-en-python-check"/>
+  <label for="m-dwesdocsinmersic3b3n-en-python-check"><a href="/dwes/docs/inmersi%C3%B3n-en-python/" title="Inmersión en Python" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsinmersic3b3n-en-python"><span class="">Python</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dwesdocsdjango-li">
+  <input type="checkbox" id="m-dwesdocsdjango-check"/>
+  <label for="m-dwesdocsdjango-check"><a href="/dwes/docs/django/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsdjango"><span class="">Django</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsdjangoinstalacion-li">
+  <input type="checkbox" id="m-dwesdocsdjangoinstalacion-check"/>
+  <label for="m-dwesdocsdjangoinstalacion-check"><a href="/dwes/docs/django/instalacion/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjangoinstalacion"><span class="">Instalación</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsdjangocreacion-proyecto-app-li">
+  <input type="checkbox" id="m-dwesdocsdjangocreacion-proyecto-app-check"/>
+  <label for="m-dwesdocsdjangocreacion-proyecto-app-check"><a href="/dwes/docs/django/creacion-proyecto-app/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjangocreacion-proyecto-app"><span class="">Creación de un proyecto y una app</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsdjangointroduccion-http-li">
+  <input type="checkbox" id="m-dwesdocsdjangointroduccion-http-check"/>
+  <label for="m-dwesdocsdjangointroduccion-http-check"><a href="/dwes/docs/django/introduccion-http/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjangointroduccion-http"><span class="">Introducción a HTTP</span></a></label>
+  
+</li>
+  </ul>
 </li>
   </ul>
 </li>
@@ -166,7 +211,60 @@ Bucles
 </div>
 
           </aside>
-          
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#estructura-del-sitio">Estructura del sitio</a></li>
+    <li><a href="#un-tutorial">Un tutorial</a></li>
+    <li><a href="#sintaxis-de-templates">Sintaxis de templates</a></li>
+    <li><a href="#proceso-de-imágenes">Proceso de imágenes</a></li>
+    <li><a href="#tema-sencillo-pare-test">Tema sencillo pare test</a></li>
+    <li><a href="#trabajando-con-ficheros-de-datos">Trabajando con ficheros de datos:</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      
+        <h5 class="taxonomy-title">Tags</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="https://lmorillas.github.io/dwes/tags/django/" data-taxonomy-term="django"><span class="taxonomy-label">django</span><span class="taxonomy-count">2</span></a></li>
+        
+          <li><a class="taxonomy-term" href="https://lmorillas.github.io/dwes/tags/http/" data-taxonomy-term="http"><span class="taxonomy-label">http</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="https://lmorillas.github.io/dwes/tags/instalaci%C3%B3n/" data-taxonomy-term="instalaci%C3%B3n"><span class="taxonomy-label">instalación</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+	
+
+          </aside>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
   
@@ -282,14 +380,35 @@ Bucles
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">​</span> <span style="color:#a40000">&#34;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.url</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#a40000">&#34;​</span> <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.name</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
 <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
 <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><strong>Ejemplo csv remoto</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">table</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">thead</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">tr</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">th</span><span style="color:#000;font-weight:bold">&gt;</span>Name<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">th</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">th</span><span style="color:#000;font-weight:bold">&gt;</span>Position<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">th</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">th</span><span style="color:#000;font-weight:bold">&gt;</span>Salary<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">th</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">tr</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">thead</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">tbody</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$url</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;https://example.com/finance/employee-salaries.csv&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+    <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$sep</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;,&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+    <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">range</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$i</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$r</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">getCSV</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$sep</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$url</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">tr</span><span style="color:#000;font-weight:bold">&gt;</span>
+        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">td</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">index</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$r</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">td</span><span style="color:#000;font-weight:bold">&gt;</span>
+        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">td</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">index</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$r</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">td</span><span style="color:#000;font-weight:bold">&gt;</span>
+        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">td</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">index</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$r</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">2</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">td</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">tr</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">tbody</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">table</span><span style="color:#000;font-weight:bold">&gt;</span>
 </code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
 
     Última modificación
-    September 28, 2021
-    : <a  href="https://github.com/google/docsy-example/commit/50bda4081d3f5398db06c349adae4f3897b41e6b">update datos (50bda40)</a>
+    October 21, 2021
+    : <a  href="https://github.com/lmorillas/dwes/commit/b9b4ea1651a2c8380ab61975e8b382dc4ffa2d9b">indices (b9b4ea1)</a>
 
 </div>
 

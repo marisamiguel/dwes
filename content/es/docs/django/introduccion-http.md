@@ -58,3 +58,4 @@ Content-Encoding: gzip
 1. Redirecciones (300–399)
 1. Errores de los clientes (400–499)
 1. Errores de los servidores (500–599)
+

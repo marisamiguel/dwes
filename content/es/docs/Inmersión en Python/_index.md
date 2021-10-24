@@ -42,5 +42,19 @@ Primeros pasos:
 ## Introducción
 * https://docs.python.org/es/3/tutorial/introduction.html 
 
-## Cuadernos de ejercicios
-* https://github.com/lmorillas/learn-python3
+## Cuadernos de tutoriales y ejercicios
+* https://github.com/lmorillas/Introduccion-Python-3
+
+### Secuencia propuesta:
+* Strings
+* Numbers
+* Conditionals
+* Listas
+* Dictionaries
+* For loops
+* Functions
+* File I/O
+* Classes
+* Modules y packages
+* Virtual environment
+  

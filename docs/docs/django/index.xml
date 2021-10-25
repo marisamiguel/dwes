@@ -29,6 +29,7 @@
 &lt;p&gt;Instalación y configuración del entorno para desarrollo:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/3.2/intro/install/&#34;&gt;https://docs.djangoproject.com/en/3.2/intro/install/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/docs/python/tutorial-django&#34;&gt;https://code.visualstudio.com/docs/python/tutorial-django&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
@@ -97,16 +98,18 @@ $ pip install Django
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;Documentación&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website&#34;&gt;https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.djangoproject.com/es/3.2/intro/tutorial01/&#34;&gt;https://docs.djangoproject.com/es/3.2/intro/tutorial01/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Objetivo: &lt;strong&gt;Biblioteca&lt;/strong&gt; &lt;a href=&#34;https://developer.mozilla.org/es/docs/Learn/Server-side/Django/skeleton_website&#34;&gt;https://developer.mozilla.org/es/docs/Learn/Server-side/Django/skeleton_website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;creación-de-proyecto&#34;&gt;Creación de proyecto&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ django-admin startproject bookr
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bookr/
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ django-admin startproject biblioteca
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;biblioteca/
     manage.py
-    bookr/
+    bibliioteca/
         __init__.py
         settings.py
         urls.py
@@ -115,7 +118,7 @@ $ pip install Django
 &lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python3 manage.py runserver
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Parar con &lt;code&gt;Ctrl+C&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;creación-aplicación&#34;&gt;Creación aplicación&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python3 manage.py startapp reviews
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python3 manage.py startapp catalogo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;modelo-vista-template&#34;&gt;Modelo Vista Template&lt;/h2&gt;
 &lt;p&gt;Diseño común: patrón Modelo Vista Controlador (&lt;strong&gt;MVC&lt;/strong&gt;)
 Django usa: &lt;strong&gt;MVT&lt;/strong&gt;: Permite que las templates puedan desarrollarse en cualquier lenguaje:&lt;/p&gt;
@@ -186,6 +189,53 @@ Content-Encoding: gzip
 &lt;li&gt;Errores de los clientes (400–499)&lt;/li&gt;
 &lt;li&gt;Errores de los servidores (500–599)&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;requests-y-responses-en-django-opt&#34;&gt;Requests y responses en django [opt]&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/3.2/intro/tutorial01/&#34;&gt;https://docs.djangoproject.com/en/3.2/intro/tutorial01/&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Modelos</title>
+      <link>https://lmorillas.github.io/dwes/docs/django/modelos/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/django/modelos/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Documentación:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/3.2/intro/tutorial02/&#34;&gt;https://docs.djangoproject.com/en/3.2/intro/tutorial02/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models&#34;&gt;https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mdn.mozillademos.org/files/15646/local_library_model_uml.png&#34; alt=&#34;Base de datos&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;trabajando-con-modelos&#34;&gt;Trabajando con modelos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;archivo &lt;strong&gt;models.py&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Argumentos comunes&lt;/li&gt;
+&lt;li&gt;Tipos comunes de campos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gestión-de-modelos&#34;&gt;Gestión de modelos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Creación y modificación de registros&lt;/li&gt;
+&lt;li&gt;Búsqueda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tarea-definir-los-modelos-de-la-biblioteca&#34;&gt;Tarea: Definir los modelos de la biblioteca&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Género&lt;/li&gt;
+&lt;li&gt;Book&lt;/li&gt;
+&lt;li&gt;Bookinstance&lt;/li&gt;
+&lt;li&gt;Autor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;migraciones&#34;&gt;Migraciones&lt;/h2&gt;
+&lt;h2 id=&#34;modelo-language&#34;&gt;Modelo Language&lt;/h2&gt;
 
       </description>
     </item>

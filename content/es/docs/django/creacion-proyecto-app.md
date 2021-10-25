@@ -9,18 +9,21 @@ tags: [django]
 
 {{% pageinfo %}}
 Documentación
+* https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website
 * https://docs.djangoproject.com/es/3.2/intro/tutorial01/
+* Objetivo: **Biblioteca** https://developer.mozilla.org/es/docs/Learn/Server-side/Django/skeleton_website
 {{% /pageinfo %}}
 
 ## Creación de proyecto
+
 ```bash
-$ django-admin startproject bookr
+$ django-admin startproject biblioteca
 ```
 
 ```
-bookr/
+biblioteca/
     manage.py
-    bookr/
+    bibliioteca/
         __init__.py
         settings.py
         urls.py
@@ -36,7 +39,7 @@ Parar con `Ctrl+C`
 
 ## Creación aplicación
 ```bash
-$ python3 manage.py startapp reviews
+$ python3 manage.py startapp catalogo
 ```
 
 ## Modelo Vista Template

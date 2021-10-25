@@ -10,6 +10,7 @@ tags: [django, instalación]
 {{% pageinfo %}}
 Instalación y configuración del entorno para desarrollo:
 * https://docs.djangoproject.com/en/3.2/intro/install/
+* https://code.visualstudio.com/docs/python/tutorial-django
 {{% /pageinfo %}}
 
 ## Instalación de Python

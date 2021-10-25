@@ -154,12 +154,34 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>4: <a href="#pg-d3a66753eac6c7801654aa2420407c19">Modelos</a></li>
+
+
+    
+  
 
     </ul>
 
 
 <div class="content">
-      
+      <h2 id="documentación-base">Documentación base</h2>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.2/">https://docs.djangoproject.com/en/3.2/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django</a></li>
+</ul>
+<h3 id="sitios-con-tutoriales">Sitios con tutoriales</h3>
+<ul>
+<li><a href="https://realpython.com/tutorials/django/">https://realpython.com/tutorials/django/</a></li>
+</ul>
+<h3 id="charlas">Charlas</h3>
+<ul>
+<li><a href="https://2021.djangocon.us/">https://2021.djangocon.us/</a></li>
+<li><a href="https://2021.djangocon.eu">https://2021.djangocon.eu</a></li>
+</ul>
+
 </div>
 </div>
 
@@ -188,6 +210,7 @@ Versión imprimible multipagina.
 <p>Instalación y configuración del entorno para desarrollo:</p>
 <ul>
 <li><a href="https://docs.djangoproject.com/en/3.2/intro/install/">https://docs.djangoproject.com/en/3.2/intro/install/</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/tutorial-django">https://code.visualstudio.com/docs/python/tutorial-django</a></li>
 </ul>
 
 </div>
@@ -260,16 +283,18 @@ $ pip install Django
 <div class="pageinfo pageinfo-primary">
 <p>Documentación</p>
 <ul>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website">https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website</a></li>
 <li><a href="https://docs.djangoproject.com/es/3.2/intro/tutorial01/">https://docs.djangoproject.com/es/3.2/intro/tutorial01/</a></li>
+<li>Objetivo: <strong>Biblioteca</strong> <a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/skeleton_website">https://developer.mozilla.org/es/docs/Learn/Server-side/Django/skeleton_website</a></li>
 </ul>
 
 </div>
 
 <h2 id="creación-de-proyecto">Creación de proyecto</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ django-admin startproject bookr
-</code></pre></div><pre tabindex="0"><code>bookr/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ django-admin startproject biblioteca
+</code></pre></div><pre tabindex="0"><code>biblioteca/
     manage.py
-    bookr/
+    bibliioteca/
         __init__.py
         settings.py
         urls.py
@@ -278,7 +303,7 @@ $ pip install Django
 </code></pre><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 manage.py runserver
 </code></pre></div><p>Parar con <code>Ctrl+C</code></p>
 <h2 id="creación-aplicación">Creación aplicación</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 manage.py startapp reviews
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 manage.py startapp catalogo
 </code></pre></div><h2 id="modelo-vista-template">Modelo Vista Template</h2>
 <p>Diseño común: patrón Modelo Vista Controlador (<strong>MVC</strong>)
 Django usa: <strong>MVT</strong>: Permite que las templates puedan desarrollarse en cualquier lenguaje:</p>
@@ -353,6 +378,57 @@ Content-Encoding: gzip
 <li>Errores de los clientes (400–499)</li>
 <li>Errores de los servidores (500–599)</li>
 </ol>
+<h3 id="requests-y-responses-en-django-opt">Requests y responses en django [opt]</h3>
+<p><a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/">https://docs.djangoproject.com/en/3.2/intro/tutorial01/</a></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d3a66753eac6c7801654aa2420407c19">4 - Modelos</h1>
+    <div class="lead">Creación y uso de modelos</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.2/intro/tutorial02/">https://docs.djangoproject.com/en/3.2/intro/tutorial02/</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models">https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models</a></li>
+</ul>
+
+</div>
+
+<p><img src="https://mdn.mozillademos.org/files/15646/local_library_model_uml.png" alt="Base de datos"></p>
+<h2 id="trabajando-con-modelos">Trabajando con modelos</h2>
+<ul>
+<li>archivo <strong>models.py</strong></li>
+<li>Argumentos comunes</li>
+<li>Tipos comunes de campos</li>
+</ul>
+<h2 id="gestión-de-modelos">Gestión de modelos</h2>
+<ul>
+<li>Creación y modificación de registros</li>
+<li>Búsqueda</li>
+</ul>
+<h2 id="tarea-definir-los-modelos-de-la-biblioteca">Tarea: Definir los modelos de la biblioteca</h2>
+<ul>
+<li>Género</li>
+<li>Book</li>
+<li>Bookinstance</li>
+<li>Autor</li>
+</ul>
+<h2 id="migraciones">Migraciones</h2>
+<h2 id="modelo-language">Modelo Language</h2>
 
 </div>
 

@@ -59,3 +59,6 @@ Content-Encoding: gzip
 1. Errores de los clientes (400–499)
 1. Errores de los servidores (500–599)
 
+
+### Requests y responses en django [opt]
+https://docs.djangoproject.com/en/3.2/intro/tutorial01/

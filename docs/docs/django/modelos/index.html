@@ -17,37 +17,28 @@
 <link rel="icon" type="image/png" href="/dwes/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/dwes/favicons/android-192x192.png" sizes="192x192">
 
-<title>Cómo añadir contenido | Desarrollo Web Entorno Servidor</title>
+<title>Modelos | Desarrollo Web Entorno Servidor</title>
 
 
-  
-  <meta name="description" content="
-
-
-Objetivo: Estructurar contenido para mejorar la visualización del sitio.
-Documentación:
-
-https://gohugo.io/content-management/organization/ …">
-<meta property="og:title" content="Cómo añadir contenido" />
-<meta property="og:description" content="Objetivo: Estructurar contenido para mejorar la visualización del sitio.
-Documentación:
- https://gohugo.io/content-management/organization/    ¿Qué estructura tiene el contenido de las páginas?  Tipos de páginas de contenido. Agrupar las páginas por tipos. En Hugo el contenido se organiza como luego se va a ver en la web. Anidamos el contenido en subdirectorios (secciones): content/&lt;directorios&gt; Pensar en front-matter - archetypes Plantillas específicas para cada modelo  Secciones Se pueden anidar todas las secciones que sean necesarias." />
+  <meta name="description" content="Creación y uso de modelos
+">
+<meta property="og:title" content="Modelos" />
+<meta property="og:description" content="Creación y uso de modelos
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lmorillas.github.io/dwes/docs/staticsitegen/contenido/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-09-26T22:53:39+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="og:url" content="https://lmorillas.github.io/dwes/docs/django/modelos/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-10-21T10:36:54+02:00" />
+<meta property="article:modified_time" content="2021-10-21T10:36:54+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
-<meta itemprop="name" content="Cómo añadir contenido">
-<meta itemprop="description" content="Objetivo: Estructurar contenido para mejorar la visualización del sitio.
-Documentación:
- https://gohugo.io/content-management/organization/    ¿Qué estructura tiene el contenido de las páginas?  Tipos de páginas de contenido. Agrupar las páginas por tipos. En Hugo el contenido se organiza como luego se va a ver en la web. Anidamos el contenido en subdirectorios (secciones): content/&lt;directorios&gt; Pensar en front-matter - archetypes Plantillas específicas para cada modelo  Secciones Se pueden anidar todas las secciones que sean necesarias."><meta itemprop="datePublished" content="2017-01-05T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-09-26T22:53:39+02:00" />
-<meta itemprop="wordCount" content="374">
+<meta itemprop="name" content="Modelos">
+<meta itemprop="description" content="Creación y uso de modelos
+"><meta itemprop="datePublished" content="2021-10-21T10:36:54+02:00" />
+<meta itemprop="dateModified" content="2021-10-21T10:36:54+02:00" />
+<meta itemprop="wordCount" content="37">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Cómo añadir contenido"/>
-<meta name="twitter:description" content="Objetivo: Estructurar contenido para mejorar la visualización del sitio.
-Documentación:
- https://gohugo.io/content-management/organization/    ¿Qué estructura tiene el contenido de las páginas?  Tipos de páginas de contenido. Agrupar las páginas por tipos. En Hugo el contenido se organiza como luego se va a ver en la web. Anidamos el contenido en subdirectorios (secciones): content/&lt;directorios&gt; Pensar en front-matter - archetypes Plantillas específicas para cada modelo  Secciones Se pueden anidar todas las secciones que sean necesarias."/>
+<meta name="twitter:title" content="Modelos"/>
+<meta name="twitter:description" content="Creación y uso de modelos
+"/>
 
 
 
@@ -124,8 +115,8 @@ Documentación:
   <input type="checkbox" id="m-dwesdocspresentacic3b3n-check"/>
   <label for="m-dwesdocspresentacic3b3n-check"><a href="/dwes/docs/presentaci%C3%B3n/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocspresentacic3b3n"><span class="">Presentación</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dwesdocsstaticsitegen-li">
-  <input type="checkbox" id="m-dwesdocsstaticsitegen-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dwesdocsstaticsitegen-li">
+  <input type="checkbox" id="m-dwesdocsstaticsitegen-check"/>
   <label for="m-dwesdocsstaticsitegen-check"><a href="/dwes/docs/staticsitegen/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsstaticsitegen"><span class="">Generadores de Sitios Estáticos</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -137,9 +128,9 @@ Documentación:
   <input type="checkbox" id="m-dwesdocsstaticsitegensegundatarea-check"/>
   <label for="m-dwesdocsstaticsitegensegundatarea-check"><a href="/dwes/docs/staticsitegen/segundatarea/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegensegundatarea"><span class="">Segunda tarea</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dwesdocsstaticsitegencontenido-li">
-  <input type="checkbox" id="m-dwesdocsstaticsitegencontenido-check" checked/>
-  <label for="m-dwesdocsstaticsitegencontenido-check"><a href="/dwes/docs/staticsitegen/contenido/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegencontenido"><span class="td-sidebar-nav-active-item">Cómo añadir contenido</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegencontenido-li">
+  <input type="checkbox" id="m-dwesdocsstaticsitegencontenido-check"/>
+  <label for="m-dwesdocsstaticsitegencontenido-check"><a href="/dwes/docs/staticsitegen/contenido/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsstaticsitegencontenido"><span class="">Cómo añadir contenido</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsstaticsitegentemplates-li">
   <input type="checkbox" id="m-dwesdocsstaticsitegentemplates-check"/>
@@ -175,8 +166,8 @@ Documentación:
   <input type="checkbox" id="m-dwesdocsinmersic3b3n-en-python-check"/>
   <label for="m-dwesdocsinmersic3b3n-en-python-check"><a href="/dwes/docs/inmersi%C3%B3n-en-python/" title="Inmersión en Python" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsinmersic3b3n-en-python"><span class="">Python</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dwesdocsdjango-li">
-  <input type="checkbox" id="m-dwesdocsdjango-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dwesdocsdjango-li">
+  <input type="checkbox" id="m-dwesdocsdjango-check" checked/>
   <label for="m-dwesdocsdjango-check"><a href="/dwes/docs/django/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsdjango"><span class="">Django</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -192,9 +183,9 @@ Documentación:
   <input type="checkbox" id="m-dwesdocsdjangointroduccion-http-check"/>
   <label for="m-dwesdocsdjangointroduccion-http-check"><a href="/dwes/docs/django/introduccion-http/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjangointroduccion-http"><span class="">Introducción a HTTP</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsdjangomodelos-li">
-  <input type="checkbox" id="m-dwesdocsdjangomodelos-check"/>
-  <label for="m-dwesdocsdjangomodelos-check"><a href="/dwes/docs/django/modelos/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjangomodelos"><span class="">Modelos</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dwesdocsdjangomodelos-li">
+  <input type="checkbox" id="m-dwesdocsdjangomodelos-check" checked/>
+  <label for="m-dwesdocsdjangomodelos-check"><a href="/dwes/docs/django/modelos/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjangomodelos"><span class="td-sidebar-nav-active-item">Modelos</span></a></label>
   
 </li>
   </ul>
@@ -213,17 +204,11 @@ Documentación:
 
 <div class="td-toc"><nav id="TableOfContents">
   <ul>
-    <li><a href="#qué-estructura-tiene-el-contenido-de-las-páginas">¿Qué estructura tiene el contenido de las páginas?</a></li>
-    <li><a href="#secciones">Secciones</a></li>
-    <li><a href="#páginas-_indexmd">Páginas <code>_index.md</code></a></li>
-    <li><a href="#páginas-normales-en-secciones">Páginas normales en secciones</a></li>
-    <li><a href="#explicación-de-las-rutas">Explicación de las rutas</a></li>
-    <li><a href="#front-matter">Front Matter</a>
-      <ul>
-        <li><a href="#documentación-relacionada">Documentación relacionada:</a></li>
-      </ul>
-    </li>
-    <li><a href="#taxonomías">Taxonomías</a></li>
+    <li><a href="#trabajando-con-modelos">Trabajando con modelos</a></li>
+    <li><a href="#gestión-de-modelos">Gestión de modelos</a></li>
+    <li><a href="#tarea-definir-los-modelos-de-la-biblioteca">Tarea: Definir los modelos de la biblioteca</a></li>
+    <li><a href="#migraciones">Migraciones</a></li>
+    <li><a href="#modelo-language">Modelo Language</a></li>
   </ul>
 </nav></div>
 
@@ -290,14 +275,14 @@ Documentación:
 
 
 <li class="breadcrumb-item" >
-	<a href="https://lmorillas.github.io/dwes/docs/staticsitegen/">Generadores de Sitios Estáticos</a>
+	<a href="https://lmorillas.github.io/dwes/docs/django/">Django</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://lmorillas.github.io/dwes/docs/staticsitegen/contenido/">Cómo añadir contenido</a>
+	<a href="https://lmorillas.github.io/dwes/docs/django/modelos/">Modelos</a>
 </li>
 
 	</ol>
@@ -305,8 +290,8 @@ Documentación:
 
             
 <div class="td-content">
-	<h1>Cómo añadir contenido</h1>
-	
+	<h1>Modelos</h1>
+	<div class="lead">Creación y uso de modelos</div>
 	<header class="article-meta">
 		
 		
@@ -325,110 +310,39 @@ Documentación:
 	
 
 <div class="pageinfo pageinfo-primary">
-<p><strong>Objetivo</strong>: Estructurar contenido para mejorar la visualización del sitio.</p>
-<p><strong>Documentación:</strong></p>
+<p>Documentación:</p>
 <ul>
-<li><a href="https://gohugo.io/content-management/organization/">https://gohugo.io/content-management/organization/</a></li>
-<li></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/intro/tutorial02/">https://docs.djangoproject.com/en/3.2/intro/tutorial02/</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models">https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models</a></li>
 </ul>
 
 </div>
 
-<h2 id="qué-estructura-tiene-el-contenido-de-las-páginas">¿Qué estructura tiene el contenido de las páginas?</h2>
+<p><img src="https://mdn.mozillademos.org/files/15646/local_library_model_uml.png" alt="Base de datos"></p>
+<h2 id="trabajando-con-modelos">Trabajando con modelos</h2>
 <ul>
-<li>Tipos de páginas de contenido. Agrupar las páginas por tipos.</li>
-<li>En Hugo el contenido se organiza como luego se va a ver en la web. Anidamos el contenido en subdirectorios (<strong>secciones</strong>): <code>content/&lt;directorios&gt;</code></li>
-<li>Pensar en <strong>front-matter</strong> - <strong>archetypes</strong></li>
-<li>Plantillas específicas para cada modelo</li>
+<li>archivo <strong>models.py</strong></li>
+<li>Argumentos comunes</li>
+<li>Tipos comunes de campos</li>
 </ul>
-<h2 id="secciones">Secciones</h2>
-<p>Se pueden anidar todas las secciones que sean necesarias.</p>
-<pre tabindex="0"><code>content
-└── blog        &lt;-- Sección, porque es el primer nivel bajo content/    ├── funny-cats
-    │   ├── mypost.md
-    │   └── kittens         &lt;-- Sección porque contiene _index.md
-    │       └── _index.md
-    └── tech                &lt;-- Sección porque contiene _index.md
-        └── _index.md
+<h2 id="gestión-de-modelos">Gestión de modelos</h2>
+<ul>
+<li>Creación y modificación de registros</li>
+<li>Búsqueda</li>
+</ul>
+<h2 id="tarea-definir-los-modelos-de-la-biblioteca">Tarea: Definir los modelos de la biblioteca</h2>
+<ul>
+<li>Género</li>
+<li>Book</li>
+<li>Bookinstance</li>
+<li>Autor</li>
+</ul>
+<h2 id="migraciones">Migraciones</h2>
+<h2 id="modelo-language">Modelo Language</h2>
 
-</code></pre><p>Por defecto Hugo asume que las páginas pertenecen al <strong>Content Type</strong> de la sección inicial, es decir que <code>posts/post-1.md</code> es de tipo <code>posts</code>. Si existe un <strong>archetype</strong> para la  sección <strong>posts</strong>, hugo generará un <strong>frontmatter</strong> específico. Ver <a href="https://gohugo.io/content-management/archetypes/">archetypes</a></p>
-<h2 id="páginas-_indexmd">Páginas <code>_index.md</code></h2>
-<ul>
-<li>Añaden <strong>front-matter</strong> y contenido a las <strong>list templates</strong></li>
-<li>La función <code>.Site.GetPage</code> da acceso a contenido y metadatos.</li>
-</ul>
-<pre tabindex="0"><code>          url
-        ⊢  ^ ⊣
-        path    slug
-        ⊢--^-⊣⊢---^---⊣
-           filepath
-        ⊢------^------⊣
-content/posts/_index.md
-</code></pre><p>Ejemplo de <strong>list.html</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">define</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;main&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
-    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h2</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h2</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">range</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Pages</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
-        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">​</span> <span style="color:#a40000">&#34;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.RelPermalink</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#a40000">&#34;​</span> <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Title</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
-    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
-<span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
-</code></pre></div><h2 id="páginas-normales-en-secciones">Páginas normales en secciones</h2>
-<ul>
-<li>Se muestran conlas <strong>single page templates</strong></li>
-</ul>
-<h2 id="explicación-de-las-rutas">Explicación de las rutas</h2>
-<ul>
-<li>filename</li>
-<li>slug</li>
-<li>section</li>
-<li>type</li>
-<li>url</li>
-</ul>
-<p>Se pueden modificar en el <strong>frontmatter</strong>: <code>slug, type y url</code></p>
-<h2 id="front-matter">Front Matter</h2>
-<ul>
-<li>Lo que precede al contenido</li>
-<li>Sintaxis especial</li>
-<li>Hay unas variables predefinidas pero el usuario puede crear nuevas.</li>
-<li>Se genera según el <strong>archetype</strong> de la sección. Por defecto <em>_default.md</em></li>
-<li>Se pueden pasar valores por defecto a las páginas que descienden de una sección.</li>
-</ul>
-<p>Por ejemplo si ponemos en <code>content/blog/_index.md</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000">title</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;Blog&#39;</span>
-<span style="color:#000;font-weight:bold">[</span><span style="color:#000">cascade</span><span style="color:#000;font-weight:bold">]</span>
-  <span style="color:#000">banner</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;images/typewriter.jpg&#39;</span>
-</code></pre></div><p>Esta página y todas las que descienden de la sección <code>blog</code> devuelven <code>images/typewriter.jpg</code> en <code>.Params.banner</code> a no ser que tengan su propio banner o un ancestro más cercano lo modifique.</p>
-<h3 id="documentación-relacionada">Documentación relacionada:</h3>
-<ul>
-<li><a href="https://gohugo.io/content-management/front-matter/">https://gohugo.io/content-management/front-matter/</a></li>
-<li><a href="https://gohugo.io/variables/page/">https://gohugo.io/variables/page/</a></li>
-</ul>
-<h2 id="taxonomías">Taxonomías</h2>
-<p><a href="https://gohugo.io/content-management/taxonomies">https://gohugo.io/content-management/taxonomies</a></p>
-<p>Una taxonomía es una categorización que nos permite clasificar contenido.</p>
-<p>Por ejemplo, en una web de Películas podríamos tener actores, directores, estudios, géneros, años, premios &hellip;</p>
-<p>Por defecto Hugo añade las taxonomías <strong>categories</strong> y <strong>tags</strong>. Se pueden añadir más en <strong>config</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000;font-weight:bold">[</span><span style="color:#000">taxonomies</span><span style="color:#000;font-weight:bold">]</span>
-  <span style="color:#000">category</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;categories&#39;</span>
-  <span style="color:#000">tag</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;tags&#39;</span>
-</code></pre></div><p>Si se quiere deshabilitar:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000">disableKinds</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;taxonomy&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;term&#39;</span><span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><p>En <strong>frontmatter</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">categories</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span>- <span style="color:#000">Personal</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span>- <span style="color:#000">Trabajo</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">tags</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span>- <span style="color:#000">software</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span>- <span style="color:#000">html</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-
-    Última modificación
-    September 26, 2021
-    : <a  href="https://github.com/lmorillas/dwes/commit/e9aa1252fb7381811c4a70c7dd5ba696af23d607">typo (e9aa125)</a>
 
 </div>
 

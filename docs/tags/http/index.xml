@@ -73,6 +73,8 @@ Content-Encoding: gzip
 &lt;li&gt;Errores de los clientes (400–499)&lt;/li&gt;
 &lt;li&gt;Errores de los servidores (500–599)&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;requests-y-responses-en-django-opt&#34;&gt;Requests y responses en django [opt]&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/3.2/intro/tutorial01/&#34;&gt;https://docs.djangoproject.com/en/3.2/intro/tutorial01/&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

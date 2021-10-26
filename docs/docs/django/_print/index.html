@@ -162,6 +162,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>5: <a href="#pg-3bc118b9dddd3032235e752834004a2d">Sitio administrativo</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -429,6 +437,54 @@ Content-Encoding: gzip
 </ul>
 <h2 id="migraciones">Migraciones</h2>
 <h2 id="modelo-language">Modelo Language</h2>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-3bc118b9dddd3032235e752834004a2d">5 - Sitio administrativo</h1>
+    <div class="lead">Configuración del admin</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Admin_site">https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Admin_site</a></li>
+</ul>
+
+</div>
+
+<h2 id="registrar-modelos">Registrar modelos</h2>
+<p><strong>archivo admin.py</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Author</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Genre</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Book</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">BookInstance</span>
+
+<span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">register</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Book</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">register</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Author</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">register</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Genre</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">register</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">BookInstance</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="crear-administrador">Crear Administrador</h2>
+<h2 id="configurar">Configurar</h2>
+<h3 id="clases-modeladmin">Clases ModelAdmin</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># Define the admin class</span>
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">AuthorAdmin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ModelAdmin</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">pass</span>
+
+<span style="color:#8f5902;font-style:italic"># Register the admin class with the associated model</span>
+<span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">register</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Author</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">AuthorAdmin</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="list_display">list_display</h3>
+<h3 id="list_filter">list_filter</h3>
+<h3 id="fields-y-fieldsets">fields y fieldsets</h3>
+<h3 id="edición-inline">Edición inline</h3>
 
 </div>
 

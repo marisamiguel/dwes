@@ -170,6 +170,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>6: <a href="#pg-f7a2a66d2c290e27da8655c9d9e80be3">Página inicial</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -219,6 +227,7 @@ Versión imprimible multipagina.
 <ul>
 <li><a href="https://docs.djangoproject.com/en/3.2/intro/install/">https://docs.djangoproject.com/en/3.2/intro/install/</a></li>
 <li><a href="https://code.visualstudio.com/docs/python/tutorial-django">https://code.visualstudio.com/docs/python/tutorial-django</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment</a></li>
 </ul>
 
 </div>
@@ -437,6 +446,12 @@ Content-Encoding: gzip
 </ul>
 <h2 id="migraciones">Migraciones</h2>
 <h2 id="modelo-language">Modelo Language</h2>
+<h2 id="fixtures">Fixtures</h2>
+<ul>
+<li><a href="https://github.com/graevskiy/local_library/blob/master/catalog/fixtures/dump.json">https://github.com/graevskiy/local_library/blob/master/catalog/fixtures/dump.json</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/howto/initial-data/">https://docs.djangoproject.com/en/3.2/howto/initial-data/</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/ref/django-admin/#django-admin-loaddata">https://docs.djangoproject.com/en/3.2/ref/django-admin/#django-admin-loaddata</a></li>
+</ul>
 
 </div>
 
@@ -485,6 +500,74 @@ Content-Encoding: gzip
 <h3 id="list_filter">list_filter</h3>
 <h3 id="fields-y-fieldsets">fields y fieldsets</h3>
 <h3 id="edición-inline">Edición inline</h3>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f7a2a66d2c290e27da8655c9d9e80be3">6 - Página inicial</h1>
+    <div class="lead">Urls, vistas, plantillas</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/intro/tutorial03/">https://docs.djangoproject.com/en/3.2/intro/tutorial03/</a></li>
+</ul>
+
+</div>
+
+<h2 id="visión-general">Visión general</h2>
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page/basic-django.png" alt="Proceso de una petición"></p>
+<h2 id="definiendo-urls">Definiendo URLs</h2>
+<p><strong>urls.py</strong> principal:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># Redirección incial</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.views.generic</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">RedirectView</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.urls</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">include</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">path</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">admin</span>
+
+<span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;admin/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">urls</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">include</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog.urls&#39;</span><span style="color:#000;font-weight:bold">)),</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">RedirectView</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">as_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;/catalog/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">permanent</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)),</span>
+<span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">static</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_URL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">document_root</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_ROOT</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p><strong>Urls de nuestra app</strong></p>
+<ul>
+<li>catalog/ — La página home/index.</li>
+<li>catalog/books/ — La lista de todos los libros.</li>
+<li>catalog/authors/ — La lista de todos los autores.</li>
+<li>catalog/book/<id> — La vista detallada para el libro específico con un campo de clave primaria de <id> (el valor por defecto). Así por ejemplo, /catalog/book/3, para el tercer libro añadido.</li>
+<li>catalog/author/<id> — La vista detallada para el autor específico con un campo de clave primaria llamada <id>. Así por ejemplo, /catalog/author/11, para el 11vo autor añadido.</li>
+</ul>
+<h2 id="crear-vista-para-pagina-inicial-del-sitio">Crear vista para pagina inicial del sitio</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">index</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><h2 id="crear-plantilla">Crear plantilla</h2>
+<ul>
+<li>plantilla base</li>
+<li>includes</li>
+<li><strong>extends</strong></li>
+<li></li>
+</ul>
+<h2 id="django-debug-toolbar">Django Debug Toolbar</h2>
+<ul>
+<li><a href="https://django-debug-toolbar.readthedocs.io/en/latest/installation.html">https://django-debug-toolbar.readthedocs.io/en/latest/installation.html</a></li>
+<li><code>$ pip install django-debug-toolbar </code></li>
+<li>Configurar</li>
+</ul>
 
 </div>
 

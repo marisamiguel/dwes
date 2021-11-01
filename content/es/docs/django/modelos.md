@@ -34,3 +34,9 @@ Documentación:
 ## Migraciones
 
 ## Modelo Language
+
+
+## Fixtures 
+* https://github.com/graevskiy/local_library/blob/master/catalog/fixtures/dump.json
+* https://docs.djangoproject.com/en/3.2/howto/initial-data/
+* https://docs.djangoproject.com/en/3.2/ref/django-admin/#django-admin-loaddata

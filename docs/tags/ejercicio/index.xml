@@ -70,13 +70,21 @@ Revisa la documentación de &lt;a href=&#34;https://developer.mozilla.org/en-US/
 &lt;li&gt;Resumen de número de libros del catálogo y número de autores&lt;/li&gt;
 &lt;li&gt;Últimos libros añadidos&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;opcional-los-usuarios-podrán-valorar-un-libro&#34;&gt;Opcional. Los usuarios podrán valorar un libro:&lt;/h2&gt;
+&lt;h2 id=&#34;añade-una-nueva-clase-revisión-para-que-los-usuarios-puedan-valorar-un-libro&#34;&gt;Añade una nueva clase &lt;strong&gt;Revisión&lt;/strong&gt; para que los usuarios puedan valorar un libro:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Usuario&lt;/li&gt;
-&lt;li&gt;Libro&lt;/li&gt;
-&lt;li&gt;Fecha&lt;/li&gt;
-&lt;li&gt;Puntuación (1-5)&lt;/li&gt;
-&lt;li&gt;Texto&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Usuario. Usa el modelo &lt;strong&gt;User&lt;/strong&gt; de Django:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;django.contrib.auth.models&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;User&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fecha de la revisión&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Puntuación (1-5)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Texto&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Un usuario sólo puede valorar un libro una vez. Podrá modificar su valoración.&lt;/p&gt;
 

@@ -640,13 +640,21 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 <li>Resumen de número de libros del catálogo y número de autores</li>
 <li>Últimos libros añadidos</li>
 </ul>
-<h2 id="opcional-los-usuarios-podrán-valorar-un-libro">Opcional. Los usuarios podrán valorar un libro:</h2>
+<h2 id="añade-una-nueva-clase-revisión-para-que-los-usuarios-puedan-valorar-un-libro">Añade una nueva clase <strong>Revisión</strong> para que los usuarios puedan valorar un libro:</h2>
 <ul>
-<li>Usuario</li>
-<li>Libro</li>
-<li>Fecha</li>
-<li>Puntuación (1-5)</li>
-<li>Texto</li>
+<li>
+<p>Usuario. Usa el modelo <strong>User</strong> de Django:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.auth.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">User</span>
+</code></pre></div></li>
+<li>
+<p>Fecha de la revisión</p>
+</li>
+<li>
+<p>Puntuación (1-5)</p>
+</li>
+<li>
+<p>Texto</p>
+</li>
 </ul>
 <p>Un usuario sólo puede valorar un libro una vez. Podrá modificar su valoración.</p>
 

@@ -39,10 +39,13 @@ En la página incial se verá:
 * Resumen de número de libros del catálogo y número de autores
 * Últimos libros añadidos
 
-## Opcional. Los usuarios podrán valorar un libro:
-* Usuario
-* Libro
-* Fecha
+## Añade una nueva clase **Revisión** para que los usuarios puedan valorar un libro:
+* Usuario. Usa el modelo **User** de Django:
+
+   ```python
+   from django.contrib.auth.models import User
+   ```
+* Fecha de la revisión
 * Puntuación (1-5)
 * Texto
 

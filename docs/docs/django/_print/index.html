@@ -186,6 +186,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>8: <a href="#pg-92f0298c6cf4c606d64aacf60fadb74e">Vistas genéricas: listados y detalle</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -658,6 +666,53 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 </ul>
 <p>Un usuario sólo puede valorar un libro una vez. Podrá modificar su valoración.</p>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-92f0298c6cf4c606d64aacf60fadb74e">8 - Vistas genéricas: listados y detalle</h1>
+    <div class="lead">Vistas genéricas son una forma de crear vistas que se pueden reutilizar en diferentes proyectos.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/intro/">https://docs.djangoproject.com/en/3.2/intro/</a></li>
+</ul>
+
+</div>
+
+<h2 id="url-mapping">URL mapping</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">views</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">index</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;index&#39;</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;books/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">views</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">BookListView</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">as_view</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;books&#39;</span><span style="color:#000;font-weight:bold">),</span>
+<span style="color:#000;font-weight:bold">]</span>
+</code></pre></div><h1 id="redirección-incial">Redirección incial</h1>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.views.generic</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">RedirectView</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.urls</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">include</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">path</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">admin</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf.urls.static</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">static</span>
+
+
+<span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;admin/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">site</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">urls</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">include</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog.urls&#39;</span><span style="color:#000;font-weight:bold">)),</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">RedirectView</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">as_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;/catalog/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">permanent</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)),</span>
+<span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">static</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_URL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">document_root</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_ROOT</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic"># Este static es solo para DEBUG = True</span>
+</code></pre></div>
 </div>
 
 

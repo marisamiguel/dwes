@@ -350,6 +350,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>4.9: <a href="#pg-4aea6c81708952e0ccec3bafb3801a6d">Formularios</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -2343,6 +2351,125 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 <li>context_object_name</li>
 <li>queryset</li>
 <li>template_name</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4aea6c81708952e0ccec3bafb3801a6d">4.9 - Formularios</h1>
+    <div class="lead">Formularios</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">https://developer.mozilla.org/en-US/docs/Learn/Forms</a></li>
+<li></li>
+</ul>
+
+</div>
+
+<h2 id="qué-son-los-formularios">Qué son los formularios</h2>
+<h2 id="cómo-se-procesan-en-django">Cómo se procesan en django</h2>
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms/form_handling_-_standard.png" alt="formularios en django"></p>
+<h2 id="fomulario-de-búsqueda">Fomulario de búsqueda</h2>
+<p>En template:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">form</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;form-inline mt-2 mt-md-0&#34;</span> 
+    <span style="color:#c4a000">action</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;{% url &#39;search_results&#39; %}&#34;</span>
+    <span style="color:#c4a000">method</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;get&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">input</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;q&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;form-control mr-sm-2&#34;</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;text&#34;</span> 
+        <span style="color:#c4a000">placeholder</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Search&#34;</span> <span style="color:#c4a000">aria-label</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Search&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">form</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>Vista de búsqueda:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">SearchResultsListView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ListView</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">model</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Book</span>
+    <span style="color:#000">context_object_name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;book_list&#39;</span>
+    <span style="color:#000">template_name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;books/search_results.html&#39;</span>
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">get_queryset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span> <span style="color:#8f5902;font-style:italic"># new</span>
+        <span style="color:#000">query</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">GET</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;q&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">Book</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">title__icontains</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">query</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p><strong>Configurar urls.py</strong></p>
+<h2 id="objetos-formsform">Objetos forms.Form</h2>
+<p>Se declaran en forms.py</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">datetime</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">forms</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.core.exceptions</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ValidationError</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.utils.translation</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ugettext_lazy</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">_</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">RenewBookForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">forms</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Form</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">renewal_date</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">forms</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DateField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">help_text</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Enter a date between now and 4 weeks (default 3).&#34;</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">clean_renewal_date</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;renewal_date&#39;</span><span style="color:#000;font-weight:bold">]</span>
+
+        <span style="color:#8f5902;font-style:italic"># Check if a date is not in the past.</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">datetime</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">date</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">today</span><span style="color:#000;font-weight:bold">():</span>
+            <span style="color:#204a87;font-weight:bold">raise</span> <span style="color:#000">ValidationError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">_</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;Invalid date - renewal in past&#39;</span><span style="color:#000;font-weight:bold">))</span>
+
+        <span style="color:#8f5902;font-style:italic"># Check if a date is in the allowed range (+4 weeks from today).</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">datetime</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">date</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">today</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">datetime</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">timedelta</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">weeks</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">):</span>
+            <span style="color:#204a87;font-weight:bold">raise</span> <span style="color:#000">ValidationError</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">_</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;Invalid date - renewal more than 4 weeks ahead&#39;</span><span style="color:#000;font-weight:bold">))</span>
+
+        <span style="color:#8f5902;font-style:italic"># Remember to always return the cleaned data.</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">data</span>    
+</code></pre></div><p><strong>Uso: urs.py, views.py y templates</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">datetime</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">get_object_or_404</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.http</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">HttpResponseRedirect</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.urls</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">reverse</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">catalog.forms</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">RenewBookForm</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">renew_book_librarian</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">pk</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">book_instance</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">get_object_or_404</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">BookInstance</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">pk</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">pk</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#8f5902;font-style:italic"># If this is a POST request then process the Form data</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">method</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;POST&#39;</span><span style="color:#000;font-weight:bold">:</span>
+
+        <span style="color:#8f5902;font-style:italic"># Create a form instance and populate it with data from the request (binding):</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">RenewBookForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">POST</span><span style="color:#000;font-weight:bold">)</span>
+
+        <span style="color:#8f5902;font-style:italic"># Check if the form is valid:</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_valid</span><span style="color:#000;font-weight:bold">():</span>
+            <span style="color:#8f5902;font-style:italic"># process the data in form.cleaned_data as required (here we just write it to the model due_back field)</span>
+            <span style="color:#000">book_instance</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">due_back</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;renewal_date&#39;</span><span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000">book_instance</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">save</span><span style="color:#000;font-weight:bold">()</span>
+
+            <span style="color:#8f5902;font-style:italic"># redirect to a new URL:</span>
+            <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">HttpResponseRedirect</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;all-borrowed&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#8f5902;font-style:italic"># If this is a GET (or any other method) create the default form.</span>
+    <span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">proposed_renewal_date</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">datetime</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">date</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">today</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">datetime</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">timedelta</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">weeks</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">RenewBookForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">initial</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;renewal_date&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">proposed_renewal_date</span><span style="color:#000;font-weight:bold">})</span>
+
+    <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;form&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">form</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;book_instance&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">book_instance</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;catalog/book_renew_librarian.html&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">context</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="modelforms">ModelForms</h2>
+<p>Heredan de ModelForm</p>
+<h2 id="vistas-genéricas-de-edición">Vistas genéricas de edición</h2>
+<ul>
+<li><strong>CreateView</strong></li>
+<li><strong>UpdateView</strong></li>
+<li><strong>DeleteView</strong></li>
 </ul>
 
 </div>

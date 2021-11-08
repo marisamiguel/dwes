@@ -2302,7 +2302,7 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 <p>Documentación:</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views</a></li>
-<li><a href="https://docs.djangoproject.com/en/3.2/intro/">https://docs.djangoproject.com/en/3.2/intro/</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/">https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/</a></li>
 </ul>
 
 </div>
@@ -2312,7 +2312,8 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
     <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">views</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">index</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;index&#39;</span><span style="color:#000;font-weight:bold">),</span>
     <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;books/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">views</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">BookListView</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">as_view</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;books&#39;</span><span style="color:#000;font-weight:bold">),</span>
 <span style="color:#000;font-weight:bold">]</span>
-</code></pre></div><h1 id="redirección-incial">Redirección incial</h1>
+</code></pre></div><h2 id="redirección-incial">Redirección incial</h2>
+<p><strong>urls.py del proyecto</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.views.generic</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">RedirectView</span>
 <span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.urls</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">include</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">path</span>
 <span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">admin</span>
@@ -2326,7 +2327,24 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 <span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">static</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_URL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">document_root</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_ROOT</span><span style="color:#000;font-weight:bold">)</span>
 
 <span style="color:#8f5902;font-style:italic"># Este static es solo para DEBUG = True</span>
-</code></pre></div>
+</code></pre></div><h2 id="genericlistview">generic.ListView</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.views</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">generic</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">BookListView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">generic</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ListView</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">model</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Book</span>
+</code></pre></div><ul>
+<li>La vista genérica consultará a la base de datos para obtener todos los registros del modelo especificado (Book)</li>
+<li>renderizará una plantilla ubicada en <strong>/biblioteca/catalogo/templates/catalogo/book_list.html</strong></li>
+<li>Dentro de la plantilla puedes acceder a la lista de libros mediante la variable de plantilla llamada <strong>object_list</strong> O <strong>book_list</strong></li>
+<li>Paginación: Añade un <strong>page_obj</strong> al contexto <a href="https://docs.djangoproject.com/en/3.2/topics/pagination/">https://docs.djangoproject.com/en/3.2/topics/pagination/</a></li>
+</ul>
+<p>Estos datos se pueden sobreescribir:</p>
+<ul>
+<li>context_object_name</li>
+<li>queryset</li>
+<li>template_name</li>
+</ul>
+
 </div>
 
 

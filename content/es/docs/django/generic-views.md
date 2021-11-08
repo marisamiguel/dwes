@@ -11,7 +11,7 @@ tags: [Vistas genéricas]
 {{% pageinfo %}}
 Documentación: 
 * https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views
-* https://docs.djangoproject.com/en/3.2/intro/
+* https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
 {{% /pageinfo %}}
 
 
@@ -24,7 +24,8 @@ urlpatterns = [
 ]
 ```
 
-# Redirección incial
+## Redirección incial
+**urls.py del proyecto**
 ```python
 from django.views.generic import RedirectView
 from django.urls import include, path
@@ -40,3 +41,23 @@ urlpatterns = [
 
 # Este static es solo para DEBUG = True
 ```
+
+## generic.ListView
+
+```python
+from django.views import generic
+
+class BookListView(generic.ListView):
+    model = Book
+```
+
+* La vista genérica consultará a la base de datos para obtener todos los registros del modelo especificado (Book)
+* renderizará una plantilla ubicada en **/biblioteca/catalogo/templates/catalogo/book_list.html**
+* Dentro de la plantilla puedes acceder a la lista de libros mediante la variable de plantilla llamada **object_list** O **book_list**
+* Paginación: Añade un **page_obj** al contexto https://docs.djangoproject.com/en/3.2/topics/pagination/ 
+
+Estos datos se pueden sobreescribir: 
+* context_object_name
+* queryset
+* template_name
+

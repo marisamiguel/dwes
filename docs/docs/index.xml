@@ -1015,12 +1015,13 @@ Revisa la documentación de &lt;a href=&#34;https://developer.mozilla.org/en-US/
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms&#34;&gt;https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn/Forms&#34;&gt;https://developer.mozilla.org/en-US/docs/Learn/Forms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/3.2/topics/forms/&#34;&gt;https://docs.djangoproject.com/en/3.2/topics/forms/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
 
 &lt;h2 id=&#34;qué-son-los-formularios&#34;&gt;Qué son los formularios&lt;/h2&gt;
+&lt;p&gt;Conjutos de etiquetas entre elementos &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; y &lt;code&gt;&amp;lt;/form&amp;gt;&lt;/code&gt; que permiten a los usuarios enviar datos a un servidor.&lt;/p&gt;
 &lt;h2 id=&#34;cómo-se-procesan-en-django&#34;&gt;Cómo se procesan en django&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms/form_handling_-_standard.png&#34; alt=&#34;formularios en django&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;fomulario-de-búsqueda&#34;&gt;Fomulario de búsqueda&lt;/h2&gt;

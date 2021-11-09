@@ -11,11 +11,11 @@ tags: [Formularios]
 Documentación: 
 * https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms
 * https://developer.mozilla.org/en-US/docs/Learn/Forms
-* 
+* https://docs.djangoproject.com/en/3.2/topics/forms/
 {{% /pageinfo %}}
 
 ## Qué son los formularios
-
+Conjutos de etiquetas entre elementos ```<form>``` y ```</form>``` que permiten a los usuarios enviar datos a un servidor.
 
 ## Cómo se procesan en django
 ![formularios en django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms/form_handling_-_standard.png)

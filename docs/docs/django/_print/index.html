@@ -202,6 +202,30 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>10: <a href="#pg-93c163464508e198441e4f1b5692bcef">Formularios - Crispy</a></li>
+
+
+    
+  
+    
+    
+	
+<li>11: <a href="#pg-71d1aa01c08df445ed6924d82d558a11">Sesiones</a></li>
+
+
+    
+  
+    
+    
+	
+<li>12: <a href="#pg-8784277a302316f7bd7cd79cc3d15542">Autenticación y permisos</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -859,6 +883,256 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 <li><strong>DeleteView</strong></li>
 </ul>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-93c163464508e198441e4f1b5692bcef">10 - Formularios - Crispy</h1>
+    <div class="lead">Formularios con Crispy</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación oficial:</p>
+<ul>
+<li><a href="https://django-crispy-forms.readthedocs.io/en/latest/">https://django-crispy-forms.readthedocs.io/en/latest/</a></li>
+<li><a href="https://github.com/django-crispy-forms/django-crispy-forms">https://github.com/django-crispy-forms/django-crispy-forms</a></li>
+</ul>
+<p>Tutoriales:</p>
+<ul>
+<li><a href="https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html">https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html</a></li>
+<li><a href="https://www.merixstudio.com/blog/django-crispy-forms-what-are-they-about/">https://www.merixstudio.com/blog/django-crispy-forms-what-are-they-about/</a></li>
+<li><a href="https://dontrepeatyourself.org/post/django-forms-django-crispy-forms/">https://dontrepeatyourself.org/post/django-forms-django-crispy-forms/</a></li>
+</ul>
+
+</div>
+
+<h2 id="situación">Situación</h2>
+<p>Cuando nace <strong>Django</strong> internet era mucho más simple. No existían los UI toolkits como Boostrap. A partir de 2009 se empieza a trabajar en lo que ahora es <strong>Crispy Forms</strong>, que mejora la creación y presentación de formularios.</p>
+<h2 id="instalación">Instalación</h2>
+<p><a href="https://django-crispy-forms.readthedocs.io/en/latest/install.html">https://django-crispy-forms.readthedocs.io/en/latest/install.html</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install django-crispy-forms
+</code></pre></div><p><strong>Configuración de Django</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">INSTALLED_APPS</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;crispy_forms&#39;</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>Se pueden usar distintos <strong>template packs</strong> <a href="https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs">https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># en settings.py</span>
+<span style="color:#000">CRISPY_TEMPLATE_PACK</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;bootstrap4&#39;</span>
+</code></pre></div><h2 id="uso">Uso</h2>
+<h3 id="crispy-filter">Crispy Filter</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% load crispy_forms_tags %}
+
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">form</span> <span style="color:#c4a000">method</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;post&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;uniForm&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    {{ my_formset|crispy }}
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">form</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h3 id="-crispy--tag">{% crispy %} tag</h3>
+<ul>
+<li><a href="https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_forms.html">https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_forms.html</a></li>
+<li><a href="https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html">https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html</a></li>
+</ul>
+<p>Podemos incluir el formulario y un <strong>helper</strong> que dirige su presentación.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% load crispy_forms_tags %}
+
+
+{% crispy form  %}
+</code></pre></div><h2 id="layouts">Layouts</h2>
+<ul>
+<li><a href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html">https://django-crispy-forms.readthedocs.io/en/latest/layouts.html</a></li>
+<li>Ejemplos de uso:
+** <a href="https://github.com/sibtc/advanced-crispy-forms-examples/blob/master/mysite/core/forms.py">https://github.com/sibtc/advanced-crispy-forms-examples/blob/master/mysite/core/forms.py</a>
+** <a href="https://github.com/s-kust/django-advanced-forms">https://github.com/s-kust/django-advanced-forms</a></li>
+<li></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-71d1aa01c08df445ed6924d82d558a11">11 - Sesiones</h1>
+    <div class="lead">Gestión de sesiones</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">https://docs.djangoproject.com/en/3.1/topics/http/sessions/</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Sessions">https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Sessions</a></li>
+</ul>
+
+</div>
+
+<h2 id="habilitar-sesiones">Habilitar sesiones</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">INSTALLED_APPS</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;django.contrib.sessions&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#ce5c00;font-weight:bold">....</span>
+
+<span style="color:#000">MIDDLEWARE</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#ce5c00;font-weight:bold">....</span>
+</code></pre></div><h2 id="ejemplo-contador-de-visitas">Ejemplo: contador de visitas</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">index</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    
+    <span style="color:#8f5902;font-style:italic"># Number of visits to this view, as counted in the session variable.</span>
+    <span style="color:#000">num_visits</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">session</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;num_visits&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">session</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;num_visits&#39;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">num_visits</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">1</span>
+
+    <span style="color:#000">context</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;num_visits&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">num_visits</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+    <span style="color:#8f5902;font-style:italic"># Render the HTML template index.html with the data in the context variable.</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;index.html&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">context</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="configuración">Configuración</h2>
+<ul>
+<li>Database sessions (por defecto)</li>
+<li>File-based sessions</li>
+<li>Cached sessions</li>
+<li>Cookie-based sessions
+<ul>
+<li>SESSION_COOKIE_AGE</li>
+<li>SESSION_COOKIE_DOMAIN</li>
+<li>SESSION_COOKIE_SECURE</li>
+<li>SESSION_EXPIRE_AT_BROWSER_CLOSE</li>
+<li>SESSION_SAVE_EVERY_REQUEST</li>
+<li>SESSION_COOKIE_HTTPONLY (para evitar acceso desde javascript)</li>
+</ul>
+</li>
+</ul>
+<p>Mejores prestaciones: cache-based sessions (Memcached, Redis).</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8784277a302316f7bd7cd79cc3d15542">12 - Autenticación y permisos</h1>
+    <div class="lead">Autenticación y permisos</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">https://docs.djangoproject.com/en/3.1/topics/http/sessions/</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication</a></li>
+<li><a href="https://learndjango.com/tutorials/django-login-and-logout-tutorial">https://learndjango.com/tutorials/django-login-and-logout-tutorial</a></li>
+</ul>
+
+</div>
+
+<h2 id="habilitar-autenticación">Habilitar autenticación</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">NSTALLED_APPS</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;django.contrib.auth&#39;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">#Core authentication framework and its default models.</span>
+    <span style="color:#4e9a06">&#39;django.contrib.contenttypes&#39;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">#Django content type system (allows permissions to be associated with models).</span>
+    <span style="color:#ce5c00;font-weight:bold">....</span>
+
+<span style="color:#000">MIDDLEWARE</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">#Manages sessions across requests</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">#Associates users with requests using sessions.</span>
+    <span style="color:#ce5c00;font-weight:bold">....</span>
+</code></pre></div><h2 id="creación-de-usuarios-y-grupos">Creación de usuarios y grupos</h2>
+<p>Podemos usar el admin</p>
+<h3 id="urls">Urls</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000">path</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;accounts/&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">include</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;django.contrib.auth.urls&#39;</span><span style="color:#000;font-weight:bold">)),</span>
+<span style="color:#000;font-weight:bold">]</span>
+</code></pre></div><h2 id="login_url">LOGIN_URL</h2>
+<p>Por defecto: <strong>'/accounts/login/'</strong></p>
+<ul>
+<li>Escribir templates: <strong>&lsquo;registration/login.html&rsquo;</strong></li>
+</ul>
+<h2 id="forzar-login">Forzar login</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">redirect</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">my_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#204a87;font-weight:bold">not</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_authenticated</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">redirect</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">?next=</span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">&#39;</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">LOGIN_URL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#000;font-weight:bold">))</span>
+    <span style="color:#8f5902;font-style:italic"># ...</span>
+</code></pre></div><p>Decorador:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.auth.decorators</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">login_required</span>
+
+<span style="color:#5c35cc;font-weight:bold">@login_required</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">my_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><p>Con vistas genéricas:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.auth.mixins</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">LoginRequiredMixin</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">LoginRequiredMixin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">View</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">login_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;/login/&#39;</span>
+    <span style="color:#000">redirect_field_name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;redirect_to&#39;</span>
+
+</code></pre></div><p>Usuarios qeu pasan un test:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">redirect</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">my_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#204a87;font-weight:bold">not</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">endswith</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;@example.com&#39;</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">redirect</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/login/?next=</span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">&#39;</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#8f5902;font-style:italic"># ...</span>
+
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.auth.mixins</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UserPassesTestMixin</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">UserPassesTestMixin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">View</span><span style="color:#000;font-weight:bold">):</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_func</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">email</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">endswith</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;@example.com&#39;</span><span style="color:#000;font-weight:bold">)</span>
+
+</code></pre></div><h2 id="permisos">Permisos</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication#permissions">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication#permissions</a></p>
+<p>Podemos detallar permisos en los modelos y después usarlos en las vistas:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.auth.decorators</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">permission_required</span>
+
+<span style="color:#5c35cc;font-weight:bold">@permission_required</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog.can_mark_returned&#39;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#5c35cc;font-weight:bold">@permission_required</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog.can_edit&#39;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">my_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+
+
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.auth.mixins</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">PermissionRequiredMixin</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyView</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">PermissionRequiredMixin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">View</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">permission_required</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;catalog.can_mark_returned&#39;</span>
+    <span style="color:#8f5902;font-style:italic"># Or multiple permissions</span>
+    <span style="color:#000">permission_required</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;catalog.can_mark_returned&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;catalog.can_edit&#39;</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#8f5902;font-style:italic"># Note that &#39;catalog.can_edit&#39; is just an example</span>
+    <span style="color:#8f5902;font-style:italic"># the catalog application doesn&#39;t have such permission!</span>
+
+</code></pre></div>
 </div>
 
 

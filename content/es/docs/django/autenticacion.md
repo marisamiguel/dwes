@@ -44,8 +44,11 @@ urlpatterns += [
 ## LOGIN_URL
 Por defecto: **'/accounts/login/'**
 
-* Escribir templates: **'registration/login.html'**
+* Escribir templates: **'registration/login.html'** dentro de la carpeta del proyecto.
+* Hay que tener configurada la búsqueda de templates en **settings.py**  https://github.com/lmorillas/biblioteca/blob/main/biblioteca/settings.py#L63
 
+## LOGOUT
+Se puede configurar LOGOUT_REDIRECT_URL en settings.py o facilitar la plantilla  **'registration/logged_out.html'** que responde a la acción de logout.
 
 ## Forzar login
 ```python

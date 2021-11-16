@@ -234,6 +234,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>14: <a href="#pg-11c7d65af1cf9722ba5d6add2a60854e">Archivos estáticos</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -1311,6 +1319,53 @@ Para los archivos que se suben de forma dinámica:</p>
         <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">img</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;{{ instance.image_field.url }}&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
     {% endif %}
 </code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-11c7d65af1cf9722ba5d6add2a60854e">14 - Archivos estáticos</h1>
+    <div class="lead">Subida de archivos</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.2/howto/static-files/">https://docs.djangoproject.com/en/3.2/howto/static-files/</a></li>
+</ul>
+
+</div>
+
+<h2 id="configurar">Configurar</h2>
+<p>Incluir <strong>django.contrib.staticfiles</strong> en ** is included in your <strong>INSTALLED_APPS</strong>.</p>
+<p>En el archivo <strong>settings.py</strong>, incluir la siguiente línea:</p>
+<p><code>STATIC_URL = '/static/'</code></p>
+<p>En las plantillas:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{% load static %}
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">img</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;{% static &#39;my_app/example.jpg&#39; %}&#34;</span> <span style="color:#c4a000">alt</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;My image&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>Los archivos van en una carptea <strong>static</strong> en las apps</p>
+<h2 id="servir-los-archivos-estáticos">Servir los archivos estáticos</h2>
+<h3 id="desarrollo">Desarrollo</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf.urls.static</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">static</span>
+
+<span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#8f5902;font-style:italic"># ... the rest of your URLconf goes here ...</span>
+<span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">static</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_URL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">document_root</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_ROOT</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="despliegue">Despliegue</h3>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/">https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/</a></li>
+</ul>
+
 </div>
 
 

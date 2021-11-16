@@ -56,8 +56,11 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;login_url&#34;&gt;LOGIN_URL&lt;/h2&gt;
 &lt;p&gt;Por defecto: &lt;strong&gt;&#39;/accounts/login/&#39;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Escribir templates: &lt;strong&gt;&amp;lsquo;registration/login.html&amp;rsquo;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Escribir templates: &lt;strong&gt;&amp;lsquo;registration/login.html&amp;rsquo;&lt;/strong&gt; dentro de la carpeta del proyecto.&lt;/li&gt;
+&lt;li&gt;Hay que tener configurada la búsqueda de templates en &lt;strong&gt;settings.py&lt;/strong&gt;  &lt;a href=&#34;https://github.com/lmorillas/biblioteca/blob/main/biblioteca/settings.py#L63&#34;&gt;https://github.com/lmorillas/biblioteca/blob/main/biblioteca/settings.py#L63&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;logout&#34;&gt;LOGOUT&lt;/h2&gt;
+&lt;p&gt;Se puede configurar LOGOUT_REDIRECT_URL en settings.py o facilitar la plantilla  &lt;strong&gt;&amp;lsquo;registration/logged_out.html&amp;rsquo;&lt;/strong&gt; que responde a la acción de logout.&lt;/p&gt;
 &lt;h2 id=&#34;forzar-login&#34;&gt;Forzar login&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;django.conf&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;settings&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;django.shortcuts&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;redirect&lt;/span&gt;

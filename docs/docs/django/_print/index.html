@@ -226,6 +226,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>13: <a href="#pg-5a2cce7f0df84a85e1d26ffd7785cd94">Subida de archivos</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -1072,8 +1080,11 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
 </code></pre></div><h2 id="login_url">LOGIN_URL</h2>
 <p>Por defecto: <strong>'/accounts/login/'</strong></p>
 <ul>
-<li>Escribir templates: <strong>&lsquo;registration/login.html&rsquo;</strong></li>
+<li>Escribir templates: <strong>&lsquo;registration/login.html&rsquo;</strong> dentro de la carpeta del proyecto.</li>
+<li>Hay que tener configurada la búsqueda de templates en <strong>settings.py</strong>  <a href="https://github.com/lmorillas/biblioteca/blob/main/biblioteca/settings.py#L63">https://github.com/lmorillas/biblioteca/blob/main/biblioteca/settings.py#L63</a></li>
 </ul>
+<h2 id="logout">LOGOUT</h2>
+<p>Se puede configurar LOGOUT_REDIRECT_URL en settings.py o facilitar la plantilla  <strong>&lsquo;registration/logged_out.html&rsquo;</strong> que responde a la acción de logout.</p>
 <h2 id="forzar-login">Forzar login</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
 <span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">redirect</span>
@@ -1132,6 +1143,173 @@ Revisa la documentación de <a href="https://developer.mozilla.org/en-US/docs/Le
     <span style="color:#8f5902;font-style:italic"># Note that &#39;catalog.can_edit&#39; is just an example</span>
     <span style="color:#8f5902;font-style:italic"># the catalog application doesn&#39;t have such permission!</span>
 
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5a2cce7f0df84a85e1d26ffd7785cd94">13 - Subida de archivos</h1>
+    <div class="lead">Subida de archivos</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/3.2/topics/files/">https://docs.djangoproject.com/en/3.2/topics/files/</a></li>
+</ul>
+
+</div>
+
+<h2 id="configuración">Configuración</h2>
+<p>Django usa STACIT_ROOT y STATIC_URL para servir lso archivos estáticos (css, js, assets).
+Para los archivos que se suben de forma dinámica:</p>
+<ul>
+<li>MEDIA_ROOT</li>
+<li>MEDIA_URL</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">MEDIA_ROOT</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">BASE_DIR</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;media&#39;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">MEDIA_URL</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;/media/&#39;</span>
+</code></pre></div><p>En templates:
+<code>django.template.context_processors.media</code></p>
+<h2 id="servidor-en-desarrollo">Servidor en desarrollo</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DEBUG</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#000">static</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MEDIA_URL</span><span style="color:#000;font-weight:bold">,</span> 
+               <span style="color:#000">document_root</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MEDIA_ROOT</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="test">Test</h2>
+<p>Subir un estático a mano y comprobar que se ve en el servidor.</p>
+<h2 id="subida-de-archivos-con-formularios">Subida de archivos con formularios</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">form</span> <span style="color:#c4a000">action</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;{% url &#39;upload&#39; %}&#34;</span> <span style="color:#c4a000">method</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;post&#34;</span> <span style="color:#c4a000">enctype</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;multipart/form-data&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;file&#34;</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;file&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;submit&#34;</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Upload&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">form</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h2 id="trabajar-con-archivos-en-una-vista">Trabajar con archivos en una vista</h2>
+<p>El contenido llega en <code>request.FILES</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">with</span> <span style="color:#204a87">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MEDIA_ROOT</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;archivo.txt&#39;</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#4e9a06">&#39;wb+&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">destination</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">chunk</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;file&#39;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">chunks</span><span style="color:#000;font-weight:bold">():</span>
+        <span style="color:#000">destination</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">write</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">chunk</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="problema-de-seguridad">Problema de seguridad</h2>
+<p>El navegador da unos valores:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">upload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;file&#39;</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000">size</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">upload</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">sizecontent</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;file&#39;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">read</span><span style="color:#000;font-weight:bold">()</span>
+<span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">upload</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span>
+<span style="color:#000">content_type</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">upload</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">content_type</span>
+<span style="color:#000">charset</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">upload</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">charset</span>
+</code></pre></div><p>¿Entorno de confianza?</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">mimetypes</span>
+
+<span style="color:#000">upload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;file&#39;</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000">mimetype</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">encoding</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">mimetypes</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">guess_type</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">upload</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">mimetype</span> <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#204a87;font-weight:bold">None</span> <span style="color:#204a87;font-weight:bold">or</span> <span style="color:#204a87;font-weight:bold">not</span> <span style="color:#000">mimetype</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">startswith</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;image/&#39;</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">raise</span> <span style="color:#ce5c00;font-weight:bold">...</span>
+</code></pre></div><h2 id="ejemplo-vista-sencilla">Ejemplo vista sencilla</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">vista_ejemplo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">method</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;POST&#39;</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">save_path</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MEDIA_ROOT</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">)</span>
+
+        <span style="color:#204a87;font-weight:bold">with</span> <span style="color:#204a87">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">save_path</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;wb&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">output_file</span><span style="color:#000;font-weight:bold">:</span>
+            <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">chunk</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">chunks</span><span style="color:#000;font-weight:bold">():</span>
+                <span style="color:#000">output_file</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">write</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">chunk</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;media-example.html&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="uso-con-django-forms">Uso con Django Forms</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">forms</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">forms</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Form</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">file_upload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">forms</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FileField</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">render</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">.forms</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UploadForm</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">media_example</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">method</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;POST&#39;</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">POST</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_valid</span><span style="color:#000;font-weight:bold">():</span>
+            <span style="color:#000">save_path</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MEDIA_ROOT</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">)</span>
+
+            <span style="color:#204a87;font-weight:bold">with</span> <span style="color:#204a87">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">save_path</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;wb&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">output_file</span><span style="color:#000;font-weight:bold">:</span>
+                <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">chunk</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">chunks</span><span style="color:#000;font-weight:bold">():</span>
+                    <span style="color:#000">output_file</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">write</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">chunk</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">()</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;media-example.html&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;form&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">form</span><span style="color:#000;font-weight:bold">})</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">form</span> <span style="color:#c4a000">method</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;post&#34;</span> <span style="color:#c4a000">enctype</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;multipart/form-data&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;submit&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Submit<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">form</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h2 id="imágenes-con-django-forms">Imágenes con Django Forms</h2>
+<p>Instalar Pillow</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">forms</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Form</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">file_upload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">forms</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ImageField</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">PIL</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Image</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">render</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">.forms</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UploadForm</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">media_example</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">method</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;POST&#39;</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">POST</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_valid</span><span style="color:#000;font-weight:bold">():</span>
+            <span style="color:#000">save_path</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">MEDIA_ROOT</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">)</span>
+
+            <span style="color:#000">image</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Image</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">])</span>
+            <span style="color:#000">image</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">thumbnail</span><span style="color:#000;font-weight:bold">((</span><span style="color:#0000cf;font-weight:bold">50</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">50</span><span style="color:#000;font-weight:bold">))</span>
+            <span style="color:#000">image</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">save</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">save_path</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">()</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;media-example.html&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;form&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">form</span><span style="color:#000;font-weight:bold">})</span>
+</code></pre></div><h2 id="uso-de-modelos">Uso de Modelos</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.db</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">models</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">ExampleModel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Model</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">image_field</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ImageField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">upload_to</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;images/&#34;</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">file_field</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FileField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">upload_to</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;files/&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.shortcuts</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">render</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">.forms</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">UploadForm</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ExampleModel</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">media_example</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">instance</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">None</span>
+
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">method</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;POST&#39;</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">POST</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">FILES</span><span style="color:#000;font-weight:bold">)</span>
+
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_valid</span><span style="color:#000;font-weight:bold">():</span>
+            <span style="color:#000">instance</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ExampleModel</span><span style="color:#000;font-weight:bold">()</span>
+            <span style="color:#000">instance</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">image_field</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;image_upload&#34;</span><span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000">instance</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">file_field</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">form</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cleaned_data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;file_upload&#34;</span><span style="color:#000;font-weight:bold">]</span>
+            <span style="color:#000">instance</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">save</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#000">form</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">UploadForm</span><span style="color:#000;font-weight:bold">()</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">render</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;media-example.html&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;form&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">form</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;instance&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">instance</span><span style="color:#000;font-weight:bold">})</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">form</span> <span style="color:#c4a000">method</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;post&#34;</span> <span style="color:#c4a000">enctype</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;multipart/form-data&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;submit&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Submit<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">form</span><span style="color:#000;font-weight:bold">&gt;</span>
+    {% if instance %}
+        <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">img</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;{{ instance.image_field.url }}&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    {% endif %}
 </code></pre></div>
 </div>
 

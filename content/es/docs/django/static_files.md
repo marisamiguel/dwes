@@ -13,7 +13,7 @@ Documentación:
 {{% /pageinfo %}}
 
 ## Configurar
-Incluir **django.contrib.staticfiles** en ** is included in your **INSTALLED_APPS**.
+Incluir **django.contrib.staticfiles** en  **INSTALLED_APPS**.
 
 En el archivo **settings.py**, incluir la siguiente línea:
 
@@ -33,11 +33,12 @@ Los archivos van en una carptea **static** en las apps
 ### Desarrollo
 ```python
 from django.conf import settings
-from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-urlpatterns = [
-    # ... the rest of your URLconf goes here ...
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    # Serve static and media files from development server
+    urlpatterns += staticfiles_urlpatterns()
+
 ```
 
 ### Despliegue

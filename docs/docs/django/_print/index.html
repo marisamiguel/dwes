@@ -242,6 +242,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>15: <a href="#pg-ddcdd7458633b63ecc0739d89af5e8a9">Uso de mapas</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -1346,7 +1354,7 @@ Para los archivos que se suben de forma dinámica:</p>
 </div>
 
 <h2 id="configurar">Configurar</h2>
-<p>Incluir <strong>django.contrib.staticfiles</strong> en ** is included in your <strong>INSTALLED_APPS</strong>.</p>
+<p>Incluir <strong>django.contrib.staticfiles</strong> en  <strong>INSTALLED_APPS</strong>.</p>
 <p>En el archivo <strong>settings.py</strong>, incluir la siguiente línea:</p>
 <p><code>STATIC_URL = '/static/'</code></p>
 <p>En las plantillas:</p>
@@ -1356,16 +1364,85 @@ Para los archivos que se suben de forma dinámica:</p>
 <h2 id="servir-los-archivos-estáticos">Servir los archivos estáticos</h2>
 <h3 id="desarrollo">Desarrollo</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">settings</span>
-<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.conf.urls.static</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">static</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib.staticfiles.urls</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">staticfiles_urlpatterns</span>
 
-<span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
-    <span style="color:#8f5902;font-style:italic"># ... the rest of your URLconf goes here ...</span>
-<span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">static</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_URL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">document_root</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">STATIC_ROOT</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DEBUG</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#8f5902;font-style:italic"># Serve static and media files from development server</span>
+    <span style="color:#000">urlpatterns</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#000">staticfiles_urlpatterns</span><span style="color:#000;font-weight:bold">()</span>
+
 </code></pre></div><h3 id="despliegue">Despliegue</h3>
 <ul>
 <li><a href="https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/">https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/</a></li>
 </ul>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ddcdd7458633b63ecc0739d89af5e8a9">15 - Uso de mapas</h1>
+    <div class="lead">Ejemplo uso de mapas con leaflet</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Documentación:</p>
+<ul>
+<li><a href="https://leafletjs.com/examples/quick-start/">https://leafletjs.com/examples/quick-start/</a></li>
+<li>Apps específicas: <a href="https://django-leaflet.readthedocs.io/en/latest/">https://django-leaflet.readthedocs.io/en/latest/</a></li>
+<li>Tutoriales: <a href="https://mappinggis.com/?s=leaflet">https://mappinggis.com/?s=leaflet</a></li>
+<li>Ejemplos: <a href="https://github.com/tomik23/leaflet-examples">https://github.com/tomik23/leaflet-examples</a></li>
+</ul>
+
+</div>
+
+<h2 id="configurar">Configurar</h2>
+<ol>
+<li>Css de leaflet</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">link</span> <span style="color:#c4a000">rel</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;stylesheet&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&#34;</span>
+   <span style="color:#c4a000">integrity</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==&#34;</span>
+   <span style="color:#c4a000">crossorigin</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">/&gt;</span>
+</code></pre></div><ol start="2">
+<li>JS de Leaflet</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#8f5902;font-style:italic">&lt;!-- Make sure you put this AFTER Leaflet&#39;s CSS --&gt;</span>
+ <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&#34;</span>
+   <span style="color:#c4a000">integrity</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==&#34;</span>
+   <span style="color:#c4a000">crossorigin</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><ol start="3">
+<li>En plantilla:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;map&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><ol start="4">
+<li>Configurar mapa desde js
+Ejemplo en plantilla de django con coordenadas en variable <strong>coords</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">mimapa</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">L</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">map</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;map&#39;</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">setView</span><span style="color:#000;font-weight:bold">([{{</span><span style="color:#000">coords</span><span style="color:#000;font-weight:bold">}}],</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">);</span>
+
+    <span style="color:#000">L</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">tileLayer</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">attribution</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;Map data &amp;copy; &lt;a href=&#34;http://openstreetmap.org&#34;&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/2.0/&#34;&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href=&#34;http://cloudmade.com&#34;&gt;CloudMade&lt;/a&gt;&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">maxZoom</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">18</span>
+    <span style="color:#000;font-weight:bold">}).</span><span style="color:#000">addTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mimapa</span><span style="color:#000;font-weight:bold">);</span>
+
+    <span style="color:#000">L</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">marker</span><span style="color:#000;font-weight:bold">([{{</span><span style="color:#000">coords</span><span style="color:#000;font-weight:bold">}}]).</span><span style="color:#000">addTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mimapa</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">bindPopup</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;CPI Los Enlaces&#34;</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><ol start="5">
+<li>Configurar el mapa en css</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">style</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">#</span><span style="color:#000">map</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#204a87;font-weight:bold">height</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">400</span><span style="color:#204a87;font-weight:bold">px</span> <span style="color:#000;font-weight:bold">;}</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">style</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div>
 </div>
 
 

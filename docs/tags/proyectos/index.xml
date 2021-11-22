@@ -1,0 +1,97 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desarrollo Web Entorno Servidor – proyectos</title>
+    <link>https://lmorillas.github.io/dwes/tags/proyectos/</link>
+    <description>Recent content in proyectos on Desarrollo Web Entorno Servidor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Oct 2021 10:36:54 +0200</lastBuildDate>
+    
+	  <atom:link href="https://lmorillas.github.io/dwes/tags/proyectos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Proyecto Django - Primer trimestre</title>
+      <link>https://lmorillas.github.io/dwes/docs/proyectos/django_1/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/proyectos/django_1/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Descripción&lt;/strong&gt;: proyecto de una web personal con altas, bajas, modificaciones y listados de datos.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;requisitos&#34;&gt;REQUISITOS&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;El proyecto estará gestionado en un repositorio de código git con un remoto en github. Accesible por el profesor (1 punto)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Habrá una gestión correcta de cambios con comentarios claros&lt;/li&gt;
+&lt;li&gt;Contendrá un &lt;strong&gt;README.md&lt;/strong&gt; con la descripción del proyecto y un método de instalación&lt;/li&gt;
+&lt;li&gt;Un &lt;strong&gt;.gitignore&lt;/strong&gt; con las extensiones que no queremos que se suban al repositorio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gestión del proyecto (1 punto)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creación de un entorno virtual con &lt;strong&gt;requirements.txt&lt;/strong&gt; para indicar las dependencias&lt;/li&gt;
+&lt;li&gt;El directorio &lt;strong&gt;env&lt;/strong&gt; no se incluirá en el repositorio.&lt;/li&gt;
+&lt;li&gt;Todas las funciones y clases estarán documentadas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Models&lt;/strong&gt; (2 puntos)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gestión correcta de datos (tipos de datos y relaciones)&lt;/li&gt;
+&lt;li&gt;Al menos 3 modelos con relaciones entre ellos&lt;/li&gt;
+&lt;li&gt;Todos tendrán método &lt;strong&gt;&lt;strong&gt;str&lt;/strong&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;urls&lt;/strong&gt; (1 punto)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Urls generales y la aplicación para listados, altas, bajas y modificaciones&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hará uso del &lt;strong&gt;Admin&lt;/strong&gt; al menos para listados con filtros y búsquedas. (1 punto)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;views&lt;/strong&gt; (2 punto)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uso de vistas tipo función y de tipo clase&lt;/li&gt;
+&lt;li&gt;Gestión correcta y segura de formularios&lt;/li&gt;
+&lt;li&gt;Las funcionalidades que modifican los datos tienen que estar limitadas a usuarios autenticados&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;templates&lt;/strong&gt; (2 punto)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Habrá herencia de una plantilla base&lt;/li&gt;
+&lt;li&gt;Habrá una barra de menús o sidebar en una plantilla aparte&lt;/li&gt;
+&lt;li&gt;bloques de contenido, extracss y extrajs&lt;/li&gt;
+&lt;li&gt;Gestión correcta de formularios&lt;/li&gt;
+&lt;li&gt;Bloques &lt;strong&gt;if&lt;/strong&gt; y &lt;strong&gt;for&lt;/strong&gt; para mostrar correctamente los datoss&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hará una presentación de la aplicación ante los compañeros el día del examen del módulo. (1 punto)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;fecha-limiete-de-entrega&#34;&gt;FECHA LIMIETE DE ENTREGA&lt;/h2&gt;
+&lt;p&gt;8 de diciembre a las 20 horas.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

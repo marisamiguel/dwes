@@ -5,7 +5,7 @@
     <loc>https://lmorillas.github.io/dwes/docs/presentaci%C3%B3n/</loc>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django-2/salidacsv/</loc>
-    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+    <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/</loc>
     <lastmod>2021-09-25T17:05:42+02:00</lastmod>
@@ -26,13 +26,13 @@
     <lastmod>2021-11-01T21:08:43+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django-2/</loc>
-    <lastmod>2021-10-21T10:29:17+02:00</lastmod>
+    <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/creacion-proyecto-app/</loc>
     <lastmod>2021-10-25T21:02:59+02:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django-2/salidajson/</loc>
-    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+    <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/introduccion-http/</loc>
     <lastmod>2021-10-25T21:02:59+02:00</lastmod>
@@ -41,16 +41,19 @@
     <lastmod>2021-11-01T21:08:43+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/sitio_administrativo/</loc>
-    <lastmod>2021-10-26T19:12:59+02:00</lastmod>
+    <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django-2/tests/</loc>
-    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+    <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/contenido/</loc>
     <lastmod>2021-09-26T22:53:39+02:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/home_page/</loc>
     <lastmod>2021-11-01T21:08:43+01:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/django-2/backup/</loc>
+    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/ejercicios_repaso/</loc>
     <lastmod>2021-11-03T07:37:24+01:00</lastmod>
@@ -61,11 +64,17 @@
     <loc>https://lmorillas.github.io/dwes/docs/django/formularios/</loc>
     <lastmod>2021-11-09T07:34:52+01:00</lastmod>
   </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/django-2/postgresql/</loc>
+    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+  </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/formularios_crispy/</loc>
     <lastmod>2021-11-14T19:16:16+01:00</lastmod>
   </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/django-2/utilidades/</loc>
+    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+  </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/proyectos/</loc>
-    <lastmod>2021-11-22T21:09:49+01:00</lastmod>
+    <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/templates/</loc>
     <lastmod>2021-09-26T22:52:09+02:00</lastmod>

@@ -154,6 +154,30 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>4: <a href="#pg-57a32f787f80d6d30f7e8555fbdf302c">Copias de seguridad</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-e90d515c257a37967f1f0bd062aaf89e">Postgresql</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-6e3579981685f703c3ce642bc7464faa">Utilidades</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -441,6 +465,154 @@ Versión imprimible multipagina.
 
         <span style="color:#8f5902;font-style:italic"># Check that it lets us login. We&#39;re a librarian, so we can view any users book</span>
         <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-57a32f787f80d6d30f7e8555fbdf302c">4 - Copias de seguridad</h1>
+    <div class="lead">Copias de segurdad. Backup y restore</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://django-dbbackup.readthedocs.io/">https://django-dbbackup.readthedocs.io/</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/django-admin/#dumpdata">https://docs.djangoproject.com/en/4.0/ref/django-admin/#dumpdata</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/django-admin/#loaddata">https://docs.djangoproject.com/en/4.0/ref/django-admin/#loaddata</a></li>
+</ul>
+
+</div>
+
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">pip</span> <span style="color:#000">install</span> <span style="color:#000">django</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">dbbackup</span>
+
+
+<span style="color:#8f5902;font-style:italic"># settings.py</span>
+<span style="color:#000">INSTALLED_APPS</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#4e9a06">&#39;dbbackup&#39;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic"># django-dbbackup</span>
+<span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#000">DBBACKUP_STORAGE</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;django.core.files.storage.FileSystemStorage&#39;</span>
+<span style="color:#000">DBBACKUP_STORAGE_OPTIONS</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;location&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;/my/backup/dir/&#39;</span><span style="color:#000;font-weight:bold">}</span>
+
+
+<span style="color:#a40000">$</span> <span style="color:#000">python</span> <span style="color:#000">manage</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">py</span> <span style="color:#000">dbbackup</span>
+<span style="color:#a40000">$</span> <span style="color:#000">python</span> <span style="color:#000">manage</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">py</span> <span style="color:#000">dbrestore</span>
+<span style="color:#a40000">$</span> <span style="color:#000">python</span> <span style="color:#000">manage</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">py</span> <span style="color:#000">mediabackup</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a40000">$</span> <span style="color:#000">python</span> <span style="color:#000">manage</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">py</span> <span style="color:#000">dumpdata</span>
+<span style="color:#a40000">$</span> <span style="color:#000">python</span> <span style="color:#000">manage</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">py</span> <span style="color:#000">loaddata</span>
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e90d515c257a37967f1f0bd062aaf89e">5 - Postgresql</h1>
+    
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/databases/">https://docs.djangoproject.com/en/4.0/ref/databases/</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-DATABASES">https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-DATABASES</a></li>
+<li><a href="https://tutorial-extensions.djangogirls.org/es/optional_postgresql_installation">https://tutorial-extensions.djangogirls.org/es/optional_postgresql_installation</a></li>
+<li><a href="https://www.section.io/engineering-education/django-app-using-postgresql-database/">https://www.section.io/engineering-education/django-app-using-postgresql-database/</a></li>
+<li><a href="https://djangocentral.com/using-postgresql-with-django/">https://djangocentral.com/using-postgresql-with-django/</a></li>
+</ul>
+
+</div>
+
+<h2 id="instalación-de-postgresql-en-linux">Instalación de postgresql en linux</h2>
+<p>Buscar en la información</p>
+<h2 id="instalación-con-docker">Instalación con docker</h2>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></li>
+<li><a href="https://docs.docker.com/engine/install/linux-postinstall/">https://docs.docker.com/engine/install/linux-postinstall/</a></li>
+<li><a href="https://docs.docker.com/samples/django/">https://docs.docker.com/samples/django/</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+
+$ sudo groupadd docker
+$ sudo usermod -aG docker <span style="color:#000">$USER</span>
+$ newgrp docker
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#8f5902;font-style:italic"># Use postgres/example user/password credentials</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;3.1&#39;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">services</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">db</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">postgres:13.0-alpine</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">restart</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">never</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">environment</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">POSTGRES_USER=hello_django</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">POSTGRES_PASSWORD=hello_django</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">POSTGRES_DB=hello_django_dev</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">./postgres_data:/var/lib/postgresql/data/</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">adminer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">adminer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">restart</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">never</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-compose up -d --build
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6e3579981685f703c3ce642bc7464faa">6 - Utilidades</h1>
+    
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://pypi.org/project/python-dotenv/">https://pypi.org/project/python-dotenv/</a></li>
+</ul>
+
+</div>
+
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install python-dotenv
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># .env</span>
+<span style="color:#000">USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">dotenv</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">load_dotenv</span>
+
+<span style="color:#000">load_dotenv</span><span style="color:#000;font-weight:bold">()</span>  <span style="color:#8f5902;font-style:italic"># take environment variables from .env.</span>
+<span style="color:#000">USER</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getenv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;USER&#34;</span><span style="color:#000;font-weight:bold">)</span>
 
 </code></pre></div>
 </div>

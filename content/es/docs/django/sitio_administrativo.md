@@ -46,4 +46,4 @@ admin.site.register(Author, AuthorAdmin)
 
 ### fields y fieldsets
 
-### Edición inline
+### Edición

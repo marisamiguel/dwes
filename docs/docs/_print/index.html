@@ -413,7 +413,7 @@ Versión imprimible multipagina.
     
     
 	
-<li>5: <a href="#pg-e65c771e2f8bbed1c3203d175a349f92">Proyectos</a></li>
+<li>5: <a href="#pg-6a416270f7839d15dc8483f60543b361">Django2</a></li>
 
 
     
@@ -428,7 +428,50 @@ Versión imprimible multipagina.
     
     
 	
-<li>5.1: <a href="#pg-805220f211a9bbec693b373a3e7b3e5b">Proyecto Django - Primer trimestre</a></li>
+<li>5.1: <a href="#pg-ecfa9bd0a552fd87dacbb41e693471e4">Generación de archivos CSV</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.2: <a href="#pg-50f59551a2b6a256d2f76ab89658f0cc">Salida JSON</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.3: <a href="#pg-6c455beabe79b76ddb0f7bf19ee1ed69">Tests</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-e65c771e2f8bbed1c3203d175a349f92">Proyectos</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>6.1: <a href="#pg-805220f211a9bbec693b373a3e7b3e5b">Proyecto Django - Primer trimestre</a></li>
 
 
     
@@ -2212,7 +2255,7 @@ Content-Encoding: gzip
 </code></pre></div><h3 id="list_display">list_display</h3>
 <h3 id="list_filter">list_filter</h3>
 <h3 id="fields-y-fieldsets">fields y fieldsets</h3>
-<h3 id="edición-inline">Edición inline</h3>
+<h3 id="edición">Edición</h3>
 
 </div>
 
@@ -3102,7 +3145,313 @@ Ejemplo en plantilla de django con coordenadas en variable <strong>coords</stron
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-e65c771e2f8bbed1c3203d175a349f92">5 - Proyectos</h1>
+	<h1 id="pg-6a416270f7839d15dc8483f60543b361">5 - Django2</h1>
+    <div class="lead">Desarrollo web con Django: &ldquo;The web framework for perfectionists with deadlines&rdquo;</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-ecfa9bd0a552fd87dacbb41e693471e4">5.1 - Generación de archivos CSV</h1>
+    <div class="lead">Generación de salida csv</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.djangoproject.com/en/4.0/howto/outputting-csv/">https://docs.djangoproject.com/en/4.0/howto/outputting-csv/</a></li>
+</ul>
+
+</div>
+
+<h2 id="generación-de-un-csv-dinámico">Generación de un CSV dinámico</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">csv</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.http</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">HttpResponse</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">some_view</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#8f5902;font-style:italic"># Create the HttpResponse object with the appropriate CSV header.</span>
+    <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">HttpResponse</span><span style="color:#000;font-weight:bold">(</span>
+        <span style="color:#000">content_type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;text/csv&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000">headers</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;Content-Disposition&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;attachment; filename=&#34;somefilename.csv&#34;&#39;</span><span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#000">writer</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">csv</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">writer</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">writer</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">writerow</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;First row&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;Foo&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;Bar&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;Baz&#39;</span><span style="color:#000;font-weight:bold">])</span>
+    <span style="color:#000">writer</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">writerow</span><span style="color:#000;font-weight:bold">([</span><span style="color:#4e9a06">&#39;Second row&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;A&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;B&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;C&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;&#34;Testing&#34;&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Here&#39;s a quote&#34;</span><span style="color:#000;font-weight:bold">])</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">response</span>
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-50f59551a2b6a256d2f76ab89658f0cc">5.2 - Salida JSON</h1>
+    <div class="lead">Generación de salida json</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.JsonResponse">https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.JsonResponse</a></li>
+<li><a href="https://dev.to/brian101co/how-to-return-a-json-response-in-django-gen">https://dev.to/brian101co/how-to-return-a-json-response-in-django-gen</a></li>
+</ul>
+
+</div>
+
+<h2 id="generación-salida-json">Generación salida JSON</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.http</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">JsonResponse</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">view_list_json</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#ce5c00;font-weight:bold">...</span>
+    <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{}</span> <span style="color:#8f5902;font-style:italic"># diccionario</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">JsonResponse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span>
+
+
+<span style="color:#8f5902;font-style:italic"># views.py</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.core.serializers</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">serialize</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.http</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">HttpResponse</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Post</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">django_models_json</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">qs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Post</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">all</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">serialize</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;json&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">qs</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">fields</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;title&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;content&#39;</span><span style="color:#000;font-weight:bold">))</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">HttpResponse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">content_type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;application/json&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6c455beabe79b76ddb0f7bf19ee1ed69">5.3 - Tests</h1>
+    <div class="lead">Tests</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/">https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.0/topics/testing/">https://docs.djangoproject.com/en/4.0/topics/testing/</a></li>
+</ul>
+
+</div>
+
+<h2 id="por-qué">¿Por qué?</h2>
+<ul>
+<li>Nos ahorran tiempo</li>
+<li>Previenen problemas, no sólo los identifican</li>
+<li>Hacen el código más legible</li>
+<li>Ayudan al trabajo en equipo</li>
+</ul>
+<h2 id="tipos-de-tests">Tipos de tests</h2>
+<p>Hay varias clasificaciones de tests automáticos:</p>
+<ul>
+<li>
+<p>Tests unitarios</p>
+</li>
+<li>
+<p>Tests de integración</p>
+</li>
+<li>
+<p>Tests de regresión</p>
+</li>
+<li>
+<p>Tests de usabilidad</p>
+</li>
+<li>
+<p>Tests de rendimiento</p>
+</li>
+<li>
+<p>Tests de calidad</p>
+</li>
+<li>
+<p>Tests de seguridad</p>
+</li>
+<li>
+<p>Tests de calidad de código</p>
+</li>
+<li>
+<p>Tests de calidad de interfaz</p>
+</li>
+<li>
+<p>Tests de calidad de documentación</p>
+</li>
+</ul>
+<h2 id="estrategias">Estrategias</h2>
+<ul>
+<li>TDD</li>
+<li>Después del código</li>
+</ul>
+<h2 id="herramientas">Herramientas</h2>
+<p>SimpleTestCase, TransactionTestCase, TestCase, LiveServerTestCase</p>
+<h2 id="cómo">¿Cómo?</h2>
+<ul>
+<li>Escribir los tests en la carpeta tests</li>
+<li><code>python manage.py test </code></li>
+</ul>
+<h2 id="tests-de-modelos">Tests de modelos</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.test</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">TestCase</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">catalog.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Author</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">AuthorModelTest</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TestCase</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#5c35cc;font-weight:bold">@classmethod</span>
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">setUpTestData</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">cls</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#8f5902;font-style:italic"># Set up non-modified objects used by all test methods</span>
+        <span style="color:#000">Author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">first_name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Big&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">last_name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Bob&#39;</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_object_name_is_last_name_comma_first_name</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">author</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">expected_object_name</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">f</span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">{</span><span style="color:#000">author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">last_name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">, </span><span style="color:#4e9a06">{</span><span style="color:#000">author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">first_name</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39;</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">author</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">expected_object_name</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_get_absolute_url</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">author</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#8f5902;font-style:italic"># This will also fail if the urlconf is not defined.</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get_absolute_url</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#4e9a06">&#39;/catalog/author/1&#39;</span><span style="color:#000;font-weight:bold">)</span>
+
+</code></pre></div><h2 id="tests-de-vistas">Tests de vistas</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.test</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">TestCase</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.urls</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">reverse</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">catalog.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Author</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">AuthorListViewTest</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TestCase</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#5c35cc;font-weight:bold">@classmethod</span>
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">setUpTestData</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">cls</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#8f5902;font-style:italic"># Create 13 authors for pagination tests</span>
+        <span style="color:#000">number_of_authors</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">13</span>
+
+        <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">author_id</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">number_of_authors</span><span style="color:#000;font-weight:bold">):</span>
+            <span style="color:#000">Author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span>
+                <span style="color:#000">first_name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">f</span><span style="color:#4e9a06">&#39;Christian </span><span style="color:#4e9a06">{</span><span style="color:#000">author_id</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39;</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#000">last_name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">f</span><span style="color:#4e9a06">&#39;Surname </span><span style="color:#4e9a06">{</span><span style="color:#000">author_id</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_view_url_exists_at_desired_location</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/catalog/authors/&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_view_url_accessible_by_name</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;authors&#39;</span><span style="color:#000;font-weight:bold">))</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_view_uses_correct_template</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;authors&#39;</span><span style="color:#000;font-weight:bold">))</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertTemplateUsed</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;catalog/author_list.html&#39;</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_pagination_is_ten</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;authors&#39;</span><span style="color:#000;font-weight:bold">))</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertTrue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;is_paginated&#39;</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertTrue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;is_paginated&#39;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;author_list&#39;</span><span style="color:#000;font-weight:bold">]),</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_lists_all_authors</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#8f5902;font-style:italic"># Get second page and confirm it has (exactly) remaining 3 items</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;authors&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#4e9a06">&#39;?page=2&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertTrue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;is_paginated&#39;</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertTrue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;is_paginated&#39;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">context</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;author_list&#39;</span><span style="color:#000;font-weight:bold">]),</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">AccesoUsuariosTest</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TestCase</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">setUp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#8f5902;font-style:italic"># Create a user</span>
+        <span style="color:#000">test_user1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">User</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create_user</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;testuser1&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;1X&lt;ISRUkw+tuK&#39;</span><span style="color:#000;font-weight:bold">)</span>
+
+        <span style="color:#000">test_user1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">save</span><span style="color:#000;font-weight:bold">()</span>
+
+        <span style="color:#8f5902;font-style:italic"># Create a book</span>
+        <span style="color:#000">test_author</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Author</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">first_name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;John&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">last_name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Smith&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">test_genre</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Genre</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Fantasy&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">test_language</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Language</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;English&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">test_book</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Book</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">objects</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">create</span><span style="color:#000;font-weight:bold">(</span>
+            <span style="color:#000">title</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Book Title&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">summary</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;My book summary&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">isbn</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;ABCDEFG&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">author</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">test_author</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#000">language</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">test_language</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_redirect_if_not_logged_in</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;renew-book-librarian&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">kwargs</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;pk&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">test_bookinstance1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">pk</span><span style="color:#000;font-weight:bold">}))</span>
+        <span style="color:#8f5902;font-style:italic"># Manually check redirect (Can&#39;t use assertRedirect, because the redirect URL is unpredictable)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">302</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertTrue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">startswith</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;/accounts/login/&#39;</span><span style="color:#000;font-weight:bold">))</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_forbidden_if_logged_in_but_not_correct_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">login</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">login</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;testuser1&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;1X&lt;ISRUkw+tuK&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;renew-book-librarian&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">kwargs</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;pk&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">test_bookinstance1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">pk</span><span style="color:#000;font-weight:bold">}))</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">403</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_logged_in_with_permission_borrowed_book</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">login</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">login</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;testuser2&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;2HJ1vRV0Z&amp;3iD&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;renew-book-librarian&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">kwargs</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;pk&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">test_bookinstance2</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">pk</span><span style="color:#000;font-weight:bold">}))</span>
+
+        <span style="color:#8f5902;font-style:italic"># Check that it lets us login - this is our book and we have the right permissions.</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">test_logged_in_with_permission_another_users_borrowed_book</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#000">login</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">login</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">username</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;testuser2&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">password</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;2HJ1vRV0Z&amp;3iD&#39;</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">client</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;renew-book-librarian&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">kwargs</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#39;pk&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">test_bookinstance1</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">pk</span><span style="color:#000;font-weight:bold">}))</span>
+
+        <span style="color:#8f5902;font-style:italic"># Check that it lets us login. We&#39;re a librarian, so we can view any users book</span>
+        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">assertEqual</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">status_code</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span>
+
+</code></pre></div>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e65c771e2f8bbed1c3203d175a349f92">6 - Proyectos</h1>
     <div class="lead">Proyectos módulo Desarrollo Web Entorno Servidor</div>
 	
 </div>
@@ -3127,7 +3476,7 @@ Ejemplo en plantilla de django con coordenadas en variable <strong>coords</stron
 
 <div class="td-content" style="">
     
-	<h1 id="pg-805220f211a9bbec693b373a3e7b3e5b">5.1 - Proyecto Django - Primer trimestre</h1>
+	<h1 id="pg-805220f211a9bbec693b373a3e7b3e5b">6.1 - Proyecto Django - Primer trimestre</h1>
     <div class="lead">Proyecto de Django primera evaluación</div>
 	
 

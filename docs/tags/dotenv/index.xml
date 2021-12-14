@@ -1,0 +1,102 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desarrollo Web Entorno Servidor – dotenv</title>
+    <link>https://lmorillas.github.io/dwes/tags/dotenv/</link>
+    <description>Recent content in dotenv on Desarrollo Web Entorno Servidor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Oct 2021 10:36:54 +0200</lastBuildDate>
+    
+	  <atom:link href="https://lmorillas.github.io/dwes/tags/dotenv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Utilidades</title>
+      <link>https://lmorillas.github.io/dwes/docs/django-2/utilidades/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/django-2/utilidades/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/python-dotenv/&#34;&gt;https://pypi.org/project/python-dotenv/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ pip install python-dotenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# .env&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# DB&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;POSTGRES_USER&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;postgres
+&lt;span style=&#34;color:#000&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;postgres
+&lt;span style=&#34;color:#000&#34;&gt;POSTGRES_DB&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;postgres
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# app&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;SECRET_KEY&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;y6xg%o&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;^m4ggo5s!%mcdnu@v#neu#1v#2s9d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;_q2&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;wixlxd&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;DATABASE_HOST&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;db
+&lt;span style=&#34;color:#000&#34;&gt;DATABASE_NAME&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;postgres
+&lt;span style=&#34;color:#000&#34;&gt;DATABASE_USER&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;postgres
+&lt;span style=&#34;color:#000&#34;&gt;DATABASE_PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;postgres
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# for debugging and error reporting.&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;DEBUG&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;True
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# settings.py&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dotenv&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;load_dotenv&lt;/span&gt;
+
+&lt;span style=&#34;color:#000&#34;&gt;load_dotenv&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;([&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;])&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# take environment variables from .env.&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# SECURITY WARNING: keep the secret key used in production secret!&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;SECRET_KEY&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;getenv&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;SECRET_KEY&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;))&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Database &lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;DATABASE_HOST&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;environ&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;DATABASES&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;HOST&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;environ&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;DATABASE_HOST&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+            &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# ENGINE read notes below&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;django.db.backends.postgresql_psycopg2&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;NAME&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;environ&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;DATABASE_NAME&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;USER&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;environ&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;DATABASE_USER&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;PASSWORD&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;environ&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;DATABASE_PASSWORD&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;DATABASES&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;django.db.backends.sqlite3&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;NAME&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;join&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;BASE_DIR&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;db.sqlite3&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# docker-compose.yml&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;3.1&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;services&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;db&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;postgres:13.0-alpine&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;env_file&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;.env&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;volumes&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;./postgres_data:/var/lib/postgresql/data/&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5432&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5432&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;adminer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;adminer&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ports&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8080&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8080&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

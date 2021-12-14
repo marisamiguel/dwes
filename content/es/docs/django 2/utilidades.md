@@ -4,7 +4,7 @@ date: 2021-10-21T10:36:54+02:00
 weight: 20
 description: >
   
-tags: []
+tags: [dotenv]
 ---
 
 {{% pageinfo %}}
@@ -17,7 +17,7 @@ $ pip install python-dotenv
 
 ```bash
 # .env
-#.env
+
 # DB
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres

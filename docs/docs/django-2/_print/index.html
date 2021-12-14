@@ -607,14 +607,67 @@ $ newgrp docker
 
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install python-dotenv
 </code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># .env</span>
-<span style="color:#000">USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
+<span style="color:#8f5902;font-style:italic">#.env</span>
+<span style="color:#8f5902;font-style:italic"># DB</span>
+<span style="color:#000">POSTGRES_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">POSTGRES_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">POSTGRES_DB</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+
+<span style="color:#8f5902;font-style:italic"># app</span>
+<span style="color:#000">SECRET_KEY</span><span style="color:#ce5c00;font-weight:bold">=</span>y6xg%o<span style="color:#000;font-weight:bold">&amp;</span>^m4ggo5s!%mcdnu@v#neu#1v#2s9d<span style="color:#000;font-weight:bold">&amp;</span>_q2<span style="color:#ce5c00;font-weight:bold">(</span>wixlxd<span style="color:#ce5c00;font-weight:bold">((</span><span style="color:#8f5902;font-style:italic">#</span>
+<span style="color:#000">DATABASE_HOST</span><span style="color:#ce5c00;font-weight:bold">=</span>db
+<span style="color:#000">DATABASE_NAME</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">DATABASE_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">DATABASE_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+
+<span style="color:#8f5902;font-style:italic"># for debugging and error reporting.</span>
+<span style="color:#000">DEBUG</span><span style="color:#ce5c00;font-weight:bold">=</span>True
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># settings.py</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
 <span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">dotenv</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">load_dotenv</span>
 
-<span style="color:#000">load_dotenv</span><span style="color:#000;font-weight:bold">()</span>  <span style="color:#8f5902;font-style:italic"># take environment variables from .env.</span>
-<span style="color:#000">USER</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getenv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;USER&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">load_dotenv</span><span style="color:#000;font-weight:bold">([</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">])</span>  <span style="color:#8f5902;font-style:italic"># take environment variables from .env.</span>
 
-</code></pre></div>
+<span style="color:#8f5902;font-style:italic"># SECURITY WARNING: keep the secret key used in production secret!</span>
+<span style="color:#000">SECRET_KEY</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getenv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;SECRET_KEY&#39;</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#8f5902;font-style:italic"># Database </span>
+<span style="color:#204a87;font-weight:bold">if</span> <span style="color:#4e9a06">&#39;DATABASE_HOST&#39;</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">DATABASES</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;default&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#4e9a06">&#39;HOST&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_HOST&#39;</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#8f5902;font-style:italic"># ENGINE read notes below</span>
+            <span style="color:#4e9a06">&#39;ENGINE&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#4e9a06">&#39;NAME&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_NAME&#39;</span><span style="color:#000;font-weight:bold">),</span>
+            <span style="color:#4e9a06">&#39;USER&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_USER&#39;</span><span style="color:#000;font-weight:bold">),</span>
+            <span style="color:#4e9a06">&#39;PASSWORD&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_PASSWORD&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">DATABASES</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;default&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#4e9a06">&#39;ENGINE&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;django.db.backends.sqlite3&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#4e9a06">&#39;NAME&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">BASE_DIR</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;db.sqlite3&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#8f5902;font-style:italic"># docker-compose.yml</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;3.1&#39;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">services</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">db</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">postgres:13.0-alpine</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">env_file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">.env</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">./postgres_data:/var/lib/postgresql/data/</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">adminer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">adminer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
 </div>
 
 

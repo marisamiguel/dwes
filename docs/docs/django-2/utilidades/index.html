@@ -32,25 +32,24 @@ https://pypi.org/project/python-dotenv/
 
 $ pip install python-dotenv
 # .env
-USER=admin
-import os
-from dotenv import load_dotenv
-
-load_dotenv() …">
+#.env
+# DB
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres …">
 <meta property="og:title" content="Utilidades" />
-<meta property="og:description" content="  https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env USER=admin import os from dotenv import load_dotenv load_dotenv() # take environment variables from .env. USER = os.getenv(&#34;USER&#34;) " />
+<meta property="og:description" content="https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env #.env # DB POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres POSTGRES_DB=postgres # app SECRET_KEY=y6xg%o&amp;^m4ggo5s!%mcdnu@v#neu#1v#2s9d&amp;_q2(wixlxd((# DATABASE_HOST=db DATABASE_NAME=postgres DATABASE_USER=postgres DATABASE_PASSWORD=postgres # for debugging and error reporting. DEBUG=True # settings.py import os from dotenv import load_dotenv load_dotenv([&lt;path&gt;]) # take environment variables from .env. # SECURITY WARNING: keep the secret key used in production secret! SECRET_KEY = str(os.getenv(&#39;SECRET_KEY&#39;)) # Database  if &#39;DATABASE_HOST&#39; in os.environ: DATABASES = { &#39;default&#39;: { &#39;HOST&#39;: os." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lmorillas.github.io/dwes/docs/django-2/utilidades/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-10-21T10:36:54+02:00" />
-<meta property="article:modified_time" content="2021-12-13T22:56:29+01:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="article:modified_time" content="2021-12-14T17:00:27+01:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
 <meta itemprop="name" content="Utilidades">
-<meta itemprop="description" content="  https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env USER=admin import os from dotenv import load_dotenv load_dotenv() # take environment variables from .env. USER = os.getenv(&#34;USER&#34;) "><meta itemprop="datePublished" content="2021-10-21T10:36:54+02:00" />
-<meta itemprop="dateModified" content="2021-12-13T22:56:29+01:00" />
-<meta itemprop="wordCount" content="24">
+<meta itemprop="description" content="https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env #.env # DB POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres POSTGRES_DB=postgres # app SECRET_KEY=y6xg%o&amp;^m4ggo5s!%mcdnu@v#neu#1v#2s9d&amp;_q2(wixlxd((# DATABASE_HOST=db DATABASE_NAME=postgres DATABASE_USER=postgres DATABASE_PASSWORD=postgres # for debugging and error reporting. DEBUG=True # settings.py import os from dotenv import load_dotenv load_dotenv([&lt;path&gt;]) # take environment variables from .env. # SECURITY WARNING: keep the secret key used in production secret! SECRET_KEY = str(os.getenv(&#39;SECRET_KEY&#39;)) # Database  if &#39;DATABASE_HOST&#39; in os.environ: DATABASES = { &#39;default&#39;: { &#39;HOST&#39;: os."><meta itemprop="datePublished" content="2021-10-21T10:36:54+02:00" />
+<meta itemprop="dateModified" content="2021-12-14T17:00:27+01:00" />
+<meta itemprop="wordCount" content="103">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Utilidades"/>
-<meta name="twitter:description" content="  https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env USER=admin import os from dotenv import load_dotenv load_dotenv() # take environment variables from .env. USER = os.getenv(&#34;USER&#34;) "/>
+<meta name="twitter:description" content="https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env #.env # DB POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres POSTGRES_DB=postgres # app SECRET_KEY=y6xg%o&amp;^m4ggo5s!%mcdnu@v#neu#1v#2s9d&amp;_q2(wixlxd((# DATABASE_HOST=db DATABASE_NAME=postgres DATABASE_USER=postgres DATABASE_PASSWORD=postgres # for debugging and error reporting. DEBUG=True # settings.py import os from dotenv import load_dotenv load_dotenv([&lt;path&gt;]) # take environment variables from .env. # SECURITY WARNING: keep the secret key used in production secret! SECRET_KEY = str(os.getenv(&#39;SECRET_KEY&#39;)) # Database  if &#39;DATABASE_HOST&#39; in os.environ: DATABASES = { &#39;default&#39;: { &#39;HOST&#39;: os."/>
 
 
 
@@ -449,21 +448,74 @@ load_dotenv() …">
 
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install python-dotenv
 </code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># .env</span>
-<span style="color:#000">USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
+<span style="color:#8f5902;font-style:italic">#.env</span>
+<span style="color:#8f5902;font-style:italic"># DB</span>
+<span style="color:#000">POSTGRES_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">POSTGRES_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">POSTGRES_DB</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+
+<span style="color:#8f5902;font-style:italic"># app</span>
+<span style="color:#000">SECRET_KEY</span><span style="color:#ce5c00;font-weight:bold">=</span>y6xg%o<span style="color:#000;font-weight:bold">&amp;</span>^m4ggo5s!%mcdnu@v#neu#1v#2s9d<span style="color:#000;font-weight:bold">&amp;</span>_q2<span style="color:#ce5c00;font-weight:bold">(</span>wixlxd<span style="color:#ce5c00;font-weight:bold">((</span><span style="color:#8f5902;font-style:italic">#</span>
+<span style="color:#000">DATABASE_HOST</span><span style="color:#ce5c00;font-weight:bold">=</span>db
+<span style="color:#000">DATABASE_NAME</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">DATABASE_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+<span style="color:#000">DATABASE_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>postgres
+
+<span style="color:#8f5902;font-style:italic"># for debugging and error reporting.</span>
+<span style="color:#000">DEBUG</span><span style="color:#ce5c00;font-weight:bold">=</span>True
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># settings.py</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
 <span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">dotenv</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">load_dotenv</span>
 
-<span style="color:#000">load_dotenv</span><span style="color:#000;font-weight:bold">()</span>  <span style="color:#8f5902;font-style:italic"># take environment variables from .env.</span>
-<span style="color:#000">USER</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getenv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;USER&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">load_dotenv</span><span style="color:#000;font-weight:bold">([</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">])</span>  <span style="color:#8f5902;font-style:italic"># take environment variables from .env.</span>
 
-</code></pre></div>
+<span style="color:#8f5902;font-style:italic"># SECURITY WARNING: keep the secret key used in production secret!</span>
+<span style="color:#000">SECRET_KEY</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getenv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;SECRET_KEY&#39;</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#8f5902;font-style:italic"># Database </span>
+<span style="color:#204a87;font-weight:bold">if</span> <span style="color:#4e9a06">&#39;DATABASE_HOST&#39;</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">DATABASES</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;default&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#4e9a06">&#39;HOST&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_HOST&#39;</span><span style="color:#000;font-weight:bold">)</span>
+            <span style="color:#8f5902;font-style:italic"># ENGINE read notes below</span>
+            <span style="color:#4e9a06">&#39;ENGINE&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#4e9a06">&#39;NAME&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_NAME&#39;</span><span style="color:#000;font-weight:bold">),</span>
+            <span style="color:#4e9a06">&#39;USER&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_USER&#39;</span><span style="color:#000;font-weight:bold">),</span>
+            <span style="color:#4e9a06">&#39;PASSWORD&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">environ</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;DATABASE_PASSWORD&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#000">DATABASES</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;default&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#4e9a06">&#39;ENGINE&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;django.db.backends.sqlite3&#39;</span><span style="color:#000;font-weight:bold">,</span>
+            <span style="color:#4e9a06">&#39;NAME&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">BASE_DIR</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;db.sqlite3&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#8f5902;font-style:italic"># docker-compose.yml</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;3.1&#39;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">services</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">db</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">postgres:13.0-alpine</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">env_file</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">.env</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">./postgres_data:/var/lib/postgresql/data/</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">adminer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">adminer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
 
     Última modificación
-    December 13, 2021
-    : <a  href="https://github.com/lmorillas/dwes/commit/d5c81a23d0164370d9588579cdd60cb9ac1f36f8">bbdd (d5c81a2)</a>
+    December 14, 2021
+    : <a  href="https://github.com/lmorillas/dwes/commit/8ba925c023ea2ec513ca034855a9c81f2e8ffca7">dotenv (8ba925c)</a>
 
 </div>
 

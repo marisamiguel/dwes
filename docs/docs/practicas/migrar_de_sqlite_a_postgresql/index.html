@@ -17,40 +17,28 @@
 <link rel="icon" type="image/png" href="/dwes/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/dwes/favicons/android-192x192.png" sizes="192x192">
 
-<title>Utilidades | Desarrollo Web Entorno Servidor</title>
+<title>Migración del proyecto de Django de sqlite a Postgresql | Desarrollo Web Entorno Servidor</title>
 
 
-  
-  <meta name="description" content="
-
-
-
-https://pypi.org/project/python-dotenv/
-
-
-
-
-$ pip install python-dotenv
-# .env
-USER=admin
-import os
-from dotenv import load_dotenv
-
-load_dotenv() …">
-<meta property="og:title" content="Utilidades" />
-<meta property="og:description" content="  https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env USER=admin import os from dotenv import load_dotenv load_dotenv() # take environment variables from .env. USER = os.getenv(&#34;USER&#34;) " />
+  <meta name="description" content="Migración de Sqlite a Postgresql
+">
+<meta property="og:title" content="Migración del proyecto de Django de sqlite a Postgresql" />
+<meta property="og:description" content="Migración de Sqlite a Postgresql
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lmorillas.github.io/dwes/docs/django-2/utilidades/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://lmorillas.github.io/dwes/docs/practicas/migrar_de_sqlite_a_postgresql/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-10-21T10:36:54+02:00" />
-<meta property="article:modified_time" content="2021-12-13T22:56:29+01:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="article:modified_time" content="2021-10-21T10:36:54+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
-<meta itemprop="name" content="Utilidades">
-<meta itemprop="description" content="  https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env USER=admin import os from dotenv import load_dotenv load_dotenv() # take environment variables from .env. USER = os.getenv(&#34;USER&#34;) "><meta itemprop="datePublished" content="2021-10-21T10:36:54+02:00" />
-<meta itemprop="dateModified" content="2021-12-13T22:56:29+01:00" />
-<meta itemprop="wordCount" content="24">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Utilidades"/>
-<meta name="twitter:description" content="  https://pypi.org/project/python-dotenv/   $ pip install python-dotenv # .env USER=admin import os from dotenv import load_dotenv load_dotenv() # take environment variables from .env. USER = os.getenv(&#34;USER&#34;) "/>
+<meta itemprop="name" content="Migración del proyecto de Django de sqlite a Postgresql">
+<meta itemprop="description" content="Migración de Sqlite a Postgresql
+"><meta itemprop="datePublished" content="2021-10-21T10:36:54+02:00" />
+<meta itemprop="dateModified" content="2021-10-21T10:36:54+02:00" />
+<meta itemprop="wordCount" content="346">
+<meta itemprop="keywords" content="mibración,postgresql,django," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Migración del proyecto de Django de sqlite a Postgresql"/>
+<meta name="twitter:description" content="Migración de Sqlite a Postgresql
+"/>
 
 
 
@@ -245,8 +233,8 @@ load_dotenv() …">
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dwesdocsdjango-2-li">
-  <input type="checkbox" id="m-dwesdocsdjango-2-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dwesdocsdjango-2-li">
+  <input type="checkbox" id="m-dwesdocsdjango-2-check"/>
   <label for="m-dwesdocsdjango-2-check"><a href="/dwes/docs/django-2/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocsdjango-2"><span class="">Django2</span></a></label>
   
   <ul class="ul-2 foldable">
@@ -270,9 +258,9 @@ load_dotenv() …">
   <input type="checkbox" id="m-dwesdocsdjango-2postgresql-check"/>
   <label for="m-dwesdocsdjango-2postgresql-check"><a href="/dwes/docs/django-2/postgresql/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjango-2postgresql"><span class="">Postgresql</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dwesdocsdjango-2utilidades-li">
-  <input type="checkbox" id="m-dwesdocsdjango-2utilidades-check" checked/>
-  <label for="m-dwesdocsdjango-2utilidades-check"><a href="/dwes/docs/django-2/utilidades/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjango-2utilidades"><span class="td-sidebar-nav-active-item">Utilidades</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocsdjango-2utilidades-li">
+  <input type="checkbox" id="m-dwesdocsdjango-2utilidades-check"/>
+  <label for="m-dwesdocsdjango-2utilidades-check"><a href="/dwes/docs/django-2/utilidades/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocsdjango-2utilidades"><span class="">Utilidades</span></a></label>
   
 </li>
   </ul>
@@ -287,14 +275,14 @@ load_dotenv() …">
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-dwesdocspracticas-li">
-  <input type="checkbox" id="m-dwesdocspracticas-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-dwesdocspracticas-li">
+  <input type="checkbox" id="m-dwesdocspracticas-check" checked/>
   <label for="m-dwesdocspracticas-check"><a href="/dwes/docs/practicas/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-dwesdocspracticas"><span class="">Prácticas</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql-li">
-  <input type="checkbox" id="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql-check"/>
-  <label for="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql-check"><a href="/dwes/docs/practicas/migrar_de_sqlite_a_postgresql/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql"><span class="">Migración del proyecto de Django de sqlite a Postgresql</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql-li">
+  <input type="checkbox" id="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql-check" checked/>
+  <label for="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql-check"><a href="/dwes/docs/practicas/migrar_de_sqlite_a_postgresql/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-dwesdocspracticasmigrar_de_sqlite_a_postgresql"><span class="td-sidebar-nav-active-item">Migración del proyecto de Django de sqlite a Postgresql</span></a></label>
   
 </li>
   </ul>
@@ -310,6 +298,22 @@ load_dotenv() …">
             
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#copia-de-datos-de-sqlite">Copia de datos de sqlite</a></li>
+    <li><a href="#instalación-y-configuración-de-docker-y-docker-compose">Instalación y configuración de docker y docker-compose</a>
+      <ul>
+        <li><a href="#instalación-de-docker">Instalación de docker</a></li>
+        <li><a href="#instalación-de-docker-compose">Instalación de docker-compose</a></li>
+      </ul>
+    </li>
+    <li><a href="#instalación-del-servico-de-postgresql">Instalación del servico de postgresql</a></li>
+    <li><a href="#configuración-de-la-nueva-base-de-datos-en-django">Configuración de la nueva base de datos en django</a></li>
+    <li><a href="#creación-de-la-estructura-de-la-base-de-datos-migraciones">Creación de la estructura de la base de datos (migraciones)</a></li>
+    <li><a href="#carga-de-los-datos-antiguos-de-sqlite">Carga de los datos antiguos de sqlite</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -406,14 +410,14 @@ load_dotenv() …">
 
 
 <li class="breadcrumb-item" >
-	<a href="https://lmorillas.github.io/dwes/docs/django-2/">Django2</a>
+	<a href="https://lmorillas.github.io/dwes/docs/practicas/">Prácticas</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://lmorillas.github.io/dwes/docs/django-2/utilidades/">Utilidades</a>
+	<a href="https://lmorillas.github.io/dwes/docs/practicas/migrar_de_sqlite_a_postgresql/">Migración del proyecto de Django de sqlite a Postgresql</a>
 </li>
 
 	</ol>
@@ -421,8 +425,8 @@ load_dotenv() …">
 
             
 <div class="td-content">
-	<h1>Utilidades</h1>
-	
+	<h1>Migración del proyecto de Django de sqlite a Postgresql</h1>
+	<div class="lead">Migración de Sqlite a Postgresql</div>
 	<header class="article-meta">
 		
 		
@@ -434,6 +438,19 @@ load_dotenv() …">
 				
 
 
+<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="https://lmorillas.github.io/dwes/tags/mibraci%C3%B3n/" data-taxonomy-term="mibraci%C3%B3n"><span class="taxonomy-label">mibración</span></a></li>
+    
+      <li><a class="taxonomy-term" href="https://lmorillas.github.io/dwes/tags/postgresql/" data-taxonomy-term="postgresql"><span class="taxonomy-label">postgresql</span></a></li>
+    
+      <li><a class="taxonomy-term" href="https://lmorillas.github.io/dwes/tags/django/" data-taxonomy-term="django"><span class="taxonomy-label">django</span></a></li>
+    
+  </ul>
+</div>
+
 			
 		
 		
@@ -441,29 +458,93 @@ load_dotenv() …">
 	
 
 <div class="pageinfo pageinfo-primary">
+<p><strong>Descripción</strong>: Migración a Postgresql</p>
+
+</div>
+
+<h2 id="copia-de-datos-de-sqlite">Copia de datos de sqlite</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># hacemos una copia de los datos de sqlite</span>
+<span style="color:#8f5902;font-style:italic"># creamos antes el directorio backups si no está creado.</span>
+$ python manage.py dumpdata -o backups/datosbiblioteca.json
+</code></pre></div><h2 id="instalación-y-configuración-de-docker-y-docker-compose">Instalación y configuración de docker y docker-compose</h2>
+<p>Si trabajamos en linux o mac lo hacemos directametne en la mmáquina. Si trabajamos en Windows, usamos la máquina virtualbox que tenemos creada.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Documentación</strong></p>
 <ul>
-<li><a href="https://pypi.org/project/python-dotenv/">https://pypi.org/project/python-dotenv/</a></li>
+<li><a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a></li>
+<li><a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></li>
 </ul>
 
 </div>
 
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install python-dotenv
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># .env</span>
-<span style="color:#000">USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
-<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">dotenv</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">load_dotenv</span>
+<h3 id="instalación-de-docker">Instalación de docker</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ <span style="color:#000">DRY_RUN</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">1</span> sh ./get-docker.sh
 
-<span style="color:#000">load_dotenv</span><span style="color:#000;font-weight:bold">()</span>  <span style="color:#8f5902;font-style:italic"># take environment variables from .env.</span>
-<span style="color:#000">USER</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getenv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;USER&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic"># post instalación</span>
+$ sudo groupadd docker
+$ sudo usermod -aG docker <span style="color:#000">$USER</span>
+$ newgrp docker 
+</code></pre></div><p>Podemos comprobar que ha funcionado bien</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker run hello-world
+</code></pre></div><h3 id="instalación-de-docker-compose">Instalación de docker-compose</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo curl -L <span style="color:#4e9a06">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span style="color:#204a87;font-weight:bold">$(</span>uname -s<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">-</span><span style="color:#204a87;font-weight:bold">$(</span>uname -m<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span> -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+</code></pre></div><p>Podemos comprobar que ha funcionado bien</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-compose --version
+</code></pre></div><h2 id="instalación-del-servico-de-postgresql">Instalación del servico de postgresql</h2>
+<p>Este servicio lo instalamos en linux o en la máquina <strong>virtualbox</strong> si usas windows</p>
+<p>En una carpeta de este linux creamos el siguiente archivo con los serviciios de postgresql y adminer.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#8f5902;font-style:italic"># docker-compose.yml</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">version</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39;3.1&#39;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">services</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">db</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">postgres:13.0-alpine</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">environment</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">POSTGRES_USER=django</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">POSTGRES_PASSWORD=password</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">POSTGRES_DB=biblioteca</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#000">./postgres_data:/var/lib/postgresql/data/</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">5432</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">adminer</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">adminer</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">ports</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>En esa misma carpeta ejecutamos:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker-compose up -d
+</code></pre></div><p>Y accedmos a la url del adminer: <code>http://localhost:8080</code> (o la ip de la máquina virtual si la estaś usando).</p>
+<p>Podrás conectar con la base de datos seleccionando postgresql y el resto de datos.</p>
+<h2 id="configuración-de-la-nueva-base-de-datos-en-django">Configuración de la nueva base de datos en django</h2>
+<p>Como vamos a usar postgresql debemos instalar el cliente de python para postgresql en nuestra máquina.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install psycopg2-binary
+</code></pre></div><p>Y configuramos el archivo settings.py para que use postgresql.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">DATABASES</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#4e9a06">&#39;default&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#4e9a06">&#39;ENGINE&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;NAME&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;biblioteca&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;USER&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;django&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;PASSWORD&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;password&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;HOST&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;localhost&#39;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#4e9a06">&#39;PORT&#39;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;5432&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
 
-</code></pre></div>
+</code></pre></div><p>Si usas virutalbox tienes que poner la <strong>ip de virtualbox</strong> en el host.</p>
+<h2 id="creación-de-la-estructura-de-la-base-de-datos-migraciones">Creación de la estructura de la base de datos (migraciones)</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python manage.py migrate
+</code></pre></div><h2 id="carga-de-los-datos-antiguos-de-sqlite">Carga de los datos antiguos de sqlite</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python manage.py loaddata backups/datosbiblioteca.json
+</code></pre></div><p>Y comprobamos que todo ha ido bien.  Deberíamos de tener nuestro proyecto django ejecutándose con la nueva base de datos postgresql. Recordad que el servidor de docker de postgresql tiene que estar ejecutándose.</p>
+
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-
-    Última modificación
-    December 13, 2021
-    : <a  href="https://github.com/lmorillas/dwes/commit/d5c81a23d0164370d9588579cdd60cb9ac1f36f8">bbdd (d5c81a2)</a>
 
 </div>
 

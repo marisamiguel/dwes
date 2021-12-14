@@ -6,6 +6,7 @@ description: >
   
 tags: [dotenv]
 ---
+## dotenv - uso de variables de entorno en desarrollo/despliegue
 
 {{% pageinfo %}}
 * https://pypi.org/project/python-dotenv/

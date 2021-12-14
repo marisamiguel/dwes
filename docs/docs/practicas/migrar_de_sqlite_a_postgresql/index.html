@@ -28,13 +28,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lmorillas.github.io/dwes/docs/practicas/migrar_de_sqlite_a_postgresql/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-10-21T10:36:54+02:00" />
-<meta property="article:modified_time" content="2021-10-21T10:36:54+02:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
+<meta property="article:modified_time" content="2021-12-14T13:49:46+01:00" /><meta property="og:site_name" content="Desarrollo Web Entorno Servidor" />
 
 <meta itemprop="name" content="Migración del proyecto de Django de sqlite a Postgresql">
 <meta itemprop="description" content="Migración de Sqlite a Postgresql
 "><meta itemprop="datePublished" content="2021-10-21T10:36:54+02:00" />
-<meta itemprop="dateModified" content="2021-10-21T10:36:54+02:00" />
-<meta itemprop="wordCount" content="346">
+<meta itemprop="dateModified" content="2021-12-14T13:49:46+01:00" />
+<meta itemprop="wordCount" content="367">
 <meta itemprop="keywords" content="mibración,postgresql,django," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Migración del proyecto de Django de sqlite a Postgresql"/>
 <meta name="twitter:description" content="Migración de Sqlite a Postgresql
@@ -312,6 +312,7 @@
     <li><a href="#configuración-de-la-nueva-base-de-datos-en-django">Configuración de la nueva base de datos en django</a></li>
     <li><a href="#creación-de-la-estructura-de-la-base-de-datos-migraciones">Creación de la estructura de la base de datos (migraciones)</a></li>
     <li><a href="#carga-de-los-datos-antiguos-de-sqlite">Carga de los datos antiguos de sqlite</a></li>
+    <li><a href="#mejoras">Mejoras</a></li>
   </ul>
 </nav></div>
 
@@ -541,10 +542,19 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 </code></pre></div><h2 id="carga-de-los-datos-antiguos-de-sqlite">Carga de los datos antiguos de sqlite</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python manage.py loaddata backups/datosbiblioteca.json
 </code></pre></div><p>Y comprobamos que todo ha ido bien.  Deberíamos de tener nuestro proyecto django ejecutándose con la nueva base de datos postgresql. Recordad que el servidor de docker de postgresql tiene que estar ejecutándose.</p>
+<h2 id="mejoras">Mejoras</h2>
+<ul>
+<li>Usar variables de entorno en <code>docker-compose.yml</code> y en <code>settings.py</code></li>
+<li>Puedes usar un fichero <code>.env</code> para configurar las variables de entorno.</li>
+</ul>
 
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
+
+    Última modificación
+    December 14, 2021
+    : <a  href="https://github.com/lmorillas/dwes/commit/f5807b951afdf0eba9a8272758f39c569d08a82e">práctica postgresql con docker (f5807b9)</a>
 
 </div>
 

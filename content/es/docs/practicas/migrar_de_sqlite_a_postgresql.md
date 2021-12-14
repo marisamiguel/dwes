@@ -128,3 +128,8 @@ $ python manage.py loaddata backups/datosbiblioteca.json
 ```
 
 Y comprobamos que todo ha ido bien.  Deberíamos de tener nuestro proyecto django ejecutándose con la nueva base de datos postgresql. Recordad que el servidor de docker de postgresql tiene que estar ejecutándose. 
+
+
+## Mejoras
+* Usar variables de entorno en ```docker-compose.yml``` y en ```settings.py```
+* Puedes usar un fichero ```.env``` para configurar las variables de entorno.

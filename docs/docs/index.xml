@@ -108,6 +108,11 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;carga-de-los-datos-antiguos-de-sqlite&#34;&gt;Carga de los datos antiguos de sqlite&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python manage.py loaddata backups/datosbiblioteca.json
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y comprobamos que todo ha ido bien.  Deberíamos de tener nuestro proyecto django ejecutándose con la nueva base de datos postgresql. Recordad que el servidor de docker de postgresql tiene que estar ejecutándose.&lt;/p&gt;
+&lt;h2 id=&#34;mejoras&#34;&gt;Mejoras&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Usar variables de entorno en &lt;code&gt;docker-compose.yml&lt;/code&gt; y en &lt;code&gt;settings.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Puedes usar un fichero &lt;code&gt;.env&lt;/code&gt; para configurar las variables de entorno.&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>

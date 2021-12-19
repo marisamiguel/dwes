@@ -23,6 +23,6 @@ tags: [proyectos]
 2. Estructura de datos (modelo)
 3. Carga de datos (proceso de csv o json)
 4. Visualización de datos: 
-    * Tablas. Explorar https://django-tables2.readthedocs.io/
+    * Tablas. Explorar https://django-tables2.readthedocs.io/ https://django-filter.readthedocs.io/ (Ejemplo: https://www.youtube.com/watch?v=G-Rct7Na0UQ)
     * Mapa. Explorar https://leafletjs.com/examples/quick-start/ https://django-leaflet.readthedocs.io/ http://python-visualization.github.io/folium/quickstart.html
 

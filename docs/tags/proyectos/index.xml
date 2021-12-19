@@ -122,7 +122,7 @@
 &lt;li&gt;Carga de datos (proceso de csv o json)&lt;/li&gt;
 &lt;li&gt;Visualización de datos:
 &lt;ul&gt;
-&lt;li&gt;Tablas. Explorar &lt;a href=&#34;https://django-tables2.readthedocs.io/&#34;&gt;https://django-tables2.readthedocs.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tablas. Explorar &lt;a href=&#34;https://django-tables2.readthedocs.io/&#34;&gt;https://django-tables2.readthedocs.io/&lt;/a&gt; &lt;a href=&#34;https://django-filter.readthedocs.io/&#34;&gt;https://django-filter.readthedocs.io/&lt;/a&gt; (Ejemplo: &lt;a href=&#34;https://www.youtube.com/watch?v=G-Rct7Na0UQ&#34;&gt;https://www.youtube.com/watch?v=G-Rct7Na0UQ&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Mapa. Explorar &lt;a href=&#34;https://leafletjs.com/examples/quick-start/&#34;&gt;https://leafletjs.com/examples/quick-start/&lt;/a&gt; &lt;a href=&#34;https://django-leaflet.readthedocs.io/&#34;&gt;https://django-leaflet.readthedocs.io/&lt;/a&gt; &lt;a href=&#34;http://python-visualization.github.io/folium/quickstart.html&#34;&gt;http://python-visualization.github.io/folium/quickstart.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;

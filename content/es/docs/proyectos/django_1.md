@@ -1,7 +1,7 @@
 ---
 title: "Proyecto Django - Primer trimestre"
 date: 2021-10-21T10:36:54+02:00
-weight: 36
+weight: 3
 description: >
   Proyecto de Django primera evaluación
 tags: [proyectos]

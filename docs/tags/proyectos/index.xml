@@ -110,10 +110,15 @@
 &lt;/div&gt;
 
 &lt;h2 id=&#34;fuentes-de-datos&#34;&gt;Fuentes de datos&lt;/h2&gt;
+&lt;h3 id=&#34;centros-educativos&#34;&gt;Centros Educativos&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://educa.aragon.es/buscador-de-centros#/map&#34;&gt;Buscador de centros&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://opendata.aragon.es/datos/catalogo/dataset/directorio-de-centros-educativos-de-aragon&#34;&gt;Directorio oficial de centros&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;datos_centros.json&#34;&gt;Datos de centros&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pelis&#34;&gt;Pelis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;listapelis.json&#34;&gt;Películas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;pasos&#34;&gt;Pasos:&lt;/h2&gt;
 &lt;ol&gt;
@@ -122,7 +127,7 @@
 &lt;li&gt;Carga de datos (proceso de csv o json)&lt;/li&gt;
 &lt;li&gt;Visualización de datos:
 &lt;ul&gt;
-&lt;li&gt;Tablas. Explorar &lt;a href=&#34;https://django-tables2.readthedocs.io/&#34;&gt;https://django-tables2.readthedocs.io/&lt;/a&gt; &lt;a href=&#34;https://django-filter.readthedocs.io/&#34;&gt;https://django-filter.readthedocs.io/&lt;/a&gt; (Ejemplo: &lt;a href=&#34;https://www.youtube.com/watch?v=G-Rct7Na0UQ&#34;&gt;https://www.youtube.com/watch?v=G-Rct7Na0UQ&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Tablas. Explorar &lt;a href=&#34;https://djangopackages.org/grids/g/tables/?python3=1&#34;&gt;Apps de tablas para djando&lt;/a&gt; &lt;a href=&#34;https://django-tables2.readthedocs.io/&#34;&gt;https://django-tables2.readthedocs.io/&lt;/a&gt; &lt;a href=&#34;https://django-filter.readthedocs.io/&#34;&gt;https://django-filter.readthedocs.io/&lt;/a&gt; (Ejemplo: &lt;a href=&#34;https://www.youtube.com/watch?v=G-Rct7Na0UQ&#34;&gt;https://www.youtube.com/watch?v=G-Rct7Na0UQ&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Mapa. Explorar &lt;a href=&#34;https://leafletjs.com/examples/quick-start/&#34;&gt;https://leafletjs.com/examples/quick-start/&lt;/a&gt; &lt;a href=&#34;https://django-leaflet.readthedocs.io/&#34;&gt;https://django-leaflet.readthedocs.io/&lt;/a&gt; &lt;a href=&#34;http://python-visualization.github.io/folium/quickstart.html&#34;&gt;http://python-visualization.github.io/folium/quickstart.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;

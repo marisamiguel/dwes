@@ -31,6 +31,12 @@
     <loc>https://lmorillas.github.io/dwes/docs/django/instalacion/</loc>
     <lastmod>2021-11-01T21:08:43+01:00</lastmod>
   </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/wagtail/instalacion/</loc>
+    <lastmod>2021-12-22T09:40:43+01:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/wagtail/primeros_pasos/</loc>
+    <lastmod>2021-12-22T09:44:16+01:00</lastmod>
+  </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django-2/</loc>
     <lastmod>2021-12-13T07:08:50+01:00</lastmod>
   </url><url>
@@ -57,6 +63,9 @@
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/scraping/</loc>
     <lastmod>2021-12-20T21:52:03+01:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/wagtail/</loc>
+    <lastmod>2021-12-22T09:40:43+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/contenido/</loc>
     <lastmod>2021-09-26T22:53:39+02:00</lastmod>
@@ -160,8 +169,11 @@
     <loc>https://lmorillas.github.io/dwes/tags/im%C3%A1genes/</loc>
     <lastmod>2021-11-16T00:09:07+01:00</lastmod>
   </url><url>
+    <loc>https://lmorillas.github.io/dwes/tags/inicio/</loc>
+    <lastmod>2021-12-22T09:44:16+01:00</lastmod>
+  </url><url>
     <loc>https://lmorillas.github.io/dwes/tags/instalaci%C3%B3n/</loc>
-    <lastmod>2021-11-01T21:08:43+01:00</lastmod>
+    <lastmod>2021-12-22T09:40:43+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/tags/mibraci%C3%B3n/</loc>
     <lastmod>2021-12-14T13:54:54+01:00</lastmod>
@@ -179,7 +191,7 @@
     <lastmod>2021-11-14T19:16:16+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/tags/</loc>
-    <lastmod>2021-12-20T07:30:25+01:00</lastmod>
+    <lastmod>2021-12-22T09:44:16+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/tags/template/</loc>
     <lastmod>2021-11-01T21:08:43+01:00</lastmod>
@@ -192,6 +204,9 @@
   </url><url>
     <loc>https://lmorillas.github.io/dwes/tags/vistas-gen%C3%A9ricas/</loc>
     <lastmod>2021-11-08T07:38:57+01:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/tags/wagtail/</loc>
+    <lastmod>2021-12-22T09:44:16+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/categories/</loc>
   </url><url>

@@ -5,4 +5,4 @@ node_modules/
 tech-doc-hugo
 themes/docsy/
 mirar.md
-
+.hugo_build.lock

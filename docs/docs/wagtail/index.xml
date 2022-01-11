@@ -95,5 +95,35 @@ wagtail_bootstrap_blog
       </description>
     </item>
     
+    <item>
+      <title>Docs: Añadir tema bootstrap</title>
+      <link>https://lmorillas.github.io/dwes/docs/wagtail/maquetar_paginas/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/wagtail/maquetar_paginas/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Intenta seguir las instrucciones de &lt;a href=&#34;https://www.accordbox.com/blog/add-bootstrap-theme-wagtail/&#34;&gt;https://www.accordbox.com/blog/add-bootstrap-theme-wagtail/&lt;/a&gt; para generar al estructura de las páginas con bootstrap.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Piensa en el diseño del sitio y de las distintas páginas&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://www.accordbox.com/static/images/wagtail_course/diagram/BlogPage.jpg&#34; alt=&#34;Ejemplo de diseño&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Diseña el template base&lt;/li&gt;
+&lt;li&gt;Crea el navbar e inclúyelo en el template base&lt;/li&gt;
+&lt;li&gt;Prepare el footer e inclúyelo en el template base&lt;/li&gt;
+&lt;li&gt;Diseña el sidebar&lt;/li&gt;
+&lt;li&gt;Widget para las categorías&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

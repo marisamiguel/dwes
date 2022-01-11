@@ -73,6 +73,9 @@
     <loc>https://lmorillas.github.io/dwes/docs/django/home_page/</loc>
     <lastmod>2021-11-01T21:08:43+01:00</lastmod>
   </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/wagtail/maquetar_paginas/</loc>
+    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+  </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django-2/backup/</loc>
     <lastmod>2021-12-13T22:56:29+01:00</lastmod>
   </url><url>
@@ -207,6 +210,8 @@
   </url><url>
     <loc>https://lmorillas.github.io/dwes/tags/wagtail/</loc>
     <lastmod>2021-12-22T09:44:16+01:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/scraping/scrapy/</loc>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/categories/</loc>
   </url><url>

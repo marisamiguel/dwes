@@ -154,6 +154,22 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>4: <a href="#pg-e388e1f29579d4f86b7393df2d1b93ef">Cómo usar imágenes</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-9e1a2b78b1e1e4cbb63a4ef36777748f">Gestión de contenido mixto</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -289,6 +305,118 @@ wagtail_bootstrap_blog
 <li>&hellip;</li>
 </ul>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e388e1f29579d4f86b7393df2d1b93ef">4 - Cómo usar imágenes</h1>
+    <div class="lead">Usando imágenes en plantillas</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p><a href="https://docs.wagtail.io/en/stable/topics/images.html">https://docs.wagtail.io/en/stable/topics/images.html</a></p>
+
+</div>
+
+<pre tabindex="0"><code>{% image [image] [resize-rule] %}
+</code></pre><h2 id="resize-rules">Resize rules</h2>
+<ul>
+<li><code>width</code>: Resize to width</li>
+<li><code>height</code>: Resize to height</li>
+<li><code>width,height</code>: Resize to width and height</li>
+<li><code>width,height,crop</code>: Resize to width and height and crop</li>
+<li><code>fill</code>: Resize to width and height and crop to fill</li>
+<li><code>max-widthxheight</code>: Resize to max</li>
+<li><code>scale</code>: Scale to width and height</li>
+<li><code>original</code>: Use original image</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9e1a2b78b1e1e4cbb63a4ef36777748f">5 - Gestión de contenido mixto</h1>
+    <div class="lead">Gestión de contenido mixto</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.wagtail.io/en/stable/topics/streamfield.html">https://docs.wagtail.io/en/stable/topics/streamfield.html</a></li>
+<li><a href="https://www.accordbox.com/blog/how-use-streamfield-wagtail/">https://www.accordbox.com/blog/how-use-streamfield-wagtail/</a></li>
+</ul>
+
+</div>
+
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">BlogPage</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Page</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">author</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">CharField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">max_length</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">255</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">date</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DateField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Post date&#34;</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">body</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">StreamField</span><span style="color:#000;font-weight:bold">([</span>
+        <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;heading&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">CharBlock</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">form_classname</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;full title&#34;</span><span style="color:#000;font-weight:bold">)),</span>
+        <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;paragraph&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">RichTextBlock</span><span style="color:#000;font-weight:bold">()),</span>
+        <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;image&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ImageChooserBlock</span><span style="color:#000;font-weight:bold">()),</span>
+    <span style="color:#000;font-weight:bold">])</span>
+
+    <span style="color:#000">content_panels</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Page</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">content_panels</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000">FieldPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;author&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">FieldPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;date&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">StreamFieldPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;body&#39;</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000;font-weight:bold">]</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">article</span><span style="color:#000;font-weight:bold">&gt;</span>
+    {% for block in page.body %}
+        {% if block.block_type == &#39;heading&#39; %}
+            <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h1</span><span style="color:#000;font-weight:bold">&gt;</span>{{ block.value }}<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h1</span><span style="color:#000;font-weight:bold">&gt;</span>
+        {% else %}
+            <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">section</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;block-{{ block.block_type }}&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+                {% include_block block %}
+            <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">section</span><span style="color:#000;font-weight:bold">&gt;</span>
+        {% endif %}
+    {% endfor %}
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">article</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#000">body</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">StreamField</span><span style="color:#000;font-weight:bold">([</span>
+     <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;person&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">StructBlock</span><span style="color:#000;font-weight:bold">([</span>
+         <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;first_name&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">CharBlock</span><span style="color:#000;font-weight:bold">()),</span>
+         <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;surname&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">CharBlock</span><span style="color:#000;font-weight:bold">()),</span>
+         <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;photo&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ImageChooserBlock</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">required</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">False</span><span style="color:#000;font-weight:bold">)),</span>
+         <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;biography&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">RichTextBlock</span><span style="color:#000;font-weight:bold">()),</span>
+     <span style="color:#000;font-weight:bold">])),</span>
+     <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;heading&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">CharBlock</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">form_classname</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;full title&#34;</span><span style="color:#000;font-weight:bold">)),</span>
+     <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;paragraph&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">blocks</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">RichTextBlock</span><span style="color:#000;font-weight:bold">()),</span>
+     <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;image&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ImageChooserBlock</span><span style="color:#000;font-weight:bold">()),</span>
+ <span style="color:#000;font-weight:bold">])</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">article</span><span style="color:#000;font-weight:bold">&gt;</span>
+   {% for block in page.body %}
+       {% if block.block_type == &#39;person&#39; %}
+           <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;person&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+               {% image block.value.photo width-400 %}
+               <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h2</span><span style="color:#000;font-weight:bold">&gt;</span>{{ block.value.first_name }} {{ block.value.surname }}<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h2</span><span style="color:#000;font-weight:bold">&gt;</span>
+               {{ block.value.biography }}
+           <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+       {% else %}
+           (rendering for other block types)
+       {% endif %}
+   {% endfor %}
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">article</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div>
 </div>
 
 

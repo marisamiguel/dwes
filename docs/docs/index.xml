@@ -2724,6 +2724,49 @@ Para los archivos que se suben de forma dinámica:&lt;/p&gt;
     </item>
     
     <item>
+      <title>Docs: Demo de Wagtail</title>
+      <link>https://lmorillas.github.io/dwes/docs/wagtail/backerydemo/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/wagtail/backerydemo/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wagtail/bakerydemo&#34;&gt;https://github.com/wagtail/bakerydemo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Instalación
+&lt;ul&gt;
+&lt;li&gt;Virtualenv&lt;/li&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Elementos avanzados
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wagtail.io/en/stable/topics/streamfield.html&#34;&gt;StreamField&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Modeladmin:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wagtail.io/en/stable/reference/contrib/modeladmin/&#34;&gt;https://docs.wagtail.io/en/stable/reference/contrib/modeladmin/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wagtail/bakerydemo/blob/master/bakerydemo/base/wagtail_hooks.py&#34;&gt;https://github.com/wagtail/bakerydemo/blob/master/bakerydemo/base/wagtail_hooks.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;search / elastisearch&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Uso de mapas</title>
       <link>https://lmorillas.github.io/dwes/docs/django/mapas/</link>
       <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>

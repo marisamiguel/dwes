@@ -92,7 +92,7 @@
     <lastmod>2021-12-13T22:56:29+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/wagtail/imagenes/</loc>
-    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+    <lastmod>2022-01-16T20:32:38+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/formularios_crispy/</loc>
     <lastmod>2021-11-14T19:16:16+01:00</lastmod>
@@ -113,7 +113,7 @@
     <lastmod>2021-11-14T19:16:16+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/wagtail/streamfield/</loc>
-    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
+    <lastmod>2022-01-16T20:32:38+01:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/staticsitegen/shortcodes/</loc>
     <lastmod>2021-09-26T22:52:09+02:00</lastmod>
@@ -129,6 +129,9 @@
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/static_files/</loc>
     <lastmod>2021-11-21T22:17:55+01:00</lastmod>
+  </url><url>
+    <loc>https://lmorillas.github.io/dwes/docs/wagtail/backerydemo/</loc>
+    <lastmod>2021-10-21T10:36:54+02:00</lastmod>
   </url><url>
     <loc>https://lmorillas.github.io/dwes/docs/django/mapas/</loc>
     <lastmod>2021-11-21T22:17:55+01:00</lastmod>

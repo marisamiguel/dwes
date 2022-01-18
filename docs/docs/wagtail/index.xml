@@ -272,5 +272,34 @@ wagtail_bootstrap_blog
       </description>
     </item>
     
+    <item>
+      <title>Docs: Manual de editores</title>
+      <link>https://lmorillas.github.io/dwes/docs/wagtail/editores/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/wagtail/editores/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wagtail.io/en/stable/editor_manual/index.html&#34;&gt;https://docs.wagtail.io/en/stable/editor_manual/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;navigate the main user interface of Wagtail&lt;/li&gt;
+&lt;li&gt;create pages of all different types&lt;/li&gt;
+&lt;li&gt;modify, save, publish and unpublish pages&lt;/li&gt;
+&lt;li&gt;set up users, and provide them with specific roles to create a publishing workflow&lt;/li&gt;
+&lt;li&gt;upload, edit and include images and documents&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

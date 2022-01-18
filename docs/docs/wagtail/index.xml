@@ -301,5 +301,101 @@ wagtail_bootstrap_blog
       </description>
     </item>
     
+    <item>
+      <title>Docs: Miscelanea</title>
+      <link>https://lmorillas.github.io/dwes/docs/wagtail/miscelanea/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/wagtail/miscelanea/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;jerarquías-de-páginas&#34;&gt;Jerarquías de páginas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wagtail.io/en/stable/topics/pages.html#page-type-business-rules&#34;&gt;https://docs.wagtail.io/en/stable/topics/pages.html#page-type-business-rules&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Definir &lt;code&gt;parent_page_types&lt;/code&gt;  y  &lt;code&gt;subpage_types&lt;/code&gt; en modelos.&lt;/p&gt;
+&lt;h2 id=&#34;configuración-editor&#34;&gt;Configuración editor&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html&#34;&gt;https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;wagtail.admin.edit_handlers&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TabbedInterface&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ObjectList&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;BlogPage&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Page&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# field definitions omitted&lt;/span&gt;
+
+    &lt;span style=&#34;color:#000&#34;&gt;content_panels&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;FieldPanel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;classname&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;full title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;FieldPanel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;FieldPanel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;classname&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;full&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;sidebar_content_panels&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;SnippetChooserPanel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;advert&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;InlinePanel&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;related_links&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;label&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Related links&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+
+    &lt;span style=&#34;color:#000&#34;&gt;edit_handler&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;TabbedInterface&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;([&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;ObjectList&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;content_panels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;heading&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Content&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;ObjectList&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sidebar_content_panels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;heading&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Sidebar content&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;ObjectList&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Page&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;promote_panels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;heading&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Promote&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;ObjectList&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Page&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;settings_panels&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;heading&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Settings&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;classname&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;),&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;limitar-richtextfield&#34;&gt;Limitar RichTextField&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;body = RichTextField(features=[&#39;h2&#39;, &#39;h3&#39;, &#39;bold&#39;, &#39;italic&#39;, &#39;link&#39;])&lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Aplicación películas</title>
+      <link>https://lmorillas.github.io/dwes/docs/wagtail/peliculas/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/wagtail/peliculas/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Crear una aplicación de películas con la informaciń del siguiente archivo json. Es la lista de las películas más vistas de &lt;a href=&#34;https://www.imdb.com/chart/top/?ref_=nv_mv_250_6&#34;&gt;imdb.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;listapelis.json&#34;&gt;Películas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Testing</title>
+      <link>https://lmorillas.github.io/dwes/docs/wagtail/testing/</link>
+      <pubDate>Thu, 21 Oct 2021 10:36:54 +0200</pubDate>
+      
+      <guid>https://lmorillas.github.io/dwes/docs/wagtail/testing/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.wagtail.io/en/stable/advanced_topics/testing.html&#34;&gt;https://docs.wagtail.io/en/stable/advanced_topics/testing.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

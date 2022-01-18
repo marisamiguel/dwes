@@ -186,6 +186,30 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>8: <a href="#pg-245fcead268b76201cc36d548609fe3b">Miscelanea</a></li>
+
+
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-eefaaaafe46a97414cd62fbe6b8f4552">Aplicación películas</a></li>
+
+
+    
+  
+    
+    
+	
+<li>10: <a href="#pg-0a2c67ac6c3739b1d9dea295dd408ec6">Testing</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -512,6 +536,114 @@ wagtail_bootstrap_blog
 <li>set up users, and provide them with specific roles to create a publishing workflow</li>
 <li>upload, edit and include images and documents</li>
 </ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-245fcead268b76201cc36d548609fe3b">8 - Miscelanea</h1>
+    <div class="lead">Configuraciones varias</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+
+</div>
+
+<h2 id="jerarquías-de-páginas">Jerarquías de páginas</h2>
+<ul>
+<li><a href="https://docs.wagtail.io/en/stable/topics/pages.html#page-type-business-rules">https://docs.wagtail.io/en/stable/topics/pages.html#page-type-business-rules</a></li>
+</ul>
+<p>Definir <code>parent_page_types</code>  y  <code>subpage_types</code> en modelos.</p>
+<h2 id="configuración-editor">Configuración editor</h2>
+<ul>
+<li><a href="https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html">https://docs.wagtail.io/en/stable/advanced_topics/customisation/page_editing_interface.html</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">wagtail.admin.edit_handlers</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">TabbedInterface</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ObjectList</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">BlogPage</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Page</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#8f5902;font-style:italic"># field definitions omitted</span>
+
+    <span style="color:#000">content_panels</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000">FieldPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;title&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">classname</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;full title&#34;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">FieldPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;date&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">FieldPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;body&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">classname</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;full&#34;</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000;font-weight:bold">]</span>
+    <span style="color:#000">sidebar_content_panels</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#000">SnippetChooserPanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;advert&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">InlinePanel</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;related_links&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">label</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Related links&#34;</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000;font-weight:bold">]</span>
+
+    <span style="color:#000">edit_handler</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">TabbedInterface</span><span style="color:#000;font-weight:bold">([</span>
+        <span style="color:#000">ObjectList</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">content_panels</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">heading</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Content&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">ObjectList</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sidebar_content_panels</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">heading</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Sidebar content&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">ObjectList</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Page</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">promote_panels</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">heading</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Promote&#39;</span><span style="color:#000;font-weight:bold">),</span>
+        <span style="color:#000">ObjectList</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Page</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">settings_panels</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">heading</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;Settings&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">classname</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;settings&#34;</span><span style="color:#000;font-weight:bold">),</span>
+    <span style="color:#000;font-weight:bold">])</span>
+</code></pre></div><h2 id="limitar-richtextfield">Limitar RichTextField</h2>
+<p><code>body = RichTextField(features=['h2', 'h3', 'bold', 'italic', 'link'])</code></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-eefaaaafe46a97414cd62fbe6b8f4552">9 - Aplicación películas</h1>
+    <div class="lead">Aplicación de películas</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Crear una aplicación de películas con la informaciń del siguiente archivo json. Es la lista de las películas más vistas de <a href="https://www.imdb.com/chart/top/?ref_=nv_mv_250_6">imdb.com</a>.</p>
+
+</div>
+
+<ul>
+<li><a href="listapelis.json">Películas</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0a2c67ac6c3739b1d9dea295dd408ec6">10 - Testing</h1>
+    <div class="lead">Configuraciones varias</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<ul>
+<li><a href="https://docs.wagtail.io/en/stable/advanced_topics/testing.html">https://docs.wagtail.io/en/stable/advanced_topics/testing.html</a></li>
+</ul>
+
+</div>
+
 
 </div>
 
